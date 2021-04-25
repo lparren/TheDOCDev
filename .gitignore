@@ -1,0 +1,12 @@
+# Software Files #
+##################
+*.gz
+*.zip
+*.jar
+.vagrant
+*.bin
+*.vdi
+*.rpm
+*.macros
+*.tgz
+Anaconda3-2020.11-Linux-x86_64.sh

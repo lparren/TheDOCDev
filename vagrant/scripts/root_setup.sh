@@ -68,16 +68,13 @@ echo "**************************************************************************
 echo "Create non-root docker user." `date`
 echo "******************************************************************************"
 groupadd -g 1042 docker_fg
-useradd -G docker_fg,condagrp docker_user
+useradd -G docker_fg,condagrp,docker docker_user
 echo "docker_user:vagrant" | chpasswd
 mkdir -p /u01/volumes/ora1930_oradata
 mkdir -p /u01/volumes/oas59_data
 chown -R docker_user:docker_fg /u01
-chmod -R 775 /u01/volumes
+chmod -R 777 /u01/volumes
 chmod -R g+s /u01/volumes
-mkdir -p /u01/zeppelin/logs
-mkdir -p /u01/zeppelin/notebook
-chmod -R 775 /u01/zeppelin
 
 # Add users so host reports process ownership properly. Not required.
 useradd -u 500 oracle
@@ -85,15 +82,20 @@ echo "oracle:oracle" | chpasswd
 
 echo "docker_user  ALL=(ALL)  NOPASSWD: ALL" >> /etc/sudoers
 echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/bin/docker" >> /etc/sudoers
-echo "alias docker=\"sudo /usr/bin/docker\"" >> /home/docker_user/.bash_profile
+#echo "alias docker=\"sudo /usr/bin/docker\"" >> /home/docker_user/.bash_profile
 
 echo "******************************************************************************"
 echo "Configure docker-compose." `date`
 echo "******************************************************************************"
 curl -L https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
+# bash command completion
+sudo curl \
+    -L https://raw.githubusercontent.com/docker/compose/1.29.1/contrib/completion/bash/docker-compose \
+    -o /etc/bash_completion.d/docker-compose
 echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/local/bin/docker-compose" >> /etc/sudoers
-echo "alias docker-compose=\"sudo /usr/local/bin/docker-compose\"" >> /home/docker_user/.bash_profile
+# create symbolic link in /usr/bin
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 echo "******************************************************************************"
 echo "Install lazydocker." `date`

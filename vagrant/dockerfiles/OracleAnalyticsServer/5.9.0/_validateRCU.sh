@@ -105,7 +105,7 @@ RCU_SETTINGS="$RCU_SETTINGS $COMPONENTS"
 (echo $BI_CONFIG_RCU_PWD; echo $BI_CONFIG_RCU_PWD) > $ORACLE_HOME/_tmp_rcu.dat
 
 #
-# validate RCU create command and settings 
+# validate RCU create command and settings
 #
 $ORACLE_HOME/oracle_common/bin/rcu $RCU_SETTINGS -validate -f < $ORACLE_HOME/_tmp_rcu.dat
 
@@ -118,4 +118,3 @@ fi
 
 # remove password file
 rm $ORACLE_HOME/_tmp_rcu.dat
-

@@ -37,5 +37,3 @@ FEDERATED_ORACLE_HOMES=
 
 #Set this variable value to the Installation Type selected. e.g. Fusion Middleware Infrastructure With Examples, Fusion Middleware Infrastructure.
 INSTALL_TYPE=Fusion Middleware Infrastructure
-
-

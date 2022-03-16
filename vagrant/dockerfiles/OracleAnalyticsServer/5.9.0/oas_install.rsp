@@ -34,5 +34,3 @@ ORACLE_HOME=###ORACLE_HOME###
 
 #The federated oracle home locations. This should be an existing Oracle Home. Multiple values can be provided as comma seperated values
 FEDERATED_ORACLE_HOMES=
-
-

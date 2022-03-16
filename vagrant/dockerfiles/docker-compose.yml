@@ -1,8 +1,9 @@
 version: "3"
 services:
-  spark_master:
+  spark:
     image: gettyimages/spark
     command: bin/spark-class org.apache.spark.deploy.master.Master -h master
+    depends_on: [spark_worker]
     hostname: master
     environment:
       MASTER: spark://master:7077
@@ -36,8 +37,6 @@ services:
       SPARK_WORKER_PORT: 8881
       SPARK_WORKER_WEBUI_PORT: 8081
       SPARK_PUBLIC_DNS: localhost
-    links:
-      - spark_master
     expose:
       - 7012
       - 7013
@@ -50,10 +49,10 @@ services:
       - ./spark/conf/worker:/conf
       - ./spark/data:/tmp/data
 
-  ora1930:
+  oradb:
     image: oracle/database:19.3.0-ee
     build:
-      context: ./ora1930
+      context: ./OracleDatabase/19.3.0
       args:
         DB_EDITION: ee
     environment:
@@ -73,14 +72,61 @@ services:
     image: oracle/oas:5.9.0
     build:
       context: ./OracleAnalyticsServer/5.9.0
+    stop_grace_period: 600s
     environment:
-        BI_CONFIG_RCU_DBSTRING: ora1930:1521:pdb1930
+        BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930
         BI_CONFIG_RCU_PWD: oracle
+    depends_on: [oradb]
     links:
-      - ora1930
+      - oradb
     expose:
       - 9500-9514
     ports:
       - 9500-9514:9500-9514
 #    volumes:
 #      - ./oas59....
+
+  ords:
+    image: thedoc/ords:21.2.0
+    build:
+      context: ./ORDS/
+    stop_grace_period: 15s
+    environment:
+      BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930
+      BI_CONFIG_RCU_PWD: oracle
+    depends_on: [oradb]
+    links:
+      - oradb
+    expose:
+      - 9500-9514
+    ports:
+      - 9500-9514:9500-9514
+
+  rstudio:
+    image: thedoc/rstudio:3.6.1
+    build:
+      context: ./Rstudio
+    depends_on: [oradb]
+    links:
+      - oradb
+    expose:
+      - 8787
+    ports:
+      - 8787:8787
+
+  dbt:
+    image: thedoc/dbt:0.19.0
+    build:
+      context: ./dbt
+    depends_on: [oradb]
+    links:
+      - oradb
+
+  # Portainer
+  portainer:
+    image: portainer/portainer-ce
+    volumes:
+      - ./portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9001:9001"

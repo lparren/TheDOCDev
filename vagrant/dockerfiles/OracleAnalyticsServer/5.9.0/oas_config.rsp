@@ -44,7 +44,7 @@ ADMIN_CONFIRM_PASSWORD=###BI_CONFIG_ADMIN_PWD###
 #LOCAL, CREATE_ONLY, USE_EXISTING
 DOMAIN_WORK=LOCAL
 
-#Select the schema type. Supported types are SCHEMA_TYPE_NEW, SCHEMA_TYPE_EXISTING.  
+#Select the schema type. Supported types are SCHEMA_TYPE_NEW, SCHEMA_TYPE_EXISTING.
 SCHEMA_TYPE=SCHEMA_TYPE_NEW
 
 #Select the existing database type to connect to. Supported database types are ORACLE, ORACLE_RAC, ORACLE_TNS_ALIAS, IBMDB2 and SQLSERVER.
@@ -92,7 +92,7 @@ STATIC_PORTS_FILE=
 #Select type of initial application.  Supported types are APPLICATION_TYPE_BI_BUNDLE, APPLICATION_TYPE_EMPTY.
 APPLICATION_TYPE=APPLICATION_TYPE_EMPTY
 
-#Location of BI Bundle file to use as the initial application.  Only used if APPLICATION_TYPE is APPLICATION_TYPE_BI_BUNDLE. 
+#Location of BI Bundle file to use as the initial application.  Only used if APPLICATION_TYPE is APPLICATION_TYPE_BI_BUNDLE.
 BI_BUNDLE_FILE=
 
 #Password which secures existing BI archive file
@@ -103,5 +103,3 @@ BI_APP_LITE_PASSWORD=
 
 #Identifier of initial default service instance if pluggable modules is enabled
 BI_DEFAULT_SERVICE_INSTANCE_KEY=ssi
-
-

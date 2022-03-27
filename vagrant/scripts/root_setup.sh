@@ -22,10 +22,19 @@ wget -nv https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.
 dnf install -y ./google-chrome-stable_current_*.rpm
 rm -f ./google-chrome-stable_current_*.rpm
 
-# echo "******************************************************************************"
-# echo "Install Anaconda" `date`
-# echo "******************************************************************************"
-#
+echo "******************************************************************************"
+echo "Install VSCode" `date`
+echo "******************************************************************************"
+
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf -y check-update
+dnf -y install code
+
+echo "******************************************************************************"
+echo "Install Anaconda" `date`
+echo "******************************************************************************"
+
 mkdir /opt/anaconda
 wget -nv https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh -b -p /opt/miniconda
@@ -52,10 +61,10 @@ echo -e "n\np\n1\n\n\nw" | fdisk /dev/sdc
 ls /dev/sd*
 docker-storage-config -s btrfs -d /dev/sdc1
 
-#echo "******************************************************************************"
-#echo "Enable experimental features." `date`
-#echo "******************************************************************************"
-#sed -i -e "s|OPTIONS='--selinux-enabled'|OPTIONS='--selinux-enabled --experimental=true'|g" /etc/sysconfig/docker
+# #echo "******************************************************************************"
+# #echo "Enable experimental features." `date`
+# #echo "******************************************************************************"
+# #sed -i -e "s|OPTIONS='--selinux-enabled'|OPTIONS='--selinux-enabled --experimental=true'|g" /etc/sysconfig/docker
 
 echo "******************************************************************************"
 echo "Enable Docker." `date`
@@ -82,7 +91,7 @@ echo "oracle:oracle" | chpasswd
 
 echo "docker_user  ALL=(ALL)  NOPASSWD: ALL" >> /etc/sudoers
 echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/bin/docker" >> /etc/sudoers
-#echo "alias docker=\"sudo /usr/bin/docker\"" >> /home/docker_user/.bash_profile
+echo "alias docker=\"sudo /usr/bin/docker\"" >> /home/docker_user/.bash_profile
 
 echo "******************************************************************************"
 echo "Configure docker-compose." `date`
@@ -97,14 +106,9 @@ echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/local/bin/docker-compose" >> /etc/s
 # create symbolic link in /usr/bin
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-echo "******************************************************************************"
-echo "Install lazydocker." `date`
-echo "******************************************************************************"
-curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
-
-echo "******************************************************************************"
-echo "Copy setup files to the local disks." `date`
-echo "******************************************************************************"
+# echo "******************************************************************************"
+# echo "Copy setup files to the local disks." `date`
+# echo "******************************************************************************"
 cp /vagrant/scripts/docker_user_setup.sh /home/docker_user/
 chown docker_user:docker_user /home/docker_user/docker_user_setup.sh
 chmod +x /home/docker_user/docker_user_setup.sh

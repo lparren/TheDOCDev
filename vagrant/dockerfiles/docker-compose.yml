@@ -69,9 +69,9 @@ services:
       - /u01/volumes/ora1930_oradata:/opt/oracle/oradata
 
   oas:
-    image: oracle/oas:5.9.0
+    image: oracle/oas:6.4.0
     build:
-      context: ./OracleAnalyticsServer/5.9.0
+      context: ./OracleAnalyticsServer/6.4.0
     stop_grace_period: 600s
     environment:
         BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930

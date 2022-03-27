@@ -11,6 +11,11 @@ perl -p -i.bak -e 's#__SUB__CWD__#'$(pwd)'#g' *.sql */*.sql */*.dat
 cd ~
 
 echo "******************************************************************************"
+echo "Install lazydocker." `date`
+echo "******************************************************************************"
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
+echo "******************************************************************************"
 echo "Install PyCharm"
 echo "******************************************************************************"
 wget -q https://download.jetbrains.com/python/pycharm-community-2021.1.tar.gz
@@ -30,7 +35,7 @@ echo "alias dbt=\"docker-compose --project-directory /u01/dockerfiles/ run dbt \
 echo "******************************************************************************"
 echo "Add lazydocker alias"
 echo "******************************************************************************"
-echo "alias lazydocker=\"sudo /usr/local/bin/lazydocker\"" >> /home/docker_user/.bash_profile
+echo "alias lazydocker=\"sudo /home/docker_user/lazydocker\"" >> /home/docker_user/.bash_profile
 
 echo "*******************************************************"
 echo "*** You need to copy all the software in place now! ***"

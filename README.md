@@ -96,13 +96,6 @@ oraclelinux       7-slim      fd78c5e25c7f   5 days ago       133MB
 oraclelinux       8-slim      a9c84545e7ad   5 days ago       110MB
 
 ```
-
-### Create the network and volume for the database and oas container
-```
-sudo docker network create --subnet=172.18.0.0/16 oracle_network
-sudo docker volume create --name ora1930_oradata --opt type=none --opt device=/u01/volumes/ora1930_oradata/ --opt o=bind
-```
-
 # You can start the containers individualy or though docker-compose
 ## Docker-compose
 docker-compose takes care of dependencies, networking, etc.
@@ -121,6 +114,11 @@ e33e3e25a4fe   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   22 hours a
 '''
 
 ## Individualy
+### Create the network and volume for the database and oas container
+```
+sudo docker network create --subnet=172.18.0.0/16 oracle_network
+sudo docker volume create --name ora1930_oradata --opt type=none --opt device=/u01/volumes/ora1930_oradata/ --opt o=bind
+```
 ### Start Oracle database container
 ```
  sudo docker run --name ora1930 \

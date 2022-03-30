@@ -106,12 +106,12 @@ Aliasses have been defined to make starting containers easier.
 - dcstop [oas|oradb|rstiudio]   - stop containers
 - dclog [oas|oradb|rstiudio]    - show container log
 
-'''
+```
 CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                 PORTS                                                                                  NAMES
 856984ddb35b   thedoc/rstudio:3.6.1        "/bin/sh -c 'rstudio…"   20 seconds ago   Up 18 seconds          0.0.0.0:8787->8787/tcp, :::8787->8787/tcp                                              dockerfiles_rstudio_1
 5855f82a2093   oracle/oas:6.4.0            "/bin/sh -c ${ORACLE…"   21 hours ago     Up 3 hours             0.0.0.0:9500-9514->9500-9514/tcp, :::9500-9514->9500-9514/tcp                          dockerfiles_oas_1
 e33e3e25a4fe   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   22 hours ago     Up 3 hours (healthy)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp, 0.0.0.0:5500->5500/tcp, :::5500->5500/tcp   dockerfiles_oradb_1
-'''
+```
 
 ## Individualy
 ### Create the network and volume for the database and oas container

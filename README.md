@@ -106,6 +106,8 @@ oraclelinux       8-slim      a9c84545e7ad   5 days ago       110MB
 docker-compose takes care of dependencies, networking, etc.
 Aliasses have been defined to make starting containers easier.
 
+On first run start dsup oreadb. When the mlogging shows DATABASE READY run dbup oas.
+
 - dcup [oas|oradb|rstiudio]     - create and start containers
 - dcstart [oas|oradb|rstiudio]  - start containers
 - dcstop [oas|oradb|rstiudio]   - stop containers

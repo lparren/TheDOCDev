@@ -60,6 +60,11 @@ for OAS 5.9.0
 
 - [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
+for OAS 6.4.0
+- jdk-8u281-linux-x64.rpm 
+- V1019848-01.zip
+- fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip
+
 for ORDS
 - [Java 11](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
 - [Tomcat 9.0.5](https://tomcat.apache.org/download-90.cgi)
@@ -78,7 +83,7 @@ for RStudio
 - ore-supporting-linux-x86-64-1.5.1.zip
 - rstudio-server-rhel-1.3.1093-x86_64.rpm
 
-With all software in place login to the virtual machine and start the build script (OAS 5.5.0 is disabled by default)
+With all software in place login to the virtual machine and start the build script (only OAS 6.4.0 is enabled by default)
 ```
 /vagrant/scripts/build.sh
 ```
@@ -100,6 +105,24 @@ sudo docker network create --subnet=172.18.0.0/16 oracle_network
 sudo docker volume create --name ora1930_oradata --opt type=none --opt device=/u01/volumes/ora1930_oradata/ --opt o=bind
 ```
 
+# You can start the containers individualy or though docker-compose
+## Docker-compose
+docker-compose takes care of dependencies, networking, etc.
+Aliasses have been defined to make starting containers easier.
+
+- dcup [oas|oradb|rstiudio] create and start containers
+- dcstart [oas|oradb|rstiudio] start containers
+- dcstop [oas|oradb|rstiudio] stop containers
+- dclogs [oas|oradb|rstiudio] show container log
+
+'''
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                 PORTS                                                                                  NAMES
+856984ddb35b   thedoc/rstudio:3.6.1        "/bin/sh -c 'rstudio…"   20 seconds ago   Up 18 seconds          0.0.0.0:8787->8787/tcp, :::8787->8787/tcp                                              dockerfiles_rstudio_1
+5855f82a2093   oracle/oas:6.4.0            "/bin/sh -c ${ORACLE…"   21 hours ago     Up 3 hours             0.0.0.0:9500-9514->9500-9514/tcp, :::9500-9514->9500-9514/tcp                          dockerfiles_oas_1
+e33e3e25a4fe   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   22 hours ago     Up 3 hours (healthy)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp, 0.0.0.0:5500->5500/tcp, :::5500->5500/tcp   dockerfiles_oradb_1
+'''
+
+## Individualy
 ### Start Oracle database container
 ```
  sudo docker run --name ora1930 \
@@ -163,3 +186,6 @@ docker run -ti --name dbt \
 
 docker logs -f dbt
 ```
+# Problems with stuck CPU's
+I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even thoud it was switched off).
+This fix worked for me: https://forums.virtualbox.org/viewtopic.php?f=25&t=97412

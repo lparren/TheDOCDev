@@ -56,10 +56,15 @@ for OAS 5.9.0
 - [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
 
-for OAS 6.4.0
-- jdk-8u281-linux-x64.rpm 
-- V1019848-01.zip
-- fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip
+for OAS 6.4.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
+- jdk-8u321-linux-x64.rpm
+- Oracle WebLogic Server 12c (12.2.1.4) Generic - Download the file "Fusion Middleware Infrastructure Installer (1.5 GB)"
+- Oracle_Analytics_Server_Linux_2022(6.4).zip (after downloading rename to Oracle_Analytics_Server_Linux_6.4.0.zip)
+- p28186730_139428_Generic.zip
+- p33618954_122140_Generic.zip
+- p33751264_122140_Generic.zip
+- p33735326_12214220105_Generic.zip
+- p33791665_12214220105_Generic.zip
 
 <!-- for ORDS
 - [Java 11](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
@@ -185,3 +190,8 @@ docker logs -f dbt
 # Problems with stuck CPU's
 I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even though it was switched off).
 This fix worked for me: https://forums.virtualbox.org/viewtopic.php?f=25&t=97412
+
+# Standing on the shoulders of giants
+Thank you very much:
+  Tim Hall (www.oracle-base.com)
+  Gianni Ceresa (https://gianniceresa.com/)

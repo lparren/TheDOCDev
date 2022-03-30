@@ -2,7 +2,7 @@
 
 #
 # File: _dropRCU.sh
-# Purpose: Drop the RCU schemas of OAS 5.5.0 in Docker container
+# Purpose: Drop the RCU schemas of OAS 5.9.0 in Docker container
 # Author: Gianni Ceresa (gianni.ceresa@datalysis.ch), February 2020
 # Absolutely no warranty, use at your own risk
 # Please include this header in any copy or reuse of the script you make

@@ -30,9 +30,14 @@ echo "**************************************************************************
 echo "Copy OracleAnalyticsServer 6.4.0 software." `date`
 echo "******************************************************************************"
 cd /u01/dockerfiles/OracleAnalyticsServer/6.4.0
-cp /vagrant/software/jdk-8u281-linux-x64.rpm .
-cp /vagrant/software/V1019848-01.zip .
+cp /vagrant/software/jdk-8u321-linux-x64.rpm .
 cp /vagrant/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip .
+cp /vagrant/software/Oracle_Analytics_Server_Linux_2022\(6.4\).zip ./Oracle_Analytics_Server_Linux_6.4.0.zip .
+cp /vagrant/software/p28186730_139428_Generic.zip .
+cp /vagrant/software/p33618954_122140_Generic.zip .
+cp /vagrant/software/p33751264_122140_Generic.zip .
+cp /vagrant/software/p33735326_12214220105_Generic.zip .
+cp /vagrant/software/p33791665_12214220105_Generic.zip .
 
 # echo "******************************************************************************"
 # echo "docker build OracleAnalyticsServer 6.4.0." `date`

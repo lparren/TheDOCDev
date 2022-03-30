@@ -4,14 +4,14 @@ This is the TheDOC Development and Testing environment in a Vagrant VM (using vi
 
 Vagrant is used to setup a Oracle Enterprise Linux 8 virtual machine with:
 - 4 cpu cores
-- 20 Gb of memory
+- 16 Gb of memory
 - 250 Gb of disk space (in total)
 - ssh forwatding (incl X11)
 - ports forwarded for several tools:
   - ssh
   - Oracle DB
   - Oracle Analytics Server
-  - Spark
+  <!-- - Spark -->
 
 ## Required Software
 
@@ -56,7 +56,7 @@ for OAS 5.9.0
 - [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
 
-for OAS 6.4.0
+<!-- for OAS 6.4.0
 - jdk-8u281-linux-x64.rpm 
 - V1019848-01.zip
 - fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip
@@ -66,7 +66,7 @@ for ORDS
 - [Tomcat 9.0.5](https://tomcat.apache.org/download-90.cgi)
 - [Oracle REST Data Services (ORDS) 21.x](http://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
 - [Oracle Application Express (APEX) 21.x - for images only](http://www.oracle.com/technetwork/developer-tools/apex/downloads/index.html)
-- [Oracle SQLcl 21.x](http://www.oracle.com/technetwork/developer-tools/sqlcl/downloads/index.html)
+- [Oracle SQLcl 21.x](http://www.oracle.com/technetwork/developer-tools/sqlcl/downloads/index.html) -->
 
 for RStudio
 - oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
@@ -183,5 +183,5 @@ docker run -ti --name dbt \
 docker logs -f dbt
 ```
 # Problems with stuck CPU's
-I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even thoud it was switched off).
+I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even though it was switched off).
 This fix worked for me: https://forums.virtualbox.org/viewtopic.php?f=25&t=97412

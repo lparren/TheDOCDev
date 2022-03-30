@@ -55,10 +55,6 @@ for OAS 5.9.0
 - [Patch 30657796](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 - [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
-for OAS 5.9.0
-- [jdk-8u281-linux-x64.rpm](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
-
-- [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
 for OAS 6.4.0
 - jdk-8u281-linux-x64.rpm 
@@ -92,11 +88,13 @@ after build there will be a database, OAS and RStudio image:
 ```
 [docker_user@localhost ~]$ docker images
 
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-thedoc/rstudio      3.6.1               dd70769d8638        17 minutes ago      2.15GB
-oracle/oas          5.9.0               201ec1e6fc1c        4 weeks ago         21.5GB
-oracle/database     19.3.0-ee           9b798901a56e        4 weeks ago         6.54GB
-oraclelinux         7-slim              dc7e50513559        6 weeks ago         132MB
+REPOSITORY        TAG         IMAGE ID       CREATED          SIZE
+thedoc/rstudio    3.6.1       0eabf923874f   59 minutes ago   2.27GB
+oracle/oas        6.4.0       9cd511707c74   23 hours ago     21.7GB
+oracle/database   19.3.0-ee   82faa400709a   24 hours ago     7.51GB
+oraclelinux       7-slim      fd78c5e25c7f   5 days ago       133MB
+oraclelinux       8-slim      a9c84545e7ad   5 days ago       110MB
+
 ```
 
 ### Create the network and volume for the database and oas container
@@ -110,10 +108,10 @@ sudo docker volume create --name ora1930_oradata --opt type=none --opt device=/u
 docker-compose takes care of dependencies, networking, etc.
 Aliasses have been defined to make starting containers easier.
 
-- dcup [oas|oradb|rstiudio] create and start containers
-- dcstart [oas|oradb|rstiudio] start containers
-- dcstop [oas|oradb|rstiudio] stop containers
-- dclogs [oas|oradb|rstiudio] show container log
+- dcup [oas|oradb|rstiudio]     - create and start containers
+- dcstart [oas|oradb|rstiudio]  - start containers
+- dcstop [oas|oradb|rstiudio]   - stop containers
+- dclog [oas|oradb|rstiudio]    - show container log
 
 '''
 CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                 PORTS                                                                                  NAMES

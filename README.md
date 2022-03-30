@@ -56,12 +56,12 @@ for OAS 5.9.0
 - [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
 
-<!-- for OAS 6.4.0
+for OAS 6.4.0
 - jdk-8u281-linux-x64.rpm 
 - V1019848-01.zip
 - fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip
 
-for ORDS
+<!-- for ORDS
 - [Java 11](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
 - [Tomcat 9.0.5](https://tomcat.apache.org/download-90.cgi)
 - [Oracle REST Data Services (ORDS) 21.x](http://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)

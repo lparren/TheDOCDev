@@ -35,7 +35,15 @@ Set the appropirate values in the .env file for the VM
 vagrant up
 ```
 
-You can log into the VM on ssh port 2222 (default port assigned by vagrant, when more vm's are active this can change) with users: docker or root (the password for all accounts is vagrant). X11 forwarding has been enabled in the vm and docker is sudo enabled.
+The following software will be installed automatically in user docker_user:
+- Oracle client (21c)
+- Visual code
+- Pycharm community edition
+- Anaconda
+- Jupyter
+
+
+You can log into the VM on ssh port 2222 (default port assigned by vagrant, when more vm's are active this can change) with users: docker_user, vagrant or root (the password for all accounts is vagrant or use the private_key which is created in folder ./TheDOCDev/vagrant/.vagrant/machines/default/virtualbox). X11 forwarding has been enabled in the vm and docker_user is sudo enabled.
 
 ### Oracle Software
 In addition you will need to download all the required software and put it into the "software" directory, so it can be copied into place and used during the builds. (Some downloads are used for more installs, you only need to download it once :-))
@@ -74,11 +82,6 @@ for OAS 6.4.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 - [Oracle SQLcl 21.x](http://www.oracle.com/technetwork/developer-tools/sqlcl/downloads/index.html) -->
 
 for RStudio
-- oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
-- oracle-instantclient-devel-21.1.0.0.0-1.x86_64.rpm
-- oracle-instantclient-jdbc-21.1.0.0.0-1.x86_64.rpm
-- oracle-instantclient-odbc-21.1.0.0.0-1.x86_64.rpm
-- oracle-instantclient-sqlplus-21.1.0.0.0-1.x86_64.rpm
 - ore-client-linux-x86-64-1.5.1.zip
 - ore-server-linux-x86-64-1.5.1.zip
 - ore-supporting-linux-x86-64-1.5.1.zip
@@ -97,7 +100,6 @@ REPOSITORY        TAG         IMAGE ID       CREATED          SIZE
 thedoc/rstudio    3.6.1       0eabf923874f   59 minutes ago   2.27GB
 oracle/oas        6.4.0       9cd511707c74   23 hours ago     21.7GB
 oracle/database   19.3.0-ee   82faa400709a   24 hours ago     7.51GB
-oraclelinux       7-slim      fd78c5e25c7f   5 days ago       133MB
 oraclelinux       8-slim      a9c84545e7ad   5 days ago       110MB
 
 ```
@@ -108,10 +110,10 @@ Aliasses have been defined to make starting containers easier.
 
 On first run start dsup oreadb. When the mlogging shows DATABASE READY run dbup oas.
 
-- dcup [oas|oradb|rstiudio]     - create and start containers
-- dcstart [oas|oradb|rstiudio]  - start containers
-- dcstop [oas|oradb|rstiudio]   - stop containers
-- dclog [oas|oradb|rstiudio]    - show container log
+- dcup [oas|oradb|rstudio]     - create and start containers
+- dcstart [oas|oradb|rstudio]  - start containers
+- dcstop [oas|oradb|rstudio]   - stop containers
+- dclog [oas|oradb|rstudio]    - show container log
 
 ```
 CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                 PORTS                                                                                  NAMES

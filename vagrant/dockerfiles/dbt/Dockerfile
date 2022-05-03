@@ -1,42 +1,57 @@
-FROM oraclelinux:8
+##
+# base image (abstract)
+##
+FROM oraclelinux:8 as base
 
-# Oracle Client version
-ARG release=19
-ARG update=3
+# N.B. The refs updated automagically every release via bumpversion
+# N.B. dbt-postgres is currently found in the core codebase so a value of dbt-core@<some_version> is correct
 
-ENV LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib/${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH} \
-    ORACLE_HOME=/usr/lib/oracle/21/client64  \
-    PATH=$PATH:$ORACLE_HOME/bin
+ENV dbt_core_ref=dbt-coree@v1.2.0a1 \
+    dbt_third_party=dbt-oracle
 
-RUN mkdir -p /opt/install && \
-    mkdir -p /usr/.dbt && \
-    chmod 777 /usr/.dbt
+# System setup
+RUN dnf update -y \
+  && dnf install oracle-instantclient-release-el8 \
+  && dnf install -y  git \
+    make \
+    openssh-clients \
+    python38 \
+    python38-libs \
+    python38-pip \
+    python38-setuptools \
+    oracle-instantclient-release-el8.x86_64 \
+    oracle-instantclient-basic.x86_64 \
+    oracle-instantclient-devel.x86_64 \
+    oracle-instantclient-jdbc.x86_64 \
+    oracle-instantclient-odbc.x86_64 \
+    oracle-instantclient-sqlplus.x86_64 \
+    oracle-instantclient-tools.x86_64 \
+    cx_oracle \
+  && rm -rf \
+    /tmp/* \
+    /var/tmp/*
 
-COPY python38.module /etc/dnf/modules.d/python38.module
-COPY oracle-instantclient* /opt/install/
+# Env vars
+ENV PYTHONIOENCODING=utf-8
+ENV LANG=C.UTF-8
 
-RUN yum install -y yum-utils && \
-    yum-config-manager --enable ol7_optional_latest && \
-    yum-config-manager --enable ol7_oracle_instantclient  && \
-    yum -y install oracle-instantclient${release}.${update}-basiclite
+# Update python
+RUN python3.8 --version
+RUN python3.8 -m pip install --upgrade pip setuptools wheel --no-cache-dir
 
-# Install python3.8
-RUN yum install -y python38 python38-libs python38-pip python38-setuptools && \
-    yum install -y unzip git bzip2 wget && \
-    yum clean all
+# Set docker basics
+WORKDIR /usr/app/dbt/
+VOLUME /usr/app
+ENTRYPOINT ["dbt"]
 
-#RUN yum localinstall -y /opt/install/oracle-instantclient*.rpm
+##
+# dbt-core
+##
+FROM base as dbt-core
+RUN python3.8 -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_core_ref}#egg=dbt-core&subdirectory=core"
 
-# Upgrade pip otherwise dbt install leads to error
-RUN pip3 install --upgrade pip setuptools wheel
-
-# Install dbt
-RUN pip3 install dbt==0.19.0 cx_Oracle dbt-oracle=0.4.0
-
-ENV WORKSPACE=/workspace
-
-# Set working directory
-WORKDIR $WORKSPACE
-
-# Make dbt an API
-CMD ["dbt"]
+##
+# dbt-third-party
+##
+FROM dbt-core as dbt-third-party
+RUN python3.8 -m pip install --no-cache-dir "${dbt_third_party}"

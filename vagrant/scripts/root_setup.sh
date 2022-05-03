@@ -46,6 +46,7 @@ chgrp -R condagrp /opt/miniconda
 chmod 770 -R /opt/miniconda
 ln -s /opt/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 
+
 echo "******************************************************************************"
 echo "Install Docker." `date`
 echo "******************************************************************************"

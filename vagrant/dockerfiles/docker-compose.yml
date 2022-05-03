@@ -1,54 +1,5 @@
 version: "3"
 services:
-  # spark:
-  #   image: gettyimages/spark
-  #   command: bin/spark-class org.apache.spark.deploy.master.Master -h master
-  #   depends_on: [spark_worker]
-  #   hostname: master
-  #   environment:
-  #     MASTER: spark://master:7077
-  #     SPARK_CONF_DIR: /conf
-  #     SPARK_PUBLIC_DNS: localhost
-  #   expose:
-  #     - 7001
-  #     - 7002
-  #     - 7003
-  #     - 7004
-  #     - 7005
-  #     - 7077
-  #     - 6066
-  #   ports:
-  #     - 4040:4040
-  #     - 6066:6066
-  #     - 7077:7077
-  #     - 8080:8080
-  #   volumes:
-  #     - ./spark/conf/master:/conf
-  #     - ./spark/data:/tmp/data
-
-  # spark_worker:
-  #   image: gettyimages/spark
-  #   command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
-  #   hostname: worker
-  #   environment:
-  #     SPARK_CONF_DIR: /conf
-  #     SPARK_WORKER_CORES: 2
-  #     SPARK_WORKER_MEMORY: 1g
-  #     SPARK_WORKER_PORT: 8881
-  #     SPARK_WORKER_WEBUI_PORT: 8081
-  #     SPARK_PUBLIC_DNS: localhost
-  #   expose:
-  #     - 7012
-  #     - 7013
-  #     - 7014
-  #     - 7015
-  #     - 8881
-  #   ports:
-  #     - 8081:8081
-  #   volumes:
-  #     - ./spark/conf/worker:/conf
-  #     - ./spark/data:/tmp/data
-
   oradb:
     image: oracle/database:19.3.0-ee
     build:
@@ -86,22 +37,6 @@ services:
 #    volumes:
 #      - ./oas59....
 
-  # ords:
-  #   image: thedoc/ords:21.2.0
-  #   build:
-  #     context: ./ORDS/
-  #   stop_grace_period: 15s
-  #   environment:
-  #     BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930
-  #     BI_CONFIG_RCU_PWD: oracle
-  #   depends_on: [oradb]
-  #   links:
-  #     - oradb
-  #   expose:
-  #     - 9500-9514
-  #   ports:
-  #     - 9500-9514:9500-9514
-
   rstudio:
     image: thedoc/rstudio:3.6.1
     build:
@@ -114,19 +49,11 @@ services:
     ports:
       - 8787:8787
 
-  # dbt:
-  #   image: thedoc/dbt:0.19.0
-  #   build:
-  #     context: ./dbt
-  #   depends_on: [oradb]
-  #   links:
-  #     - oradb
-
-  # # Portainer
-  # portainer:
-  #   image: portainer/portainer-ce
-  #   volumes:
-  #     - ./portainer_data:/data
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #   ports:
-  #     - "9001:9001"
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    expose:
+      - 8888
+    ports:
+      - 8888:8888
+    volumes:
+      - $HOME/jupyter:/home/jovyan/work

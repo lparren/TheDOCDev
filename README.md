@@ -195,6 +195,21 @@ docker logs -f dbt
 I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even though it was switched off).
 This fix worked for me: https://forums.virtualbox.org/viewtopic.php?f=25&t=97412
 
+
+# Problems with guest additions after upgrade
+Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not install the new version and this will lead to a mounting error during startup. I fixed it with these steps:
+  - vagrant up 
+  - connect wit ssh and execute the following command (substitute version with your current version)
+    sudo ln -s /opt/VBoxGuestAdditions-<version>/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
+  - reinstall the plugin
+    vagrant plugin install vagrant-vbguest
+  - Force reinstall of the geuest additions
+    vagrant vbguest --do install
+  - reload the virtual machine
+    vagrant reload
+
+  vagrant keeps report the old version during startup (6.1.32) while vagrant-vbguest reports the new one (7.0.2). Everything seems to work correctly though.
+
 # Standing on the shoulders of giants
 Thank you very much:
   Tim Hall (www.oracle-base.com)

@@ -6,12 +6,9 @@ FROM oraclelinux:8 as base
 # N.B. The refs updated automagically every release via bumpversion
 # N.B. dbt-postgres is currently found in the core codebase so a value of dbt-core@<some_version> is correct
 
-ENV dbt_core_ref=dbt-coree@v1.2.0a1 \
-    dbt_third_party=dbt-oracle
-
 # System setup
 RUN dnf update -y \
-  && dnf install oracle-instantclient-release-el8 \
+  && dnf install -y oracle-instantclient-release-el8 \
   && dnf install -y  git \
     make \
     openssh-clients \
@@ -25,11 +22,7 @@ RUN dnf update -y \
     oracle-instantclient-jdbc.x86_64 \
     oracle-instantclient-odbc.x86_64 \
     oracle-instantclient-sqlplus.x86_64 \
-    oracle-instantclient-tools.x86_64 \
-    cx_oracle \
-  && rm -rf \
-    /tmp/* \
-    /var/tmp/*
+    oracle-instantclient-tools.x86_64
 
 # Env vars
 ENV PYTHONIOENCODING=utf-8
@@ -42,16 +35,8 @@ RUN python3.8 -m pip install --upgrade pip setuptools wheel --no-cache-dir
 # Set docker basics
 WORKDIR /usr/app/dbt/
 VOLUME /usr/app
+
+RUN python3.8 -m pip install --no-cache-dir dbt-oracle 
+RUN python3.8 -m pip install --no-cache-dir dbtvault
+
 ENTRYPOINT ["dbt"]
-
-##
-# dbt-core
-##
-FROM base as dbt-core
-RUN python3.8 -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_core_ref}#egg=dbt-core&subdirectory=core"
-
-##
-# dbt-third-party
-##
-FROM dbt-core as dbt-third-party
-RUN python3.8 -m pip install --no-cache-dir "${dbt_third_party}"

@@ -28,19 +28,19 @@ cd /u01/db-sample-schemas
 perl -p -i.bak -e 's#__SUB__CWD__#'$(pwd)'#g' *.sql */*.sql */*.dat
 cd ~
 
-echo "******************************************************************************"
-echo "Install lazydocker." `date`
-echo "******************************************************************************"
-mkdir /home/docker_user/lazydocker
+# echo "******************************************************************************"
+# echo "Install lazydocker." `date`
+# echo "******************************************************************************"
+# mkdir /home/docker_user/lazydocker
 
-echo "******************************************************************************"
-echo "Install PyCharm" `date`
-echo "******************************************************************************"
-wget -q https://download.jetbrains.com/python/pycharm-community-2021.1.tar.gz
-tar -xvf pycharm-community-2021.1.tar.gz
-mv pycharm-community-2021.1/ pycharm-ce
-rm pycharm-community-2021.1.tar.gz
-cd ~
+# echo "******************************************************************************"
+# echo "Install PyCharm" `date`
+# echo "******************************************************************************"
+# wget -q https://download.jetbrains.com/python/pycharm-community-2021.1.tar.gz
+# tar -xvf pycharm-community-2021.1.tar.gz
+# mv pycharm-community-2021.1/ pycharm-ce
+# rm pycharm-community-2021.1.tar.gz
+# cd ~
 
 # echo "******************************************************************************"
 # echo "Install Jupyter" `date`
@@ -52,6 +52,11 @@ cd ~
 # conda install -y pip
 # conda update -y conda
 # conda init bash
+
+echo "******************************************************************************"
+echo "Create project folder" `date`
+echo "******************************************************************************"
+mkdir /home/docker_user/project
 
 echo "******************************************************************************"
 echo "Create aliasses" `date`

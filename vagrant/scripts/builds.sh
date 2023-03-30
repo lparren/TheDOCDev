@@ -37,18 +37,34 @@ sudo docker-compose --project-directory /u01/dockerfiles/ build --no-cache  --fo
 # cp /vagrant/software/p33735326_12214220105_Generic.zip .
 # cp /vagrant/software/p33791665_12214220105_Generic.zip .
 
-echo "******************************************************************************"
-echo "Copy OracleAnalyticsServer 7.0.0 software." `date`
-echo "******************************************************************************"
-cd /u01/dockerfiles/OracleAnalyticsServer/7.0.0
-cp /vagrant/software/jdk-8u321-linux-x64.rpm .
-cp /vagrant/software/V983368-01.zip .
-cp /vagrant/software/V1034351-01.zip .
-
 # echo "******************************************************************************"
 # echo "docker build OracleAnalyticsServer 6.4.0." `date`
 # echo "******************************************************************************"
 # sudo docker-compose --project-directory /u01/dockerfiles/ build --no-cache  --force-rm oas
+
+
+echo "******************************************************************************"
+echo "Copy OracleAnalyticsServer 7.0.0 software." `date`
+echo "******************************************************************************"
+cd /u01/dockerfiles/OracleAnalyticsServer/7.0.0
+cp /vagrant/software/jdk-8u361-linux-x64.rpm .
+cp /vagrant/software/Oracle_Analytics_Server_Linux_7.0.0.zip .
+cp /vagrant/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip .
+cp /vagrant/software/p28186730_1394211_Generic.zip .
+cp /vagrant/software/p34065178_122140_Generic.zip .
+cp /vagrant/software/p34974729_122140_Generic.zip .
+cp /vagrant/software/p34839859_122140_Generic.zip .
+cp /vagrant/software/p34542329_122140_Generic.zip .
+cp /vagrant/software/p34944256_122140_Generic.zip .
+cp /vagrant/software/p33950717_122140_Generic.zip .
+cp /vagrant/software/p34549208_122140_Generic.zip .
+
+# echo "******************************************************************************"
+# echo "docker build OracleAnalyticsServer 7.0.0." `date`
+# echo "******************************************************************************"
+# sudo docker-compose --project-directory /u01/dockerfiles/ build --no-cache  --force-rm oas
+
+
 
 # echo "******************************************************************************"
 # echo "Copy RStudio software." `date`

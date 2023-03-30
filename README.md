@@ -111,17 +111,17 @@ after build there will be a database, OAS and RStudio image:
 
 REPOSITORY        TAG         IMAGE ID       CREATED          SIZE
 thedoc/rstudio    3.6.1       0eabf923874f   59 minutes ago   2.27GB
-oracle/oas        6.4.0       9cd511707c74   23 hours ago     21.7GB
+oracle/oas        7.0.0       9cd511707c74   23 hours ago     28.7GB
 oracle/database   19.3.0-ee   82faa400709a   24 hours ago     7.51GB
 oraclelinux       8-slim      a9c84545e7ad   5 days ago       110MB
 
 ```
-# You can start the containers individualy or though docker-compose
+# You can start the containers individualy or through docker-compose
 ## Docker-compose
 docker-compose takes care of dependencies, networking, etc.
 Aliasses have been defined to make starting containers easier.
 
-On first run start dsup oreadb. When the mlogging shows DATABASE READY run dbup oas.
+On first run start dsup oreadb. When the logging shows DATABASE READY run dbup oas.
 
 - dcup [oas|oradb|rstudio]     - create and start containers
 - dcstart [oas|oradb|rstudio]  - start containers
@@ -233,5 +233,5 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
 
 # Standing on the shoulders of giants
 Thank you very much:
-  Tim Hall (www.oracle-base.com)
+  Tim Hall (https://www.oracle-base.com)
   Gianni Ceresa (https://gianniceresa.com/)

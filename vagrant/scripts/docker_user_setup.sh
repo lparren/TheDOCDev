@@ -71,8 +71,8 @@ echo "alias dclog=\"docker-compose --project-directory /u01/dockerfiles/ logs -f
 echo "alias dbt=\"docker-compose --project-directory /u01/dockerfiles/ run dbt \"" >> /home/docker_user/.bash_profile
 echo "alias lzd=\"docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /home/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker\"" >> /home/docker_user/.bash_profile
 #
-echo "alias mlt=\'docker run --rm -it -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \'" >> /home/docker_user/.bash_profile
-echo "alias mltui=\'docker run --rm -d -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \'" >> /home/docker_user/.bash_profile
+echo "alias mlt=\"docker run --rm -it -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \"" >> /home/docker_user/.bash_profile
+echo "alias mltui=\"docker run --rm -d -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \"" >> /home/docker_user/.bash_profile
 
 echo "*******************************************************"
 echo "*** You need to copy all the software in place now! ***"

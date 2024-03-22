@@ -38,9 +38,18 @@ vagrant up
 The following software will be installed automatically in user docker_user:
 - Oracle client (21c)
 - Visual code
-- Pycharm community edition
+- Oracle SQL Developer Extension for VSCode
+<!-- - Pycharm community edition -->
 - Anaconda
-- Jupyter
+<!-- - Jupyter -->
+
+The folder dockerfiles is copied into the VM  to folder /u01. there a re subfolders
+  - meltano
+    testing the [Meltano](https://meltano.com/) application 
+  - oracle
+    Containers for Oracle database and Analytics Server
+  - postgres
+    Testing postgres and dbt
 
 
 You can log into the VM on ssh port 2222 (default port assigned by vagrant, when more vm's are active this can change) with users: docker_user, vagrant or root (the password for all accounts is vagrant or use the private_key which is created in folder ./TheDOCDev/vagrant/.vagrant/machines/default/virtualbox). X11 forwarding has been enabled in the vm and docker_user is sudo enabled.
@@ -75,17 +84,29 @@ for OAS 6.4.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 - p33791665_12214220105_Generic.zip
 
 for OAS 7.0.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
-- jdk-8u361-linux-x64.rpm (https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
-- Oracle WebLogic Server 12c (12.2.1.4) Generic - Download the file "Fusion Middleware Infrastructure Installer (1.5 GB)"
-- Oracle_Analytics_Server_Linux_7.0.0.zip (after downloading rename to Oracle_Analytics_Server_Linux_7.0.0.zip)
-- p28186730_1394211_Generic.zip
-- p34065178_122140_Generic.zip 
-- p34974729_122140_Generic.zip 
-- p34839859_122140_Generic.zip 
-- p34542329_122140_Generic.zip 
-- p34944256_122140_Generic.zip 
-- p33950717_122140_Generic.zip 
-- p34549208_122140_Generic.zip 
+- [Java SE Development Kit 8u](https://www.oracle.com/java/technologies/downloads/?#java8)
+- [Oracle WebLogic Server 12.2.1.4 Fusion Middleware Infrastructure Installer](https://download.oracle.com/otn/nt/middleware/12c/122140/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip?)
+- [Oracle Analytics Server 2023 Update Installer](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html?)
+- [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730&amp;)
+- [Patch 34974729](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34974729&amp;)
+- [Patch 34839859](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34839859&amp;)
+- [Patch 34542329](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34542329&amp;)
+- [Patch 34944256](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34944256&amp;)
+- [Patch 33950717](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=33950717&amp;)
+- [Patch 34549208](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34549208&amp;)
+
+for OAS 7.6.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
+- [jdk-8u401-linux-x64.rpm ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+- [Oracle WebLogic Server 12.2.1.4 Fusion Middleware Infrastructure Installer](https://download.oracle.com/otn/nt/middleware/12c/122140/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip?)
+- [Oracle Analytics Server 2024 Linux](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
+- [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730&amp;)
+- [Patch 34974729](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34974729&amp;)
+- [Patch 34839859](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34839859&amp;)
+- [Patch 34542329](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34542329&amp;)
+- [Patch 34944256](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34944256&amp;)
+- [Patch 33950717](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=33950717&amp;)
+- [Patch 34549208](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34549208&amp;)
+<!--- [Patch 35024228](https://support.oracle.com/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=35024228&amp;)-->
 
 <!-- for ORDS
 - [Java 11](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
@@ -100,39 +121,49 @@ for RStudio
 - ore-supporting-linux-x86-64-1.5.1.zip
 - rstudio-server-rhel-1.3.1093-x86_64.rpm
 
-With all software in place login to the virtual machine and start the build script (only OAS 7.0.0 is enabled by default)
+With all software in place login to the virtual machine and start the build script (only OAS 7.6.0 is enabled by default)
 ```
 /vagrant/scripts/build.sh
 ```
-after build there will be a database, OAS and RStudio image:
+after build there will be a database, OAS image:
 
 ```
 [docker_user@localhost ~]$ docker images
 
-REPOSITORY        TAG         IMAGE ID       CREATED          SIZE
-thedoc/rstudio    3.6.1       0eabf923874f   59 minutes ago   2.27GB
-oracle/oas        7.0.0       9cd511707c74   23 hours ago     28.7GB
-oracle/database   19.3.0-ee   82faa400709a   24 hours ago     7.51GB
-oraclelinux       8-slim      a9c84545e7ad   5 days ago       110MB
-
+REPOSITORY            TAG         IMAGE ID       CREATED          SIZE
+oracle/oas            7.6.0       1d699499db62   15 minutes ago   29.3GB
+oracle/database       19.3.0-ee   08351437f741   2 hours ago      7.61GB
+oraclelinux           8-slim      656791178b56   13 days ago      116MB
+lazyteam/lazydocker   latest      6518a6686572   22 months ago    55.7MB
 ```
-# You can start the containers individualy or through docker-compose
-## Docker-compose
-docker-compose takes care of dependencies, networking, etc.
+
+# You can start the containers individualy or through docker compose
+## Docker compose
+docker compose takes care of dependencies, networking, etc.
 Aliasses have been defined to make starting containers easier.
 
-On first run start dsup oreadb. When the logging shows DATABASE READY run dbup oas.
+Aliasses:
+  - lzd:    [lazydocker](https://github.com/jesseduffield/lazydocker/tree/master) - A simple terminal UI for both docker and docker-compose, written in Go with the gocui library.
+  - mlt:    Start meltano docker container interactive
+  - mltui:  Start meltano docker container in the backgroup
+  - oracle
+    - orastart: [oradb|oas|23cfree|dbt] Starts a container: database, Analytics server, 23cfree database or dbt (oas uses a oradb 19.3 instance) 
+    - orastop:  [oradb|oas|23cfree|dbt] Stops a container 
+    - oaup:     [oradb|oas|23cfree|dbt] Creates a container instance from an image
+    - oralog:   [oradb|oas|23cfree|dbt] Shows the logging for a container
+  - Postgresql
+    - pgstart:  [db|pgadmin|dbt] Start postgresql container: db is the database, pgadmin: the postgres admintool, dbt  
+    - pgstop:   [db|pgadmin|dbt] Stops the container  
+    - pgup:     [db|pgadmin|dbt] Creates a container instance from an image
+    - pglog:    [db|pgadmin|dbt] Shows the logging for a container
 
-- dcup [oas|oradb|rstudio]     - create and start containers
-- dcstart [oas|oradb|rstudio]  - start containers
-- dcstop [oas|oradb|rstudio]   - stop containers
-- dclog [oas|oradb|rstudio]    - show container log
+### First run
+On first run start oraup oreadb. When the logging shows DATABASE READY run oraup oas.
 
 ```
-CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                 PORTS                                                                                  NAMES
-856984ddb35b   thedoc/rstudio:3.6.1        "/bin/sh -c 'rstudio…"   20 seconds ago   Up 18 seconds          0.0.0.0:8787->8787/tcp, :::8787->8787/tcp                                              dockerfiles_rstudio_1
-5855f82a2093   oracle/oas:7.0.0            "/bin/sh -c ${ORACLE…"   21 hours ago     Up 3 hours             0.0.0.0:9500-9514->9500-9514/tcp, :::9500-9514->9500-9514/tcp                          dockerfiles_oas_1
-e33e3e25a4fe   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   22 hours ago     Up 3 hours (healthy)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp, 0.0.0.0:5500->5500/tcp, :::5500->5500/tcp   dockerfiles_oradb_1
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS                       PORTS                                                                                  NAMES
+1fd5d829e65b   oracle/oas:7.6.0            "/bin/sh -c ${ORACLE…"   34 minutes ago      Up 34 minutes                0/tcp, 0.0.0.0:9500-9514->9500-9514/tcp, :::9500-9514->9500-9514/tcp                   oracle-oas-1
+827582584ee2   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   About an hour ago   Up About an hour (healthy)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp, 0.0.0.0:5500->5500/tcp, :::5500->5500/tcp   oracle-oradb-1
 ```
 
 ## Individualy

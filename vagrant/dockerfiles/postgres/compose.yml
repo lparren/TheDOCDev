@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    container_name: local_pgdb
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: me@here.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on: [db]
+    links:
+      - db
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.7.2
+    volumes:
+      - ./usr/test:/usr/app/dbt
+      - ./usr/test/profiles:/root/.dbt   
+    ports:
+      - "8080:8080"      
+
+volumes:
+  local_pgdata:
+  pgadmin-data:

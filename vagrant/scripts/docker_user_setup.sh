@@ -18,20 +18,22 @@ echo "export LD_LIBRARY_PATH=$CLIENT_HOME/lib" >> /home/docker_user/.bash_profil
 echo "export PATH=$PATH:$CLIENT_HOME/bin" >> /home/docker_user/.bash_profile
 
 echo "******************************************************************************"
-echo "Clone db-sample-schemas." `date`
+echo "Copy dockerfiles form host." `date`
 echo "******************************************************************************"
-# Clone the latest Git repository. Use SSH so no password.
 cd /u01
 cp -r /vagrant/dockerfiles /u01
-git clone https://github.com/oracle/db-sample-schemas.git
-cd /u01/db-sample-schemas
-perl -p -i.bak -e 's#__SUB__CWD__#'$(pwd)'#g' *.sql */*.sql */*.dat
-cd ~
 
-# echo "******************************************************************************"
-# echo "Install lazydocker." `date`
-# echo "******************************************************************************"
-# mkdir /home/docker_user/lazydocker
+echo "******************************************************************************"
+echo "Install VSCode sql-developer and postgres extension" `date`
+echo "******************************************************************************"
+
+code --install-extension Oracle.sql-developer
+code --install-extension ckolkman.vscode-postgres
+
+echo "******************************************************************************"
+echo "Install lazydocker." `date`
+echo "******************************************************************************"
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
 # echo "******************************************************************************"
 # echo "Install PyCharm" `date`
@@ -61,16 +63,26 @@ mkdir /home/docker_user/project
 echo "******************************************************************************"
 echo "Create aliasses" `date`
 echo "******************************************************************************"
-echo "alias jupyter=\"jupyter notebook &\"" >> /home/docker_user/.bash_profile
+# echo "alias jupyter=\"jupyter notebook &\"" >> /home/docker_user/.bash_profile
 echo "alias chrome=\"google-chrome &\"" >> /home/docker_user/.bash_profile
-echo "alias pycharm=\"~/pycharm-ce/bin/pycharm.sh &\"" >> /home/docker_user/.bash_profile
-echo "alias dcup=\"docker-compose --project-directory /u01/dockerfiles/  up --detach \"" >> /home/docker_user/.bash_profile
-echo "alias dcstart=\"docker-compose --project-directory /u01/dockerfiles/ start \"" >> /home/docker_user/.bash_profile
-echo "alias dcstop=\"docker-compose --project-directory /u01/dockerfiles/ stop \"" >> /home/docker_user/.bash_profile
-echo "alias dclog=\"docker-compose --project-directory /u01/dockerfiles/ logs -f \"" >> /home/docker_user/.bash_profile
-echo "alias dbt=\"docker-compose --project-directory /u01/dockerfiles/ run dbt \"" >> /home/docker_user/.bash_profile
-echo "alias lzd=\"docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /home/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker\"" >> /home/docker_user/.bash_profile
-#
+# echo "alias pycharm=\"~/pycharm-ce/bin/pycharm.sh &\"" >> /home/docker_user/.bash_profile
+echo "# Oracle aliasses" >> /home/docker_user/.bash_profile
+echo "alias oraup=\"docker compose --project-directory /u01/dockerfiles/oracle/  up --detach \"" >> /home/docker_user/.bash_profile
+echo "alias orastart=\"docker compose --project-directory /u01/dockerfiles/oracle/ start \"" >> /home/docker_user/.bash_profile
+echo "alias orastop=\"docker compose --project-directory /u01/dockerfiles/oracle/ stop \"" >> /home/docker_user/.bash_profile
+echo "alias oralog=\"docker compose --project-directory /u01/dockerfiles/oracle/ logs -f \"" >> /home/docker_user/.bash_profile
+# 
+echo "# Postgres aliasses" >> /home/docker_user/.bash_profile
+echo "alias pgup=\"docker compose --project-directory /u01/dockerfiles/postgres/  up --detach \"" >> /home/docker_user/.bash_profile
+echo "alias pgstart=\"docker compose --project-directory /u01/dockerfiles/postgres/ start \"" >> /home/docker_user/.bash_profile
+echo "alias pgstop=\"docker compose --project-directory /u01/dockerfiles/postgres/ stop \"" >> /home/docker_user/.bash_profile
+echo "alias pglog=\"docker compose --project-directory /u01/dockerfiles/postgres/ logs -f \"" >> /home/docker_user/.bash_profile
+
+echo "# Lazydocker aliasses" >> /home/docker_user/.bash_profile
+#echo "alias lzd=\"docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /home/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker\"" >> /home/docker_user/.bash_profile
+echo "alias lzd=\"lazydocker\"" >> /home/docker_user/.bash_profile
+
+echo "#" >> /home/docker_user/.bash_profile
 echo "alias mlt=\"docker run --rm -it -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \"" >> /home/docker_user/.bash_profile
 echo "alias mltui=\"docker run --rm -d -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \"" >> /home/docker_user/.bash_profile
 

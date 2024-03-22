@@ -50,12 +50,12 @@ ENV ORACLE_BASE=/opt/oracle \
     CHECK_SPACE_FILE="checkSpace.sh" \
     CHECK_DB_FILE="checkDBStatus.sh" \
     USER_SCRIPTS_FILE="runUserScripts.sh" \
-	  INSTALL_ORE="installORE.sh" \
+	INSTALL_ORE="installORE.sh" \
     INSTALL_DB_BINARIES_FILE="installDBBinaries.sh" \
-	  INSTALL_SAMPLE_SCHEMAS="installSampleSchemas.sh" \
-	  SAMPLE_SCHEMAS="db-sample-schemas-master.zip" \
+	INSTALL_SAMPLE_SCHEMAS="installSampleSchemas.sh" \
+	SAMPLE_SCHEMAS="db-sample-schemas-master.zip" \
     ORE_SERVER="ore-server-linux-x86-64-1.5.1.zip" \
-	  ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip"
+	ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip"
 
 # Use second ENV so that variable get substituted
 ENV PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH \
@@ -70,7 +70,7 @@ COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE 
 RUN yum install -y yum-utils zip unzip dos2unix && \
     yum-config-manager --enable ol7_optional_latest && \
     yum-config-manager --enable ol7_addons  && \
-	  yum install -y cairo-devel libpng-devel R
+	yum install -y cairo-devel libpng-devel R
 
 RUN chmod ug+x $INSTALL_DIR/*.sh && \
     sync && \
@@ -121,7 +121,7 @@ USER oracle
 WORKDIR /home/oracle
 
 HEALTHCHECK --interval=1m --start-period=5m \
-   CMD "$ORACLE_BASE/$CHECK_DB_FILE" >/dev/null || exit 1
+    CMD "$ORACLE_BASE/$CHECK_DB_FILE" >/dev/null || exit 1
 
 # Define default command to start Oracle Database.
 CMD exec $ORACLE_BASE/$RUN_FILE

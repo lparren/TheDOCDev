@@ -1,0 +1,109 @@
+[0m14:36:55.245058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3402f23bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3400c51f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3400c51ed0>]}
+
+
+============================== 14:36:55.250859 | ac66e11e-304c-4eae-8d00-c04e4cebe5e8 ==============================
+[0m14:36:55.250859 [info ] [MainThread]: Running with dbt=1.7.2
+[0m14:36:55.251390 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m14:36:55.252377 [info ] [MainThread]: dbt version: 1.7.2
+[0m14:36:55.253036 [info ] [MainThread]: python version: 3.10.7
+[0m14:36:55.253866 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m14:36:55.254502 [info ] [MainThread]: os info: Linux-5.15.0-200.131.27.el8uek.x86_64-x86_64-with-glibc2.31
+[0m14:36:55.258484 [info ] [MainThread]: Using profiles dir at /root/.dbt
+[0m14:36:55.259025 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m14:36:55.259804 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m14:36:55.356203 [info ] [MainThread]: Configuration:
+[0m14:36:55.356836 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m14:36:55.357459 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:36:55.358072 [info ] [MainThread]: Required dependencies:
+[0m14:36:55.358715 [debug] [MainThread]: Executing "git --help"
+[0m14:36:55.361043 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:36:55.361620 [debug] [MainThread]: STDERR: "b''"
+[0m14:36:55.362154 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:36:55.362542 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m14:36:55.363357 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:36:55.363903 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Could not find profile named 'dbt'
+
+
+[0m14:36:55.365507 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.1718844, "process_user_time": 2.336238, "process_kernel_time": 0.115396, "process_mem_max_rss": "92972", "process_out_blocks": "624", "command_success": false, "process_in_blocks": "0"}
+[0m14:36:55.366681 [debug] [MainThread]: Command `dbt debug` failed at 14:36:55.366482 after 0.17 seconds
+[0m14:36:55.367249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3402f23bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3400bfaa70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3400bf8ee0>]}
+[0m14:36:55.367667 [debug] [MainThread]: Flushing usage events
+[0m12:12:39.135103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ff6b9fb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ff4a34a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ff4a34970>]}
+
+
+============================== 12:12:39.172594 | 64b0df21-6e28-41aa-9f16-1b0739787a3c ==============================
+[0m12:12:39.172594 [info ] [MainThread]: Running with dbt=1.7.2
+[0m12:12:39.173316 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt -rm debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:12:39.174315 [info ] [MainThread]: dbt version: 1.7.2
+[0m12:12:39.175261 [info ] [MainThread]: python version: 3.10.7
+[0m12:12:39.176194 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m12:12:39.177030 [info ] [MainThread]: os info: Linux-5.15.0-200.131.27.el8uek.x86_64-x86_64-with-glibc2.31
+[0m12:12:39.177822 [info ] [MainThread]: Using profiles dir at /root/.dbt
+[0m12:12:39.178436 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m12:12:39.179213 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt/dbt_project.yml
+[0m12:12:39.180161 [info ] [MainThread]: Configuration:
+[0m12:12:39.180948 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m12:12:39.181909 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:12:39.182909 [info ] [MainThread]: Required dependencies:
+[0m12:12:39.183992 [debug] [MainThread]: Executing "git --help"
+[0m12:12:39.188150 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:12:39.189061 [debug] [MainThread]: STDERR: "b''"
+[0m12:12:39.189770 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:12:39.190409 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m12:12:39.191678 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:12:39.192408 [info ] [MainThread]: dbt looked for a profiles.yml file in /root/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m12:12:39.193152 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </usr/app/dbt/dbt_project.yml> not found
+
+[0m12:12:39.194850 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.062764734, "process_user_time": 2.272501, "process_kernel_time": 0.112503, "process_mem_max_rss": "92036", "process_in_blocks": "8", "process_out_blocks": "624", "command_success": false}
+[0m12:12:39.195799 [debug] [MainThread]: Command `dbt debug` failed at 12:12:39.195578 after 0.06 seconds
+[0m12:12:39.213357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ff6b9fb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ff8e03010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0ff48aeb60>]}
+[0m12:12:39.213876 [debug] [MainThread]: Flushing usage events
+[0m12:33:34.017354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbde3907be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbde1754a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbde1754970>]}
+
+
+============================== 12:33:34.023209 | 4e356f22-2864-4672-8b96-6d9b2ec927cf ==============================
+[0m12:33:34.023209 [info ] [MainThread]: Running with dbt=1.7.2
+[0m12:33:34.023874 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:33:34.024592 [info ] [MainThread]: dbt version: 1.7.2
+[0m12:33:34.025191 [info ] [MainThread]: python version: 3.10.7
+[0m12:33:34.025976 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m12:33:34.026425 [info ] [MainThread]: os info: Linux-5.15.0-200.131.27.el8uek.x86_64-x86_64-with-glibc2.31
+[0m12:33:34.027199 [info ] [MainThread]: Using profiles dir at /root/.dbt
+[0m12:33:34.027637 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m12:33:34.028361 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt/dbt_project.yml
+[0m12:33:34.028907 [info ] [MainThread]: Configuration:
+[0m12:33:34.029740 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m12:33:34.030276 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:33:34.031121 [info ] [MainThread]: Required dependencies:
+[0m12:33:34.031595 [debug] [MainThread]: Executing "git --help"
+[0m12:33:34.035086 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:33:34.036059 [debug] [MainThread]: STDERR: "b''"
+[0m12:33:34.036591 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:33:34.037081 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m12:33:34.037707 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:33:34.038177 [info ] [MainThread]: dbt looked for a profiles.yml file in /root/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m12:33:34.038870 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </usr/app/dbt/dbt_project.yml> not found
+
+[0m12:33:34.040249 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.025385868, "process_user_time": 2.234364, "process_kernel_time": 0.132566, "process_mem_max_rss": "92300", "process_out_blocks": "632", "command_success": false, "process_in_blocks": "0"}
+[0m12:33:34.040959 [debug] [MainThread]: Command `dbt debug` failed at 12:33:34.040800 after 0.03 seconds
+[0m12:33:34.041322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbde3907be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbde5c1fc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbde15ced70>]}
+[0m12:33:34.041719 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,97 @@
+services:
+  oradb:
+    image: oracle/database:19.3.0-ee
+    build:
+      context: ./OracleDatabase/19.3.0
+      args:
+        DB_EDITION: ee
+    environment:
+      ORACLE_SID: db1930
+      ORACLE_PDB: pdb1930
+      ORACLE_PWD: oracle
+    expose:
+      - 1521
+      - 5500
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - /u01/volumes/ora1930_oradata:/opt/oracle/oradata
+
+  23cfree:
+    image: container-registry.oracle.com/database/free:latest
+    environment:
+      # ORACLE_SID: db1930
+      # ORACLE_PDB: pdb1930
+      ORACLE_PWD: oracle
+    expose:
+      - 8521
+      - 8500
+    ports:
+      - 8521:1521
+      - 8500:5500
+    # volumes:
+    #   - /u01/volumes/ora1930_oradata:/opt/oracle/oradata
+  
+  oas:
+    image: oracle/oas:7.6.0
+    build:
+      context: ./OracleAnalyticsServer/7.6.0
+    stop_grace_period: 600s
+    environment:
+      BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930
+      BI_CONFIG_RCU_PWD: oracle
+    depends_on: [oradb]
+    links:
+      - oradb
+    expose:
+      - 9500-9514
+    ports:
+      - 9500-9514:9500-9514
+#    volumes:
+#      - ./oas59....
+
+  dbt:
+    image: thedoc/dbt:1.6.5 
+    build:
+      context: ./dbt
+    environment:
+      ORA_PYTHON_DRIVER_TYPE: thin
+      DBT_ORACLE_USER: hr
+      DBT_ORACLE_PASSWORD: hr
+      DBT_ORACLE_SCHEMA: hr
+      DBT_ORACLE_HOST: 127.0.0.1
+      DBT_ORACLE_SERVICE: pdb1930
+      DBT_ORACLE_DATABASE: pdb1930
+      DBT_ORACLE_TNS_NAME: localhost:1521/pdb1930     
+    depends_on: [oradb]
+    links:
+      - oradb
+    expose:
+      - 1521
+    ports:
+      - 1521:1521     
+    # volumes:
+    #   - /home/docker_user/project/dbt/test:/usr/app 
+    #   - /home/docker_user/project/dbt/test/profiles.yml:/root/.dbt/profiles.yml
+    
+  # rstudio:
+  #   image: thedoc/rstudio:3.6.1
+  #   build:
+  #     context: ./Rstudio
+  #   depends_on: [oradb]
+  #   links:
+  #     - oradb
+  #   expose:
+  #     - 8787
+  #   ports:
+  #     - 8787:8787
+
+  # jupyter:
+  #   image: jupyter/datascience-notebook:latest
+  #   expose:
+  #     - 8888
+  #   ports:
+  #     - 8888:8888
+  #   volumes:
+  #     - $HOME/jupyter:/home/jovyan/work

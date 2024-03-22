@@ -1,0 +1,49 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    container_name: local_pgdb
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: me@here.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on: [db]
+    links:
+      - db
+  meltano:
+    image: meltano/meltano
+    build:
+      context: ./meltano
+      args:
+        USER_ID: 1001
+        GROUP_ID: 1043
+        PYTHON_VERSION: 3.8
+        # MELTANO_VERSION: latest
+    # user: docker_user
+    working_dir: /projects/mytest
+    volumes:
+      - ./meltano-projects:/projects
+    ports:
+      - "5000:5000"      
+    depends_on: [db]
+    links:
+      - db    
+
+volumes:
+  local_pgdata:
+  pgadmin-data:

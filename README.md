@@ -99,27 +99,22 @@ for OAS 7.6.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 - [jdk-8u401-linux-x64.rpm ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 - [Oracle WebLogic Server 12.2.1.4 Fusion Middleware Infrastructure Installer](https://download.oracle.com/otn/nt/middleware/12c/122140/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip?)
 - [Oracle Analytics Server 2024 Linux](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
+- [Patch 34065178](https://support.oracle.com/epmos/faces/PatchDetail?patchId=34065178&amp;)
 - [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730&amp;)
-- [Patch 34974729](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34974729&amp;)
-- [Patch 34839859](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34839859&amp;)
-- [Patch 34542329](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34542329&amp;)
-- [Patch 34944256](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34944256&amp;)
-- [Patch 33950717](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=33950717&amp;)
-- [Patch 34549208](https://support.oracle.com/epmos/faces/PatchDetail?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=34549208&amp;)
+- [Patch 36485713](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36485713&amp;)
+- [Patch 36402397](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36402397&amp;)
+- [Patch 34542329](https://support.oracle.com/epmos/faces/PatchDetail?patchId=34542329&amp;)
+- [Patch 36348444](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36348444&amp;)
+- [Patch 36316422](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36316422&amp;)
+- [Patch 36349529](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36349529&amp;)
 <!--- [Patch 35024228](https://support.oracle.com/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=35024228&amp;)-->
 
-<!-- for ORDS
-- [Java 11](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
-- [Tomcat 9.0.5](https://tomcat.apache.org/download-90.cgi)
-- [Oracle REST Data Services (ORDS) 21.x](http://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
-- [Oracle Application Express (APEX) 21.x - for images only](http://www.oracle.com/technetwork/developer-tools/apex/downloads/index.html)
-- [Oracle SQLcl 21.x](http://www.oracle.com/technetwork/developer-tools/sqlcl/downloads/index.html) -->
-
-for RStudio
-- ore-client-linux-x86-64-1.5.1.zip
-- ore-server-linux-x86-64-1.5.1.zip
-- ore-supporting-linux-x86-64-1.5.1.zip
-- rstudio-server-rhel-1.3.1093-x86_64.rpm
+for ORDS
+- [Java 11 (11.0.23_9)](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
+- [Tomcat 9.0.90](https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90.tar.gz)
+- [Oracle REST Data Services (ORDS) latest](https://download.oracle.com/otn_software/java/ords/ords-latest.zip)
+- [Oracle Application Express (APEX) latest](https://download.oracle.com/otn_software/apex/apex-latest.zip)
+- [Oracle SQLcl latest](https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip)
 
 With all software in place login to the virtual machine and start the build script (only OAS 7.6.0 is enabled by default)
 ```
@@ -166,75 +161,6 @@ CONTAINER ID   IMAGE                       COMMAND                  CREATED     
 827582584ee2   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   About an hour ago   Up About an hour (healthy)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp, 0.0.0.0:5500->5500/tcp, :::5500->5500/tcp   oracle-oradb-1
 ```
 
-## Individualy
-### Create the network and volume for the database and oas container
-```
-sudo docker network create --subnet=172.18.0.0/16 oracle_network
-sudo docker volume create --name ora1930_oradata --opt type=none --opt device=/u01/volumes/ora1930_oradata/ --opt o=bind
-```
-### Start Oracle database container
-```
- sudo docker run --name ora1930 \
-  --detach \
-  --network oracle_network \
-  --ip 172.18.0.22 \
-  -p 1521:1521 -p 5500:5500 \
-  -e ORACLE_SID=db1930 \
-  -e ORACLE_PDB=pdb1930 \
-  -e ORACLE_PWD=oracle \
-  --mount source=ora1930_oradata,destination=/opt/oracle/oradata \
-  oracle/database:19.3.0-ee
-
-docker logs -f ora1930
-```
-
-### Start Oracle OAS 5.5.0 container
-```
-sudo docker run --name oas55 \
-  --detach \
-  --network=oracle_network \
-  -p 9500-9514:9500-9514 \
-  --stop-timeout 600 \
-  -e "BI_CONFIG_RCU_DBSTRING=172.18.0.22:1521:pdb1930" \
-  -e "BI_CONFIG_RCU_PWD=oracle" \
-  oracle/oas:5.5.0
-
-docker logs -f oas55
-```
-
-### Start Oracle OAS 5.9.0 container
-```
-sudo docker run --name oas59 \
-  --detach \
-  --network=oracle_network \
-  -p 9500-9514:9500-9514 \
-  --stop-timeout 600 \
-  -e "BI_CONFIG_RCU_DBSTRING=172.18.0.22:1521:pdb1930" \
-  -e "BI_CONFIG_RCU_PWD=oracle" \
-  oracle/oas:5.9.0
-
-docker logs -f oas59
-```
-
-### Start RStudio container
-```
-sudo docker run --name rstudio \
-  --detach \
-  --network oracle_network \
-  -p 8787:8787 \
-  thedoc/rstudio:3.6.1
-
-docker logs -f rstudio
-```
-
-### Start DBT
-```
-docker run -ti --name dbt \
-  --network oracle_network \
-  thedoc/dbt:0.19.0
-
-docker logs -f dbt
-```
 # Problems with stuck CPU's
 I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even though it was switched off).
 This fix worked for me: https://forums.virtualbox.org/viewtopic.php?f=25&t=97412

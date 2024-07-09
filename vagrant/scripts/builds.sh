@@ -25,6 +25,23 @@ echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
 echo "******************************************************************************"
 sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  oradb
 
+echo "******************************************************************************"
+echo "Copy ORDS software." `date`
+echo "******************************************************************************"
+
+cd /u01/dockerfiles/oracle/ords
+cp /vagrant/software/OpenJDK11U-jdk_x64_linux_hotspot_11.0.23_9.tar.gz .
+cp /vagrant/software/apache-tomcat-9.0.90.tar.gz .
+cp /vagrant/software/ords-latest.zip .
+cp /vagrant/software/apex-latest.zip .
+cp /vagrant/software/sqlcl-latest.zip . 
+
+echo "******************************************************************************"
+echo "docker build Oracle 19.3.0 software" `date`
+echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+echo "******************************************************************************"
+sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  ords
+
 # echo "******************************************************************************"
 # echo "Copy OracleAnalyticsServer 6.4.0 software." `date`
 # echo "******************************************************************************"
@@ -70,17 +87,17 @@ echo "**************************************************************************
 echo "Copy OracleAnalyticsServer 7.6.0 software." `date`
 echo "******************************************************************************"
 cd /u01/dockerfiles/oracle/OracleAnalyticsServer/7.6.0
-cp /vagrant/software/jdk-8u401-linux-x64.rpm .
+cp /vagrant/software/jdk-8u411-linux-x64.rpm .
 cp /vagrant/software/Oracle_Analytics_Server_Linux_7.6.0.zip .
 cp /vagrant/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip .
-cp /vagrant/software/p28186730_1394211_Generic.zip .
+cp /vagrant/software/p28186730_1394215_Generic.zip .
 cp /vagrant/software/p34065178_122140_Generic.zip .
-cp /vagrant/software/p34974729_122140_Generic.zip .
-cp /vagrant/software/p34839859_122140_Generic.zip .
+cp /vagrant/software/p36485713_122140_Generic.zip .
+cp /vagrant/software/p36402397_122140_Generic.zip .
 cp /vagrant/software/p34542329_122140_Generic.zip .
-cp /vagrant/software/p34944256_122140_Generic.zip .
-cp /vagrant/software/p33950717_122140_Generic.zip .
-cp /vagrant/software/p34549208_122140_Generic.zip .
+cp /vagrant/software/p36348444_122140_Generic.zip .
+cp /vagrant/software/p36316422_122140_Generic.zip .
+cp /vagrant/software/p36349529_122140_Generic.zip .
 
 echo "******************************************************************************"
 echo "docker build OracleAnalyticsServer 7.6.0." `date`

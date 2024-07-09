@@ -45,11 +45,11 @@ LABEL maintainer="tim@oracle-base.com"
 
 # ------------------------------------------------------------------------------
 # Define fixed (build time) environment variables.
-ENV JAVA_SOFTWARE="OpenJDK11U-jdk_x64_linux_hotspot_11.0.11_9.tar.gz"          \
-    TOMCAT_SOFTWARE="apache-tomcat-9.0.50.tar.gz"                              \
-    ORDS_SOFTWARE="ords-21.2.0.174.1826.zip"                                   \
-    APEX_SOFTWARE="apex_21.1_en.zip"                                           \ 
-    SQLCL_SOFTWARE="sqlcl-21.2.0.174.2245.zip"                                 \
+ENV JAVA_SOFTWARE="OpenJDK11U-jdk_x64_linux_hotspot_11.0.23_9.tar.gz"          \
+    TOMCAT_SOFTWARE="apache-tomcat-9.0.90.tar.gz"                              \
+    ORDS_SOFTWARE="ords-latest.zip"                                   \
+    APEX_SOFTWARE="apex-latest.zip"                                           \ 
+    SQLCL_SOFTWARE="sqlcl-latest.zip"                                 \
     SOFTWARE_DIR="/u01/software"                                               \
     SCRIPTS_DIR="/u01/scripts"                                                 \
     KEYSTORE_DIR="/u01/keystore"                                               \
@@ -79,7 +79,7 @@ ENV DB_HOSTNAME="ol8-19.localdomain"                                           \
 
 # ------------------------------------------------------------------------------
 # Get all the files for the build.
-COPY software/* ${SOFTWARE_DIR}/
+COPY ${JAVA_SOFTWARE} ${TOMCAT_SOFTWARE} ${ORDS_SOFTWARE} ${APEX_SOFTWARE} ${SQLCL_SOFTWARE} ${SOFTWARE_DIR}/
 COPY scripts/* ${SCRIPTS_DIR}/
 
 # ------------------------------------------------------------------------------

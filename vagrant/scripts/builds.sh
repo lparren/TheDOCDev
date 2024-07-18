@@ -26,6 +26,19 @@ echo "**************************************************************************
 sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  oradb
 
 echo "******************************************************************************"
+echo "Copy Oracle 23ai-free software." `date`
+echo "******************************************************************************"
+
+cd /u01/dockerfiles/oracle/OracleDatabase/23aifree
+cp /vagrant/software/apex-latest.zip .
+
+echo "******************************************************************************"
+echo "docker build Oracle 23ai-free software" `date`
+echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+echo "******************************************************************************"
+sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  23ai
+
+echo "******************************************************************************"
 echo "Copy ORDS software." `date`
 echo "******************************************************************************"
 

@@ -1,8 +1,11 @@
 echo "*******************************************************"
 echo "*** Installing APEX                                 ***"
 echo "*******************************************************"
-cd /opt/install
-unzip $APEX_FILE
+cd ~
+mkdir install
+cd install
+cp /container-entrypoint-initdb.d/${APEX_FILE} .
+unzip ${APEX_FILE}
 cd apex
 
 sqlplus sys/${ORACLE_PASSWORD}@FREEPDB1 as sysdba <<EOF
@@ -29,3 +32,6 @@ alter user APEX_REST_PUBLIC_USER identified by "${APEX_PASSWORD}" account unlock
 
 exit;
 EOF
+
+cd ..
+rm -Rf apex

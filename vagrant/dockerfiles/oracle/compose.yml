@@ -21,15 +21,14 @@ services:
       - /u01/volumes/ora1930_oradata:/opt/oracle/oradata
 
   23ai:
-    image: oracle/oracle-free:latest
-    build:
-      context: ./OracleDatabase/23aifree
+    image: gvenzl/oracle-free:latest
     environment:
       APP_USER: vector
       APP_USER_PASSWORD: vector
       ORACLE_PASSWORD: oracle
       APEX_EMAIL: me@here.com
       APEX_PASSWORD: ApexPassword1!      
+      APEX_FILE: apex-latest.zip
     expose:
       - 8521
       - 8500
@@ -38,7 +37,7 @@ services:
       - 8500:5500
     volumes:
       - /u01/volumes/23aifree_oradata:/opt/oracle/oradata
-      - ./OracleDatabase/23aifree/init_scripts:/container-entrypoint-initdb.d
+      - ./OracleDatabase/23aifree:/container-entrypoint-initdb.d
 
   oas:
     image: oracle/oas:7.6.0
@@ -63,18 +62,15 @@ services:
     build:
       context: ./ords
     environment:
-      DB_HOSTNAME: 23ai
+      DB_HOSTNAME: oracle-23ai-1
       DB_PORT: 1521
       DB_SERVICE: FREEPDB1
       APEX_PUBLIC_USER_PASSWORD: ApexPassword1!
-      APEX_TABLESPACE: APEX
-      TEMP_TABLESPACE: TEMP
       APEX_LISTENER_PASSWORD: ApexPassword1!
       APEX_REST_PASSWORD: ApexPassword1!
       PUBLIC_PASSWORD: ApexPassword1!
       SYS_PASSWORD: oracle
-      KEYSTORE_PASSWORD: KeystorePassword1!
-      AJP_SECRET: AJPSecret1!
+      APEX_FILE: apex-latest.zip
     depends_on: [23ai]
     links:
       - 23ai

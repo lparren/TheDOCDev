@@ -81,7 +81,8 @@ groupadd -g 1042 docker_fg
 useradd -G docker_fg,condagrp,docker docker_user
 echo "docker_user:vagrant" | chpasswd
 mkdir -p /u01/volumes/ora1930_oradata
-mkdir -p /u01/volumes/oas59_data
+mkdir -p /u01/volumes/oas760_data
+mkdir -p /u01/volumes/23aifree_oradata
 chown -R docker_user:docker_fg /u01
 chmod -R 777 /u01/volumes
 chmod -R g+s /u01/volumes

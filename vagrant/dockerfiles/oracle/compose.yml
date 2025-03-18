@@ -9,8 +9,10 @@ services:
       ORACLE_SID: db1930
       ORACLE_PDB: pdb1930
       ORACLE_PWD: oracle
+      ORACLE_EDITION: enterprise
       APEX_EMAIL: me@here.com
       APEX_PASSWORD: ApexPassword1!
+      APEX_FILE: apex-latest.zip
     expose:
       - 1521
       - 5500
@@ -19,16 +21,24 @@ services:
       - 5500:5500
     volumes:
       - /u01/volumes/ora1930_oradata:/opt/oracle/oradata
+      - ./OracleDatabase/19.3.0/userScripts:/opt/oracle/scripts/setup
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536      
 
   23ai:
     image: gvenzl/oracle-free:latest
     environment:
       APP_USER: vector
       APP_USER_PASSWORD: vector
+      ORACLE_PDB: FREEPDB1
+      ORACLE_PWD: oracle
       ORACLE_PASSWORD: oracle
       APEX_EMAIL: me@here.com
       APEX_PASSWORD: ApexPassword1!      
       APEX_FILE: apex-latest.zip
+      TPCH_FILE: tpch-data-3.0.1.zip
     expose:
       - 8521
       - 8500
@@ -40,9 +50,9 @@ services:
       - ./OracleDatabase/23aifree:/container-entrypoint-initdb.d
 
   oas:
-    image: oracle/oas:7.6.0
+    image: oracle/oas:8.2.0
     build:
-      context: ./OracleAnalyticsServer/7.6.0
+      context: ./OracleAnalyticsServer/8.2.0
     stop_grace_period: 600s
     environment:
       BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930
@@ -55,7 +65,11 @@ services:
     ports:
       - 9500-9514:9500-9514
     volumes:
-      - /u01/volumes/ora1930_oradata:/opt/oracle/oradata
+      - /u01/volumes/oas820_data:/opt/oracle/oradata
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536   
 
   ords:
     image: oracle/ords:latest
@@ -81,26 +95,36 @@ services:
       - 8080:8080
       - 8443:8443
 
-  dbt:
-    image: thedoc/dbt:1.7.2
+  # dbt:
+  #   image: thedoc/dbt:latest
+  #   build:
+  #     context: ./dbt
+  #   environment:
+  #     ORA_PYTHON_DRIVER_TYPE: thin
+  #     DBT_ORACLE_USER: tpch
+  #     DBT_ORACLE_PASSWORD: tpch
+  #     DBT_ORACLE_SCHEMA: tpch
+  #     DBT_ORACLE_HOST: oradb
+  #     DBT_ORACLE_PORT: 1521
+  #     DBT_ORACLE_SERVICE: pdb1930
+  #     DBT_ORACLE_DATABASE: pdb1930
+  #     DBT_ORACLE_TNS_NAME: :1521/pdb1930
+  #   depends_on: [oradb]
+  #   links:
+  #     - oradb
+  #   expose:
+  #     - 1521
+  #   ports:
+  #     - 1521:1521
+  #   tty: true
+  #   stdin_open: true
+  #   volumes:
+  #     - /home/docker_user/project:/usr/app
+  #     - /home/docker_user/project:/root/.dbt/
+
+  tpch:
+    image: thedoc/tpch:3.0.1
     build:
-      context: ./dbt
-    environment:
-      ORA_PYTHON_DRIVER_TYPE: thin
-      DBT_ORACLE_USER: hr
-      DBT_ORACLE_PASSWORD: hr
-      DBT_ORACLE_SCHEMA: hr
-      DBT_ORACLE_HOST: 127.0.0.1
-      DBT_ORACLE_SERVICE: pdb1930
-      DBT_ORACLE_DATABASE: pdb1930
-      DBT_ORACLE_TNS_NAME: localhost:1521/pdb1930
-    depends_on: [oradb]
-    links:
-      - oradb
-    expose:
-      - 1521
-    ports:
-      - 1521:1521
+      context: ./tpch
     volumes:
-      - /home/docker_user/project/dbt/test:/usr/app
-      - /home/docker_user/project/dbt/test/profiles.yml:/root/.dbt/profiles.yml
+      - /home/docker_user/project/tpch_data:/data

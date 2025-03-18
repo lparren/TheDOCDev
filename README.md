@@ -3,8 +3,8 @@ This is the TheDOC Development and Testing environment in a Vagrant VM (using vi
 # vagrant
 
 Vagrant is used to setup a Oracle Enterprise Linux 8 virtual machine with:
-- 4 cpu cores
-- 16 Gb of memory
+- 8 cpu cores
+- 20 Gb of memory
 - 250 Gb of disk space (in total)
 - ssh forwatding (incl X11)
 - ports forwarded for several tools:
@@ -36,7 +36,7 @@ vagrant up
 ```
 
 The following software will be installed automatically in user docker_user:
-- Oracle client (21c)
+- Oracle client (19c)
 - Visual code
 - Oracle SQL Developer Extension for VSCode
 <!-- - Pycharm community edition -->
@@ -109,6 +109,19 @@ for OAS 7.6.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 - [Patch 36349529](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36349529&amp;)
 <!--- [Patch 35024228](https://support.oracle.com/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=35024228&amp;)-->
 
+for OAS 8.2.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
+- [jdk-8u441-linux-x64.rpm ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+- [Oracle WebLogic Server 12.2.1.4 Fusion Middleware Infrastructure Installer](https://download.oracle.com/otn/nt/middleware/12c/122140/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip?)
+- [Oracle Analytics Server 2025 Linux](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
+- [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730&amp;)
+- [Patch 37476485](https://support.oracle.com/epmos/faces/PatchDetail?patchId=37476485&amp;)
+- [Patch 37388935](https://support.oracle.com/epmos/faces/PatchDetail?patchId=37388935&amp;)
+- [Patch 34809489](https://support.oracle.com/epmos/faces/PatchDetail?patchId=34809489&amp;)
+- [Patch 37284722](https://support.oracle.com/epmos/faces/PatchDetail?patchId=37284722&amp;)
+- [Patch 37035947](https://support.oracle.com/epmos/faces/PatchDetail?patchId=37035947&amp;)
+- [Patch 36946553](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36946553&amp;)
+- [Patch 36316422](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36316422&amp;)
+
 for ORDS
 - [Java 11 (11.0.23_9)](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
 - [Tomcat 9.0.90](https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90.tar.gz)
@@ -165,6 +178,37 @@ CONTAINER ID   IMAGE                       COMMAND                  CREATED     
 I kept getting messages of stuck CPU's in my linux guest. It looks like there was contention between Virtualbox and Hyper-V (even though it was switched off).
 This fix worked for me: https://forums.virtualbox.org/viewtopic.php?f=25&t=97412
 
+## Update new Win11 Laptop
+After I upgraded my laptop to a new Intel Core 7 Ultra machine with a fresh windows installation the problems started reoccuring. I turns out that microsoft forces the activation of *Virtualization Based Security* in a new OEM install. This means that a Hyper-V VM is used as an extra layer of security. Unfortunately this interferes with Virtualbox. I had to use the following additional steps get Hyper-V turned of completely. If you have a managed laptop (like me) check with yopur administrator if this is acceptable.
+
+To turn off the Windows Memory Integrity security feature, on the Windows host navigate to 
+```
+Start > Settings > Update & Security > Windows Security > Device security > Core isolation > Memory integrity.
+```
+
+Alternatively, you can disable VBS completely in the *Group Policy Editor* under 
+```
+Computer Configuration > Administrative Templates > System > Device Guard > Turn On Virtualization Based Security.
+ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All 
+```
+
+When VBS has been switched of you are still not done. Make the following changes to the registry
+```
+  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard
+      EnableVirtualizationBasedSecurity must be set to 0 
+  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\CredentialGuard
+      Enabled  must be set to 0 
+  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity
+      Enabled  must be set to 0 
+  Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\KernelShadowStacks
+      Enabled  must be set to 0 
+```
+
+When all changes have been made reboot your system end Hyper-V, Core ISolation and Virtualization Based Security will be switched of.
+You can verify it is off by running msinfo32.exe. If there is still a hypervisor running it will report this at the bottom of the right window
+```
+  A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+```
 
 # Problems with guest additions after upgrade
 Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not install the new version and this will lead to a mounting error during startup. I fixed it with these steps:
@@ -192,3 +236,6 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
 Thank you very much:
   Tim Hall (https://www.oracle-base.com)
   Gianni Ceresa (https://gianniceresa.com/)
+  Gerald Venzl (https://blogs.oracle.com/authors/gerald-venzl)
+
+

@@ -1,11 +1,11 @@
 # LICENSE UPL 1.0
 #
-# Copyright (c) 2018, 2020 Oracle and/or its affiliates.
+# Copyright (c) 2018, 2022 Oracle and/or its affiliates.
 #
 # ORACLE DOCKERFILES PROJECT
 # --------------------------
 # This is the Dockerfile for Oracle Database 19c
-#
+# 
 # REQUIRED FILES TO BUILD THIS IMAGE
 # ----------------------------------
 # (1) db_home.zip
@@ -15,12 +15,14 @@
 # HOW TO BUILD THIS IMAGE
 # -----------------------
 # Put all downloaded files in the same directory as this Dockerfile
-# Run:
-#      $ docker build -t oracle/database:19.3.0-${EDITION} .
+# Run: 
+#      $ docker build -t oracle/database:19.3.0-${EDITION} . 
 #
 # Pull base image
 # ---------------
-FROM oraclelinux:7-slim as base
+ARG BASE_IMAGE=oraclelinux:7-slim
+# hadolint ignore=DL3006
+FROM ${BASE_IMAGE} as base
 
 # Labels
 # ------
@@ -34,28 +36,51 @@ LABEL "provider"="Oracle"                                               \
       "port.listener"="1521"                                            \
       "port.oemexpress"="5500"
 
+# Argument to control removal of components not needed after db software installation
+ARG SLIMMING=true
+ARG INSTALL_FILE_1="LINUX.X64_193000_db_home.zip"
+
 # Environment variables required for this build (do NOT change)
 # -------------------------------------------------------------
 ENV ORACLE_BASE=/opt/oracle \
     ORACLE_HOME=/opt/oracle/product/19c/dbhome_1 \
     INSTALL_DIR=/opt/install \
-    INSTALL_FILE_1="LINUX.X64_193000_db_home.zip" \
+    INSTALL_FILE_1=$INSTALL_FILE_1 \
     INSTALL_RSP="db_inst.rsp" \
     CONFIG_RSP="dbca.rsp.tmpl" \
     PWD_FILE="setPassword.sh" \
     RUN_FILE="runOracle.sh" \
     START_FILE="startDB.sh" \
     CREATE_DB_FILE="createDB.sh" \
+    CREATE_OBSERVER_FILE="createObserver.sh" \
     SETUP_LINUX_FILE="setupLinuxEnv.sh" \
     CHECK_SPACE_FILE="checkSpace.sh" \
     CHECK_DB_FILE="checkDBStatus.sh" \
     USER_SCRIPTS_FILE="runUserScripts.sh" \
-	INSTALL_ORE="installORE.sh" \
     INSTALL_DB_BINARIES_FILE="installDBBinaries.sh" \
-	INSTALL_SAMPLE_SCHEMAS="installSampleSchemas.sh" \
+    RELINK_BINARY_FILE="relinkOracleBinary.sh" \
+    CONFIG_TCPS_FILE="configTcps.sh" \
+    SLIMMING=$SLIMMING \
+    ENABLE_ARCHIVELOG=false \
+    ARCHIVELOG_DIR_NAME=archive_logs \
+    # To clone a database referred by PRIMARY_DB_CONN_STR
+    CLONE_DB=false \
+    # To create a standby database referred by PRIMARY_DB_CONN_STR
+    STANDBY_DB=false \
+    # Env var below should be in <HOST>:<PORT>/<SERVICE_NAME> format
+    PRIMARY_DB_CONN_STR="" \
+    # For creating dataguard observer
+    DG_OBSERVER_ONLY=false \
+    DG_OBSERVER_NAME="" \
+    CHECKPOINT_FILE_EXTN=".created" \
+    # Directory for keeping Oracle Wallet
+    WALLET_DIR="" \
+    # extra files voor user scripts
+    # ORE_SERVER="ore-server-linux-x86-64-1.5.1.zip" \
+	# ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip" \
+    APEX_FILE="apex-latest.zip" \
 	SAMPLE_SCHEMAS="db-sample-schemas-master.zip" \
-    ORE_SERVER="ore-server-linux-x86-64-1.5.1.zip" \
-	ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip"
+    TPCH_SAMPLE="tpch-data-3.0.1.zip"
 
 # Use second ENV so that variable get substituted
 ENV PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH \
@@ -65,12 +90,12 @@ ENV PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH \
 # Copy files needed during both installation and runtime
 # -------------
 COPY $SETUP_LINUX_FILE $CHECK_SPACE_FILE $INSTALL_DIR/
-COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE $USER_SCRIPTS_FILE $ORE_SERVER $ORE_SUPPORT $SAMPLE_SCHEMAS $INSTALL_ORE $INSTALL_SAMPLE_SCHEMAS $ORACLE_BASE/
+COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CREATE_OBSERVER_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE $USER_SCRIPTS_FILE $RELINK_BINARY_FILE $CONFIG_TCPS_FILE $ORACLE_BASE/
+COPY $APEX_FILE $ORACLE_BASE/
 
-RUN yum install -y yum-utils zip unzip dos2unix && \
-    yum-config-manager --enable ol7_optional_latest && \
-    yum-config-manager --enable ol7_addons  && \
-	yum install -y cairo-devel libpng-devel R
+RUN dnf install -y dos2unix perl && \
+    dnf config-manager --enable ol7_optional_latest && \
+    dnf config-manager --enable ol7_addons
 
 RUN chmod ug+x $INSTALL_DIR/*.sh && \
     sync && \
@@ -89,17 +114,13 @@ FROM base AS builder
 ARG DB_EDITION
 
 # Copy DB install file
-COPY --chown=oracle:dba $INSTALL_FILE_1 $INSTALL_RSP $INSTALL_DB_BINARIES_FILE $ORE_SERVER $ORE_SUPPORT $INSTALL_DIR/
-
-RUN echo "DB_EDITION = $DB_EDITION"
+COPY --chown=oracle:dba $INSTALL_FILE_1 $INSTALL_RSP $INSTALL_DB_BINARIES_FILE $INSTALL_DIR/
 
 # Install DB software binaries
 USER oracle
-RUN chmod ug+x $INSTALL_DIR/*.sh && \
+RUN chmod ug+x "$INSTALL_DIR"/*.sh && \
     sync && \
-    $INSTALL_DIR/$INSTALL_DB_BINARIES_FILE $DB_EDITION
-
-
+    "$INSTALL_DIR"/"$INSTALL_DB_BINARIES_FILE" $DB_EDITION
 
 #############################################
 # -------------------------------------------
@@ -112,16 +133,20 @@ FROM base
 USER oracle
 COPY --chown=oracle:dba --from=builder $ORACLE_BASE $ORACLE_BASE
 
-
 USER root
-RUN $ORACLE_BASE/oraInventory/orainstRoot.sh && \
-    $ORACLE_HOME/root.sh
+RUN "$ORACLE_BASE"/oraInventory/orainstRoot.sh && \
+    "$ORACLE_HOME"/root.sh
 
 USER oracle
 WORKDIR /home/oracle
+COPY $SAMPLE_SCHEMAS $TPCH_SAMPLE /home/oracle
 
-HEALTHCHECK --interval=1m --start-period=5m \
-    CMD "$ORACLE_BASE/$CHECK_DB_FILE" >/dev/null || exit 1
+# Add a bashrc file to capitalize ORACLE_SID in the environment
+# hadolint ignore=SC2016
+RUN echo 'ORACLE_SID=${ORACLE_SID:-ORCLCDB}; export ORACLE_SID=${ORACLE_SID^^}' > .bashrc
 
-# Define default command to start Oracle Database.
-CMD exec $ORACLE_BASE/$RUN_FILE
+HEALTHCHECK --interval=1m --start-period=5m --timeout=30s \
+   CMD "$ORACLE_BASE/$CHECK_DB_FILE" >/dev/null || exit 1
+
+# Define default command to start Oracle Database. 
+CMD [ "/bin/bash", "-c", "exec $ORACLE_BASE/$RUN_FILE" ]

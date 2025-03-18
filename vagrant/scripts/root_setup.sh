@@ -6,8 +6,8 @@ echo "**************************************************************************
 echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 dnf install -y dnf-utils zip unzip git
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-dnf config-manager --enable ol8_addons
-dnf install -y oracle-epel-release-el8
+dnf config-manager --enable ol9_addons
+dnf install -y oracle-epel-release-el9
 dnf install -y xorg-x11-xauth  x11vnc
 
 # Enable X11 forwarding
@@ -82,6 +82,7 @@ useradd -G docker_fg,condagrp,docker docker_user
 echo "docker_user:vagrant" | chpasswd
 mkdir -p /u01/volumes/ora1930_oradata
 mkdir -p /u01/volumes/oas760_data
+mkdir -p /u01/volumes/oas820_data
 mkdir -p /u01/volumes/23aifree_oradata
 chown -R docker_user:docker_fg /u01
 chmod -R 777 /u01/volumes
@@ -95,18 +96,18 @@ echo "docker_user  ALL=(ALL)  NOPASSWD: ALL" >> /etc/sudoers
 echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/bin/docker" >> /etc/sudoers
 echo "alias docker=\"sudo /usr/bin/docker\"" >> /home/docker_user/.bash_profile
 
-echo "******************************************************************************"
-echo "Configure docker-compose." `date`
-echo "******************************************************************************"
-curl -L https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-# bash command completion
-sudo curl \
-    -L https://raw.githubusercontent.com/docker/compose/1.29.1/contrib/completion/bash/docker-compose \
-    -o /etc/bash_completion.d/docker-compose
-echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/local/bin/docker-compose" >> /etc/sudoers
-# create symbolic link in /usr/bin
-ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+# echo "******************************************************************************"
+# echo "Configure docker-compose." `date`
+# echo "******************************************************************************"
+# curl -L https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+# chmod +x /usr/local/bin/docker-compose
+# # bash command completion
+# sudo curl \
+#     -L https://raw.githubusercontent.com/docker/compose/1.29.1/contrib/completion/bash/docker-compose \
+#     -o /etc/bash_completion.d/docker-compose
+# echo "docker_user  ALL=(ALL)  NOPASSWD: /usr/local/bin/docker-compose" >> /etc/sudoers
+# # create symbolic link in /usr/bin
+# ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # echo "******************************************************************************"
 # echo "Copy setup files to the local disks." `date`

@@ -7,6 +7,7 @@ echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 dnf install -y dnf-utils zip unzip git
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 dnf config-manager --enable ol9_addons
+dnf config-manager --add-repo=https://yum.oracle.com/repo/OracleLinux/OL9/oracle/instantclient23/x86_64/
 dnf install -y oracle-epel-release-el9
 dnf install -y xorg-x11-xauth  x11vnc
 
@@ -16,7 +17,7 @@ sed -i -e "s|#X11DisplayOffset 10|X11DisplayOffset 10|g"   /etc/ssh/sshd_config
 sed -i -e "s|#X11UseLocalhost yes|X11UseLocalhost yes|g"   /etc/ssh/sshd_config
 
 echo "******************************************************************************"
-echo "Install google chrome" `date`
+echo "Install google chrome" `date
 echo "******************************************************************************"
 wget -nv https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 dnf install -y ./google-chrome-stable_current_*.rpm

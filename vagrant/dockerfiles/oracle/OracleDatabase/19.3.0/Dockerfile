@@ -78,9 +78,9 @@ ENV ORACLE_BASE=/opt/oracle \
     # extra files voor user scripts
     # ORE_SERVER="ore-server-linux-x86-64-1.5.1.zip" \
 	# ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip" \
+    # TPCH_SAMPLE="tpch-data-3.0.1.zip" \
     APEX_FILE="apex-latest.zip" \
-	SAMPLE_SCHEMAS="db-sample-schemas-master.zip" \
-    TPCH_SAMPLE="tpch-data-3.0.1.zip"
+	SAMPLE_SCHEMAS="db-sample-schemas-master.zip" 
 
 # Use second ENV so that variable get substituted
 ENV PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH \
@@ -93,9 +93,9 @@ COPY $SETUP_LINUX_FILE $CHECK_SPACE_FILE $INSTALL_DIR/
 COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CREATE_OBSERVER_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE $USER_SCRIPTS_FILE $RELINK_BINARY_FILE $CONFIG_TCPS_FILE $ORACLE_BASE/
 COPY $APEX_FILE $ORACLE_BASE/
 
-RUN dnf install -y dos2unix perl && \
-    dnf config-manager --enable ol7_optional_latest && \
-    dnf config-manager --enable ol7_addons
+RUN yum install -y dos2unix perl && \
+    yum-config-manager --enable ol7_optional_latest && \
+    yum-config-manager --enable ol7_addons
 
 RUN chmod ug+x $INSTALL_DIR/*.sh && \
     sync && \
@@ -139,7 +139,8 @@ RUN "$ORACLE_BASE"/oraInventory/orainstRoot.sh && \
 
 USER oracle
 WORKDIR /home/oracle
-COPY $SAMPLE_SCHEMAS $TPCH_SAMPLE /home/oracle
+COPY $SAMPLE_SCHEMAS /home/oracle
+# COPY $TPCH_SAMPLE /home/oracle
 
 # Add a bashrc file to capitalize ORACLE_SID in the environment
 # hadolint ignore=SC2016

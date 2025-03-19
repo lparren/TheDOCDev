@@ -16,8 +16,8 @@ cd /u01/dockerfiles/oracle/OracleDatabase/19.3.0
 cp /vagrant/software/LINUX.X64_193000_db_home.zip .
 cp /vagrant/software/apex-latest.zip .
 cp /vagrant/software/db-sample-schemas-master.zip .
-cp /vagrant/software/tpch-data-3.0.1.zip.301 ./tpch-data-3.0.1.zip
-cp /vagrant/software/tpch-data-3.0.1.z0* .
+# cp /vagrant/software/tpch-data-3.0.1.zip.301 ./tpch-data-3.0.1.zip
+# cp /vagrant/software/tpch-data-3.0.1.z0* .
 
 echo "******************************************************************************"
 echo "docker build Oracle 19.3.0 software" `date`
@@ -31,7 +31,7 @@ echo "**************************************************************************
 
 cd /u01/dockerfiles/oracle/OracleDatabase/23aifree
 cp /vagrant/software/apex-latest.zip .
-cp /vagrant/software/tpch-data-3.0.1.zip.301 ./tpch-data-3.0.1.zip
+# cp /vagrant/software/tpch-data-3.0.1.zip.301 ./tpch-data-3.0.1.zip
 
 echo "******************************************************************************"
 echo "docker build Oracle 23ai-free software" `date`

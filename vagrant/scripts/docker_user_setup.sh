@@ -5,14 +5,14 @@ echo "**************************************************************************
 echo "******************************************************************************"
 echo "Install oracle client." `date`
 echo "******************************************************************************"
-sudo dnf install -y oracle-instantclient19.26-basic.x86_64     
-sudo dnf install -y oracle-instantclient19.26-devel.x86_64     
-sudo dnf install -y oracle-instantclient19.26-jdbc.x86_64      
-sudo dnf install -y oracle-instantclient19.26-odbc.x86_64      
-sudo dnf install -y oracle-instantclient19.26-sqlplus.x86_64   
-sudo dnf install -y oracle-instantclient19.26-tools.x86_64  
+sudo dnf install -y oracle-instantclient-basic.x86_64     
+sudo dnf install -y oracle-instantclient-devel.x86_64     
+sudo dnf install -y oracle-instantclient-jdbc.x86_64      
+sudo dnf install -y oracle-instantclient-odbc.x86_64      
+sudo dnf install -y oracle-instantclient-sqlplus.x86_64   
+sudo dnf install -y oracle-instantclient-tools.x86_64  
 
-echo "export CLIENT_HOME=/usr/lib/oracle/19.26/client64" >> /home/docker_user/.bash_profile
+echo "export CLIENT_HOME=/usr/lib/oracle/23/client64" >> /home/docker_user/.bash_profile
 echo "export LD_LIBRARY_PATH=$CLIENT_HOME/lib" >> /home/docker_user/.bash_profile
 echo "export PATH=$PATH:$CLIENT_HOME/bin" >> /home/docker_user/.bash_profile
 

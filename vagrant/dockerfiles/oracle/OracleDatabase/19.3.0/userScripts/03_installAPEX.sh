@@ -7,7 +7,7 @@ cd apex
 
 sqlplus / as sysdba <<EOF
 alter session set container = ${ORACLE_PDB};
-create tablespace apex datafile size 1m autoextend on next 1m;
+create tablespace apex datafile '/opt/oracle/oradata/DB1930/PDB1930/apex01.dbf' size 1m autoextend on next 1m;
 @apexins.sql APEX APEX TEMP /i/
 
 BEGIN

@@ -36,7 +36,7 @@ vagrant up
 ```
 
 The following software will be installed automatically in user docker_user:
-- Oracle client (19c)
+- Oracle client (23)
 - Visual code
 - Oracle SQL Developer Extension for VSCode
 <!-- - Pycharm community edition -->

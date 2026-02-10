@@ -4,7 +4,7 @@ echo "*******************************************************"
 mkdir /opt/oracle/tpch
 cd /opt/oracle/tpch
 cp /container-entrypoint-initdb.d/${TPCH_FILE} .
-unzip tpch-data-3.0.1.zip
+unzip tpch-data.zip
 ls -l *.tbl
 echo "*** Create TPCH schema"
 sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF

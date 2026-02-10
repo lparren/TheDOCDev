@@ -27,12 +27,12 @@ echo "Install VSCode sql-developer and postgres extension" `date`
 echo "******************************************************************************"
 
 code --install-extension Oracle.sql-developer
-code --install-extension ckolkman.vscode-postgres
+code --install-extension ms-ossdata.vscode-pgsql
 
 echo "******************************************************************************"
 echo "Install lazydocker." `date`
 echo "******************************************************************************"
-curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+sudo curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
 # echo "******************************************************************************"
 # echo "Install PyCharm" `date`
@@ -71,6 +71,7 @@ echo "alias orastart=\"docker compose --project-directory /u01/dockerfiles/oracl
 echo "alias orastop=\"docker compose --project-directory /u01/dockerfiles/oracle/ stop \"" >> /home/docker_user/.bash_profile
 echo "alias oralog=\"docker compose --project-directory /u01/dockerfiles/oracle/ logs -f \"" >> /home/docker_user/.bash_profile
 echo "alias orabuild=\"docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm \"" >> /home/docker_user/.bash_profile
+echo "alias orarun=\"docker compose --project-directory /u01/dockerfiles/oracle/ run -rm \"" >> /home/docker_user/.bash_profile
 # 
 echo "# Postgres aliasses" >> /home/docker_user/.bash_profile
 echo "alias pgup=\"docker compose --project-directory /u01/dockerfiles/postgres/  up --detach \"" >> /home/docker_user/.bash_profile

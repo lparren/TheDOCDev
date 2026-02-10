@@ -1,12 +1,31 @@
 # This is an optional file used for my setup.
 
 echo "******************************************************************************"
-echo "Get latest oraclelinux:7/8-slim." `date`
+echo "Get latest oraclelinux:8/9-slim." `date`
 echo "******************************************************************************"
 
 # Get latest oraclelinux:7-slim
 sudo docker pull oraclelinux:8-slim
 sudo docker pull oraclelinux:9-slim
+
+echo "******************************************************************************"
+echo "Generate TPC-H data" `date`
+echo "******************************************************************************"
+# orabuild tpch
+docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  tpch
+docker compose --project-directory /u01/dockerfiles/oracle/ run --rm tpch -v -f
+sudo zip -j /home/docker_user/project/tpch_data/tpch-data.zip /home/docker_user/project/tpch_data/*.tbl
+# Add zip to every DB instance
+cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/19.3.0/
+cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/23aifree/
+cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/26ai/
+
+# echo "******************************************************************************"
+# echo "Generate TPC-DS data" `date`
+# echo "******************************************************************************"
+# # orabuild tpch
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  tpcds
+# docker compose --project-directory /u01/dockerfiles/oracle/ run --rm tpcds -v -f
 
 echo "******************************************************************************"
 echo "Copy Oracle 19.3.0 software." `date`
@@ -16,14 +35,29 @@ cd /u01/dockerfiles/oracle/OracleDatabase/19.3.0
 cp /vagrant/software/LINUX.X64_193000_db_home.zip .
 cp /vagrant/software/apex-latest.zip .
 cp /vagrant/software/db-sample-schemas-master.zip .
-# cp /vagrant/software/tpch-data-3.0.1.zip.301 ./tpch-data-3.0.1.zip
-# cp /vagrant/software/tpch-data-3.0.1.z0* .
+
+# echo "******************************************************************************"
+# echo "docker build Oracle 19.3.0 software" `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+# echo "******************************************************************************"
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  oradb
+
 
 echo "******************************************************************************"
-echo "docker build Oracle 19.3.0 software" `date`
-echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+echo "Copy Oracle 26ai software." `date`
 echo "******************************************************************************"
-# sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  oradb
+
+cd /u01/dockerfiles/oracle/OracleDatabase/26ai
+cp /vagrant/software/oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm .
+cp /vagrant/software/apex-latest.zip .
+cp /vagrant/software/db-sample-schemas-master.zip .
+
+# echo "******************************************************************************"
+# echo "docker build Oracle 19.3.0 software" `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+# echo "******************************************************************************"
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  26ai
+
 
 echo "******************************************************************************"
 echo "Copy Oracle 23ai-free software." `date`
@@ -31,30 +65,30 @@ echo "**************************************************************************
 
 cd /u01/dockerfiles/oracle/OracleDatabase/23aifree
 cp /vagrant/software/apex-latest.zip .
-# cp /vagrant/software/tpch-data-3.0.1.zip.301 ./tpch-data-3.0.1.zip
 
-echo "******************************************************************************"
-echo "docker build Oracle 23ai-free software" `date`
-echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
-echo "******************************************************************************"
-# sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  23ai
 
-echo "******************************************************************************"
-echo "Copy ORDS software." `date`
-echo "******************************************************************************"
+# echo "******************************************************************************"
+# echo "docker build Oracle 23ai-free software" `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+# echo "******************************************************************************"
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  23ai
 
-cd /u01/dockerfiles/oracle/ords
-cp /vagrant/software/OpenJDK11U-jdk_x64_linux_hotspot_11.0.23_9.tar.gz .
-cp /vagrant/software/apache-tomcat-9.0.90.tar.gz .
-cp /vagrant/software/ords-latest.zip .
-cp /vagrant/software/apex-latest.zip .
-cp /vagrant/software/sqlcl-latest.zip . 
+# echo "******************************************************************************"
+# echo "Copy ORDS software." `date`
+# echo "******************************************************************************"
 
-echo "******************************************************************************"
-echo "docker build ORDS" `date`
-echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
-echo "******************************************************************************"
-# sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  ords
+# cd /u01/dockerfiles/oracle/ords
+# cp /vagrant/software/OpenJDK11U-jdk_x64_linux_hotspot_11.0.23_9.tar.gz .
+# cp /vagrant/software/apache-tomcat-9.0.90.tar.gz .
+# cp /vagrant/software/ords-latest.zip .
+# cp /vagrant/software/apex-latest.zip .
+# cp /vagrant/software/sqlcl-latest.zip .
+
+# echo "******************************************************************************"
+# echo "docker build ORDS" `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+# echo "******************************************************************************"
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  ords
 
 # echo "******************************************************************************"
 # echo "Copy OracleAnalyticsServer 6.4.0 software." `date`
@@ -95,7 +129,7 @@ echo "**************************************************************************
 # echo "docker build OracleAnalyticsServer 7.0.0." `date`
 # echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
 # echo "******************************************************************************"
-# sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
 
 # echo "******************************************************************************"
 # echo "Copy OracleAnalyticsServer 7.6.0 software." `date`
@@ -117,7 +151,7 @@ echo "**************************************************************************
 # echo "docker build OracleAnalyticsServer 7.6.0." `date`
 # echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
 # echo "******************************************************************************"
-# sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
 
 echo "******************************************************************************"
 echo "Copy OracleAnalyticsServer 8.2.0 software." `date`
@@ -135,26 +169,11 @@ cp /vagrant/software/p37035947_122140_Generic.zip .
 cp /vagrant/software/p36946553_122140_Generic.zip .
 cp /vagrant/software/p36316422_122140_Generic.zip .
 
-echo "******************************************************************************"
-echo "docker build OracleAnalyticsServer 8.2.0." `date`
-echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
-echo "******************************************************************************"
-# sudo docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
-
 # echo "******************************************************************************"
-# echo "Copy RStudio software." `date`
+# echo "docker build OracleAnalyticsServer 8.2.0." `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
 # echo "******************************************************************************"
-# cd /u01/dockerfiles/Rstudio
-# cp /vagrant/software/ore-client-linux-x86-64-1.5.1.zip .
-# cp /vagrant/software/ore-server-linux-x86-64-1.5.1.zip .
-# cp /vagrant/software/ore-supporting-linux-x86-64-1.5.1.zip .
-# cp /vagrant/software/rstudio-server-rhel-1.3.1093-x86_64.rpm .
-
-# echo "******************************************************************************"
-# echo "docker build RStudio Server 3.6.1." `date`
-# echo "******************************************************************************"
-# sudo docker-compose --project-directory /u01/dockerfiles/ build --no-cache  --force-rm rstudio
-
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
 
 # echo "******************************************************************************"
 # echo "Copy DBT software." `date`
@@ -171,17 +190,9 @@ echo "**************************************************************************
 # echo "******************************************************************************"
 # #sudo docker build --force-rm=true --no-cache=true   -t thedoc/dbt:0.19.0  .
 
-
-# echo "******************************************************************************"
-# echo "docker build Portainer" `date`
-# echo "******************************************************************************"
-# cd /u01/dockerfiles
-# #docker-compose build portainer
-
 sudo docker image prune -f
 
 echo "******************************************************************************"
 echo "Finished"
-echo " - cd /u01/dockerfiles/"
-echo " - user docker-compose up oradb|oas|rstudio|dbt container"
+echo " - docker compose up oradb|oas|23aifree|26ai"
 echo "******************************************************************************"

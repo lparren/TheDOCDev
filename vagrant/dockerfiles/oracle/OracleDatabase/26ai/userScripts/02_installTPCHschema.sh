@@ -1,7 +1,7 @@
 echo "*******************************************************"
 echo "*** Installing TPCH sample schema                   ***"
 echo "*******************************************************"
-cd /home/oracle
+cd /tmp
 unzip tpch-data.zip
 ls -l *.tbl
 mkdir /home/oracle/tpch
@@ -9,8 +9,8 @@ mv *.tbl /home/oracle/tpch
 rm *.tbl
 echo "*** Create TPCH schema"
 sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
-    drop USER tpch cascade;
-    CREATE USER tpch IDENTIFIED BY tpch;
+    drop user if exists tpch cascade;
+    CREATE USER IF NOT EXISTS tpch IDENTIFIED BY tpch;
     GRANT CREATE SESSION,
         RESOURCE,
         UNLIMITED TABLESPACE
@@ -19,7 +19,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
     GRANT READ ON DIRECTORY tpch_dir TO tpch;
     -- 1.4.1
     --  per 1.4.2.1  all table columns may be defined NOT NULL
-    CREATE TABLE tpch.ext_part
+    CREATE TABLE IF NOT EXISTS tpch.ext_part
     (
         p_partkey       NUMBER(10, 0),
         p_name          VARCHAR2(55),
@@ -40,7 +40,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                     MISSING FIELD VALUES ARE NULL
                 )
             LOCATION('part.tbl'));
-    CREATE TABLE tpch.part
+    CREATE TABLE IF NOT EXISTS tpch.part
     (
         p_partkey       NUMBER(10, 0) NOT NULL,
         p_name          VARCHAR2(55) NOT NULL,
@@ -52,7 +52,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
         p_retailprice   NUMBER NOT NULL,
         p_comment       VARCHAR2(23) NOT NULL
     );
-    CREATE TABLE tpch.ext_supplier
+    CREATE TABLE IF NOT EXISTS tpch.ext_supplier
     (
         s_suppkey     NUMBER(10, 0),
         s_name        CHAR(25),
@@ -71,7 +71,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                     MISSING FIELD VALUES ARE NULL
                 )
             LOCATION('supplier.tbl'));
-    CREATE TABLE tpch.supplier
+    CREATE TABLE IF NOT EXISTS tpch.supplier
     (
         s_suppkey     NUMBER(10, 0) NOT NULL,
         s_name        CHAR(25) NOT NULL,
@@ -81,7 +81,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
         s_acctbal     NUMBER NOT NULL,
         s_comment     VARCHAR2(101) NOT NULL
     );
-    CREATE TABLE tpch.ext_partsupp
+    CREATE TABLE IF NOT EXISTS tpch.ext_partsupp
     (
         ps_partkey      NUMBER(10, 0),
         ps_suppkey      NUMBER(10, 0),
@@ -99,7 +99,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                 )
             LOCATION('partsupp.tbl'));
 
-    CREATE TABLE tpch.partsupp
+    CREATE TABLE IF NOT EXISTS tpch.partsupp
     (
         ps_partkey      NUMBER(10, 0) NOT NULL,
         ps_suppkey      NUMBER(10, 0) NOT NULL,
@@ -107,7 +107,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
         ps_supplycost   NUMBER NOT NULL,
         ps_comment      VARCHAR2(199) NOT NULL
     );
-    CREATE TABLE tpch.ext_customer
+    CREATE TABLE IF NOT EXISTS tpch.ext_customer
     (
         c_custkey      NUMBER(10, 0),
         c_name         VARCHAR2(25),
@@ -127,7 +127,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                     MISSING FIELD VALUES ARE NULL
                 )
             LOCATION('customer.tbl'));
-    CREATE TABLE tpch.customer
+    CREATE TABLE IF NOT EXISTS tpch.customer
     (
         c_custkey      NUMBER(10, 0) NOT NULL,
         c_name         VARCHAR2(25) NOT NULL,
@@ -139,7 +139,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
         c_comment      VARCHAR2(117) NOT NULL
     );
     -- read date values as yyyy-mm-dd text
-    CREATE TABLE tpch.ext_orders
+    CREATE TABLE IF NOT EXISTS tpch.ext_orders
     (
         o_orderkey        NUMBER(10, 0),
         o_custkey         NUMBER(10, 0),
@@ -160,7 +160,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                     MISSING FIELD VALUES ARE NULL
                 )
             LOCATION('orders.tbl'));
-    CREATE TABLE tpch.orders
+    CREATE TABLE IF NOT EXISTS tpch.orders
     (
         o_orderkey        NUMBER(10, 0) NOT NULL,
         o_custkey         NUMBER(10, 0) NOT NULL,
@@ -173,7 +173,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
         o_comment         VARCHAR2(79) NOT NULL
     );
     -- read date values as yyyy-mm-dd text
-    CREATE TABLE tpch.ext_lineitem
+    CREATE TABLE IF NOT EXISTS tpch.ext_lineitem
     (
         l_orderkey        NUMBER(10, 0),
         l_partkey         NUMBER(10, 0),
@@ -201,7 +201,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                     MISSING FIELD VALUES ARE NULL
                 )
             LOCATION('lineitem.tbl'));
-    CREATE TABLE tpch.lineitem
+    CREATE TABLE IF NOT EXISTS tpch.lineitem
     (
         l_orderkey        NUMBER(10, 0),
         l_partkey         NUMBER(10, 0),
@@ -220,7 +220,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
         l_shipmode        CHAR(10),
         l_comment         VARCHAR2(44)
     );
-    CREATE TABLE tpch.ext_nation
+    CREATE TABLE IF NOT EXISTS tpch.ext_nation
     (
         n_nationkey   NUMBER(10, 0),
         n_name        CHAR(25),
@@ -237,14 +237,14 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                 )
             LOCATION('nation.tbl'));
 
-    CREATE TABLE tpch.nation
+    CREATE TABLE IF NOT EXISTS tpch.nation
     (
         n_nationkey   NUMBER(10, 0),
         n_name        CHAR(25),
         n_regionkey   NUMBER(10, 0),
         n_comment     VARCHAR(152)
     );
-    CREATE TABLE tpch.ext_region
+    CREATE TABLE IF NOT EXISTS tpch.ext_region
     (
         r_regionkey   NUMBER(10, 0),
         r_name        CHAR(25),
@@ -259,7 +259,7 @@ sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
                     MISSING FIELD VALUES ARE NULL
                 )
             LOCATION('region.tbl'));
-    CREATE TABLE tpch.region
+    CREATE TABLE IF NOT EXISTS tpch.region
     (
         r_regionkey   NUMBER(10, 0),
         r_name        CHAR(25),

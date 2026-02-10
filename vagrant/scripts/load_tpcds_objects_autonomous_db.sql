@@ -1,23 +1,26 @@
-begin	
-dbms_cloud.copy_data(
-    table_name    => 'CATALOG_PAGE',
-    schema_name   => 'EDW_TPCDS',
-    file_uri_list => 'https://objectstorage.eu-amsterdam-1.oraclecloud.com/n/axr9klrvy8b9/b/TPCDS/o/catalog_page.dat',
-    format        =>
-            JSON_OBJECT(
-                'ignoremissingcolumns' VALUE 'true',
-                'removequotes' VALUE 'true',
-                'dateformat' VALUE 'YYYY-MM-DD',
-                'blankasnull' VALUE 'true'
-            )
-);
-end;
+
+-- BEGIN
+--     dbms_cloud.copy_data(
+--         table_name      => 'CATALOG_PAGE',
+--         schema_name     => 'EDW_TPCDS',
+--         file_uri_list   => 'https://objectstorage.eu-amsterdam-1.oraclecloud.com/n/axr9klrvy8b9/b/TPCDS/o/catalog_page.dat',
+--         credential_name => 'BIDEMO_CRED',
+--         format          =>
+--                 JSON_OBJECT(
+--                     'ignoremissingcolumns' VALUE 'true',
+--                     'removequotes' VALUE 'true',
+--                     'dateformat' VALUE 'YYYY-MM-DD',
+--                     'blankasnull' VALUE 'true'
+--                 )
+--     );
+-- END;
+-- /
 
 BEGIN
     dbms_cloud.copy_data(
-        table_name      => 'CATALOG_PAGE',
+        table_name      => 'CALL_CENTER',
         schema_name     => 'EDW_TPCDS',
-        file_uri_list   => 'https://objectstorage.eu-amsterdam-1.oraclecloud.com/n/axr9klrvy8b9/b/TPCDS/o/catalog_page.dat',
+        file_uri_list   => 'https://objectstorage.eu-amsterdam-1.oraclecloud.com/n/axr9klrvy8b9/b/TPCDS/o/call_center.dat',
         credential_name => 'BIDEMO_CRED',
         format          =>
                 JSON_OBJECT(

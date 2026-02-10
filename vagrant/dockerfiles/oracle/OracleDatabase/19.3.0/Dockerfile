@@ -22,7 +22,7 @@
 # ---------------
 ARG BASE_IMAGE=oraclelinux:7-slim
 # hadolint ignore=DL3006
-FROM ${BASE_IMAGE} as base
+FROM ${BASE_IMAGE} AS base
 
 # Labels
 # ------
@@ -78,7 +78,7 @@ ENV ORACLE_BASE=/opt/oracle \
     # extra files voor user scripts
     # ORE_SERVER="ore-server-linux-x86-64-1.5.1.zip" \
 	# ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip" \
-    # TPCH_SAMPLE="tpch-data-3.0.1.zip" \
+    TPCH_SAMPLE="tpch-data.zip" \
     APEX_FILE="apex-latest.zip" \
 	SAMPLE_SCHEMAS="db-sample-schemas-master.zip" 
 
@@ -140,7 +140,7 @@ RUN "$ORACLE_BASE"/oraInventory/orainstRoot.sh && \
 USER oracle
 WORKDIR /home/oracle
 COPY $SAMPLE_SCHEMAS /home/oracle
-# COPY $TPCH_SAMPLE /home/oracle
+COPY $TPCH_SAMPLE /home/oracle
 
 # Add a bashrc file to capitalize ORACLE_SID in the environment
 # hadolint ignore=SC2016

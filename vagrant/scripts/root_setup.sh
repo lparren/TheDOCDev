@@ -17,7 +17,7 @@ sed -i -e "s|#X11DisplayOffset 10|X11DisplayOffset 10|g"   /etc/ssh/sshd_config
 sed -i -e "s|#X11UseLocalhost yes|X11UseLocalhost yes|g"   /etc/ssh/sshd_config
 
 echo "******************************************************************************"
-echo "Install google chrome" `date
+echo "Install google chrome" `date` 
 echo "******************************************************************************"
 wget -nv https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 dnf install -y ./google-chrome-stable_current_*.rpm
@@ -32,36 +32,51 @@ sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.micros
 dnf -y check-update
 dnf -y install code
 
-echo "******************************************************************************"
-echo "Install Anaconda" `date`
-echo "******************************************************************************"
+# echo "******************************************************************************"
+# echo "Install Anaconda" `date`
+# echo "******************************************************************************"
 
-mkdir /opt/anaconda
-wget -nv https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-bash miniconda.sh -b -p /opt/miniconda
-export PATH=/opt/miniconda/bin:$PATH
-conda config --set always_yes yes --set changeps1 no
-conda info -a
-groupadd condagrp
-chgrp -R condagrp /opt/miniconda
-chmod 770 -R /opt/miniconda
-ln -s /opt/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+# mkdir /opt/anaconda
+# wget -nv https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+# bash miniconda.sh -b -p /opt/miniconda
+# export PATH=/opt/miniconda/bin:$PATH
+# conda config --set always_yes yes --set changeps1 no
+# conda info -a
+# groupadd condagrp
+# chgrp -R condagrp /opt/miniconda
+# chmod 770 -R /opt/miniconda
+# ln -s /opt/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 
 
 echo "******************************************************************************"
 echo "Install Docker." `date`
 echo "******************************************************************************"
 dnf install -y docker-ce --nobest
-dnf update -y
+# dnf update -y
 
 echo "******************************************************************************"
 echo "Prepare the drive for the docker images." `date`
 echo "******************************************************************************"
-ls /dev/sd*
-echo -e "n\np\n1\n\n\nw" | fdisk /dev/sdc
-
-ls /dev/sd*
-docker-storage-config -s btrfs -d /dev/sdc1
+# ls /dev/sd*
+# # 1. Partition the disk (same as your original script)
+# umount /var/lib/docker
+# echo ',,' | sfdisk /dev/sdc 
+# # 2. Format the partition as Btrfs
+# # Ensure btrfs-progs is installed first: sudo dnf install -y btrfs-progs
+# mkfs.btrfs -f /dev/sdc1
+# # 3. Create the mount point and mount the disk
+# mount /dev/sdc1 /var/lib/docker
+# # 4. Make the mount permanent in /etc/fstab
+# if ! grep -q "/var/lib/docker" /etc/fstab; then
+#     echo "/dev/sdc1 /var/lib/docker btrfs defaults 0 0" >> /etc/fstab
+# fi
+# # 5. Create the modern Docker configuration file
+mkdir -p /etc/docker
+cat <<EOF > /etc/docker/daemon.json
+{
+  "storage-driver": "overlay2"
+}
+EOF
 
 # #echo "******************************************************************************"
 # #echo "Enable experimental features." `date`
@@ -71,6 +86,7 @@ docker-storage-config -s btrfs -d /dev/sdc1
 echo "******************************************************************************"
 echo "Enable Docker." `date`
 echo "******************************************************************************"
+
 systemctl enable docker.service
 systemctl start docker.service
 systemctl status docker.service
@@ -79,15 +95,15 @@ echo "**************************************************************************
 echo "Create non-root docker user." `date`
 echo "******************************************************************************"
 groupadd -g 1042 docker_fg
-useradd -G docker_fg,condagrp,docker docker_user
+useradd -G docker_fg,docker docker_user
 echo "docker_user:vagrant" | chpasswd
 mkdir -p /u01/volumes/ora1930_oradata
 mkdir -p /u01/volumes/oas760_data
 mkdir -p /u01/volumes/oas820_data
 mkdir -p /u01/volumes/23aifree_oradata
+mkdir -p /u01/volumes/26ai_oradata
 chown -R docker_user:docker_fg /u01
-chmod -R 777 /u01/volumes
-chmod -R g+s /u01/volumes
+chmod -R 777 /u01/
 
 # Add users so host reports process ownership properly. Not required.
 useradd -u 500 oracle

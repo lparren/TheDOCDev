@@ -1,15 +1,14 @@
 echo "*******************************************************"
-echo "*** Installing APEX                                 ***"
+echo "*** Installing db sample schemas                    ***"
 echo "*******************************************************"
-cd ~
-mkdir install
-cd install
-cp /container-entrypoint-initdb.d/${APEX_FILE} .
-unzip ${APEX_FILE}
+cd /tmp
+unzip $APEX_FILE
 cd apex
 
-sqlplus sys/${ORACLE_PASSWORD}@FREEPDB1 as sysdba <<EOF
-@apexins.sql USERS USERS TEMP /i/
+sqlplus / as sysdba <<EOF
+alter session set container = ${ORACLE_PDB};
+create tablespace apex datafile '/opt/oracle/oradata/ORCLCDB/apex01.dbf' size 200m autoextend on next 10m maxsize unlimited;
+@apexins.sql APEX APEX TEMP /i/
 
 BEGIN
     APEX_UTIL.set_security_group_id( 10 );
@@ -26,12 +25,10 @@ END;
 /
 
 @apex_rest_config.sql "${APEX_PASSWORD}" "${APEX_PASSWORD}"
+--@apex_epg_config.sql ${ORACLE_HOME}
 
 alter user APEX_PUBLIC_USER identified by "${APEX_PASSWORD}" account unlock;
 alter user APEX_REST_PUBLIC_USER identified by "${APEX_PASSWORD}" account unlock;
 
 exit;
 EOF
-
-cd ..
-rm -Rf apex

@@ -27,6 +27,31 @@ services:
         soft: 65536
         hard: 65536      
 
+  26ai:
+    image: oracle/database:26ai-ee
+    build:
+      context: ./OracleDatabase/26ai
+    environment:
+      ORACLE_SID: ORCLCDB
+      ORACLE_PDB: ORCLPDB1
+      ORACLE_PWD: oracle
+      ORACLE_EDITION: enterprise
+      APEX_EMAIL: me@here.com
+      APEX_PASSWORD: ApexPassword1!
+      APEX_FILE: apex-latest.zip
+    expose:
+      - 1521
+      - 5500
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - /u01/volumes/26ai_oradata:/opt/oracle/oradata
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536   
+
   23ai:
     image: gvenzl/oracle-free:latest
     environment:
@@ -38,7 +63,7 @@ services:
       APEX_EMAIL: me@here.com
       APEX_PASSWORD: ApexPassword1!      
       APEX_FILE: apex-latest.zip
-      TPCH_FILE: tpch-data-3.0.1.zip
+      TPCH_FILE: tpch-data.zip
     expose:
       - 8521
       - 8500
@@ -128,3 +153,21 @@ services:
       context: ./tpch
     volumes:
       - /home/docker_user/project/tpch_data:/data
+      
+  tpcds:
+    image: thedoc/tpcds:4.0.0
+    build:
+      context: ./tpcds
+    volumes:
+      - /home/docker_user/project/tpcds_data:/data
+
+  jupyter:
+    image: quay.io/jupyter/all-spark-notebook:latest
+    environment:
+      JUPYTER_TOKEN: password
+    volumes:
+      - /home/docker_user/project/jovyan:/home/jovyan/work
+    expose:
+      - 8888
+    ports:
+      - 8888:8888      

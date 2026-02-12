@@ -44,8 +44,8 @@ The folder dockerfiles is copied into the VM  to folder /u01. there a re subfold
   - meltano
     testing the [Meltano](https://meltano.com/) application 
   - oracle
-    Containers for Oracle database, Analytics Server, ORDS, Jupyter, dbt and TPC data sets.
-    The databases 
+    Containers for Oracle database, Analytics Server, ORDS, Jupyter, dbt and TPC data sets. 
+    The databases contain test data schemas and the latest APEX
   - postgres
     Testing postgres and dbt
 
@@ -232,7 +232,7 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
   vagrant keeps report the old version during startup (6.1.32) while vagrant-vbguest reports the new one (7.0.2). Everything seems to work correctly though.
 
 # Changes
-## 2026-12-02
+## 2026-02-12
 - upgraded linux to OL9
   - fixed docker installation after upgrade
   - converted docker storage to overlay2 in stead of btrfs

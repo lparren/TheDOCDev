@@ -6,12 +6,12 @@ Vagrant is used to setup a Oracle Enterprise Linux 8 virtual machine with:
 - 8 cpu cores
 - 20 Gb of memory
 - 250 Gb of disk space (in total)
-- ssh forwatding (incl X11)
+- ssh forwarding (incl X11)
 - ports forwarded for several tools:
   - ssh
   - Oracle DB
   - Oracle Analytics Server
-  <!-- - Spark -->
+
 
 ## Required Software
 
@@ -23,7 +23,7 @@ Download and install the latest version of
 ### Install the vagrant plug-ins (virtualbox guest, env)
 
 ```
-vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-vbguest (no longer supported but still works)
 vagrant plugin install vagrant-env
 ```
 
@@ -36,18 +36,16 @@ vagrant up
 ```
 
 The following software will be installed automatically in user docker_user:
-- Oracle client (23)
+- Oracle client
 - Visual code
 - Oracle SQL Developer Extension for VSCode
-<!-- - Pycharm community edition -->
-- Anaconda
-<!-- - Jupyter -->
 
 The folder dockerfiles is copied into the VM  to folder /u01. there a re subfolders
   - meltano
     testing the [Meltano](https://meltano.com/) application 
   - oracle
-    Containers for Oracle database and Analytics Server
+    Containers for Oracle database, Analytics Server, ORDS, Jupyter, dbt and TPC data sets.
+    The databases 
   - postgres
     Testing postgres and dbt
 
@@ -129,7 +127,7 @@ for ORDS
 - [Oracle Application Express (APEX) latest](https://download.oracle.com/otn_software/apex/apex-latest.zip)
 - [Oracle SQLcl latest](https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip)
 
-With all software in place login to the virtual machine and start the build script (only OAS 7.6.0 is enabled by default)
+With all software in place login to the virtual machine and start the build script (Only the TPC builds are enabled to generate data for the databases.)
 ```
 /vagrant/scripts/build.sh
 ```
@@ -155,10 +153,11 @@ Aliasses:
   - mlt:    Start meltano docker container interactive
   - mltui:  Start meltano docker container in the backgroup
   - oracle
-    - orastart: [oradb|oas|23cfree|dbt] Starts a container: database, Analytics server, 23cfree database or dbt (oas uses a oradb 19.3 instance) 
-    - orastop:  [oradb|oas|23cfree|dbt] Stops a container 
-    - oaup:     [oradb|oas|23cfree|dbt] Creates a container instance from an image
-    - oralog:   [oradb|oas|23cfree|dbt] Shows the logging for a container
+    - orastart: [oradb|oas|23ai|26ai|dbt] Starts a container: database, Analytics server, 23cfree database or dbt (oas uses a oradb 19.3 instance) 
+    - orastop:  [oradb|oas|23ai|26ai|dbt] Stops a container 
+    - oaup:     [oradb|oas|23ai|26ai|dbt] Creates a container instance from an image
+    - oralog:   [oradb|oas|23ai|26ai|dbt] Shows the logging for a container
+    - orarun:   [tpch|tpcds|dbt] start a container and automatical deletes it after run
   - Postgresql
     - pgstart:  [db|pgadmin|dbt] Start postgresql container: db is the database, pgadmin: the postgres admintool, dbt  
     - pgstop:   [db|pgadmin|dbt] Stops the container  
@@ -166,7 +165,7 @@ Aliasses:
     - pglog:    [db|pgadmin|dbt] Shows the logging for a container
 
 ### First run
-On first run start oraup oreadb. When the logging shows DATABASE READY run oraup oas.
+On first run start oraup oradb. When the logging shows DATABASE READY run oraup oas.
 
 ```
 CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS                       PORTS                                                                                  NAMES
@@ -204,7 +203,7 @@ When VBS has been switched of you are still not done. Make the following changes
       Enabled  must be set to 0 
 ```
 
-When all changes have been made reboot your system end Hyper-V, Core ISolation and Virtualization Based Security will be switched of.
+When all changes have been made reboot your system end Hyper-V, Core Isolation and Virtualization Based Security will be switched of.
 You can verify it is off by running msinfo32.exe. If there is still a hypervisor running it will report this at the bottom of the right window
 ```
   A hypervisor has been detected. Features required for Hyper-V will not be displayed.
@@ -232,10 +231,18 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
 
   vagrant keeps report the old version during startup (6.1.32) while vagrant-vbguest reports the new one (7.0.2). Everything seems to work correctly though.
 
+# Changes
+## 2026-12-02
+- upgraded linux to OL9
+  - fixed docker installation after upgrade
+  - converted docker storage to overlay2 in stead of btrfs
+- added TPC-H and TPC-DS for generation of test data
+- Removed unused software and containers
+- added standalone jupyter container
+- fixed typos
+
 # Standing on the shoulders of giants
 Thank you very much:
   Tim Hall (https://www.oracle-base.com)
   Gianni Ceresa (https://gianniceresa.com/)
   Gerald Venzl (https://blogs.oracle.com/authors/gerald-venzl)
-
-

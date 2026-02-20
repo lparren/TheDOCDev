@@ -14,18 +14,27 @@ echo "**************************************************************************
 # orabuild tpch
 docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  tpch
 docker compose --project-directory /u01/dockerfiles/oracle/ run --rm tpch -v -f
+sudo rm -f /home/docker_user/project/tpch_data/*.zip
 sudo zip -j /home/docker_user/project/tpch_data/tpch-data.zip /home/docker_user/project/tpch_data/*.tbl
 # Add zip to every DB instance
 cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/19.3.0/
+cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/19c/
 cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/23aifree/
 cp /home/docker_user/project/tpch_data/tpch-data.zip /u01/dockerfiles/oracle/OracleDatabase/26ai/
 
 # echo "******************************************************************************"
 # echo "Generate TPC-DS data" `date`
 # echo "******************************************************************************"
-# # orabuild tpch
-# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  tpcds
-# docker compose --project-directory /u01/dockerfiles/oracle/ run --rm tpcds -v -f
+# orabuild tpch
+docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  tpcds
+docker compose --project-directory /u01/dockerfiles/oracle/ run --rm tpcds -force -verbose Y -scale 1  -dir /data
+sudo rm -f /home/docker_user/project/tpcds_data/*.zip
+sudo zip -j /home/docker_user/project/tpcds_data/tpcds-data.zip /home/docker_user/project/tpcds_data/*.dat
+# Add zip to every DB instance
+cp /home/docker_user/project/tpcds_data/tpcds-data.zip /u01/dockerfiles/oracle/OracleDatabase/19.3.0/
+cp /home/docker_user/project/tpcds_data/tpcds-data.zip /u01/dockerfiles/oracle/OracleDatabase/19c/
+cp /home/docker_user/project/tpcds_data/tpcds-data.zip /u01/dockerfiles/oracle/OracleDatabase/23aifree/
+cp /home/docker_user/project/tpcds_data/tpcds-data.zip /u01/dockerfiles/oracle/OracleDatabase/26ai/
 
 echo "******************************************************************************"
 echo "Copy Oracle 19.3.0 software." `date`
@@ -34,7 +43,22 @@ echo "**************************************************************************
 cd /u01/dockerfiles/oracle/OracleDatabase/19.3.0
 cp /vagrant/software/LINUX.X64_193000_db_home.zip .
 cp /vagrant/software/apex-latest.zip .
-cp /vagrant/software/db-sample-schemas-master.zip .
+cp /vagrant/software/db-sample-schemas-23.3.zip .
+
+# echo "******************************************************************************"
+# echo "docker build Oracle 19.3.0 software" `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+# echo "******************************************************************************"
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm  oradb
+
+echo "******************************************************************************"
+echo "Copy Oracle 19c software." `date`
+echo "******************************************************************************"
+
+cd /u01/dockerfiles/oracle/OracleDatabase/19c
+cp /vagrant/software/oracle-database-ee-19c-1.0-1.x86_64.rpm .
+cp /vagrant/software/apex-latest.zip .
+cp /vagrant/software/db-sample-schemas-19c.zip .
 
 # echo "******************************************************************************"
 # echo "docker build Oracle 19.3.0 software" `date`
@@ -50,7 +74,7 @@ echo "**************************************************************************
 cd /u01/dockerfiles/oracle/OracleDatabase/26ai
 cp /vagrant/software/oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm .
 cp /vagrant/software/apex-latest.zip .
-cp /vagrant/software/db-sample-schemas-master.zip .
+cp /vagrant/software/db-sample-schemas-23.3.zip .
 
 # echo "******************************************************************************"
 # echo "docker build Oracle 19.3.0 software" `date`
@@ -157,10 +181,10 @@ echo "**************************************************************************
 echo "Copy OracleAnalyticsServer 8.2.0 software." `date`
 echo "******************************************************************************"
 cd /u01/dockerfiles/oracle/OracleAnalyticsServer/8.2.0
-cp /vagrant/software/jdk-8u411-linux-x64.rpm .
+cp /vagrant/software/jdk-8u481-linux-x64.rpm .
 cp /vagrant/software/Oracle_Analytics_Server_Linux_8.2.0.zip .
 cp /vagrant/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip .
-cp /vagrant/software/p28186730_1394218_Generic.zip .
+cp /vagrant/software/p28186730_1394222_Generic.zip .
 cp /vagrant/software/p37476485_122140_Generic.zip .
 cp /vagrant/software/p37388935_122140_Generic.zip .
 cp /vagrant/software/p34809489_122140_Generic.zip .

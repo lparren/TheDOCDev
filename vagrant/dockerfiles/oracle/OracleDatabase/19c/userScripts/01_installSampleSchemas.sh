@@ -1,7 +1,7 @@
 echo "*******************************************************"
 echo "*** Installing db sample schemas                    ***"
 echo "*******************************************************"
-cd /home/oracle
+cd /tmp
 unzip db-sample-schemas-19c.zip
 cd db-sample-schemas-19c
 perl -p -i.bak -e 's#__SUB__CWD__#'$(pwd)'#g' *.sql */*.sql */*.dat 

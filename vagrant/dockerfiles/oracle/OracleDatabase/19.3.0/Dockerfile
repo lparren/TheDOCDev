@@ -80,7 +80,7 @@ ENV ORACLE_BASE=/opt/oracle \
 	# ORE_SUPPORT="ore-supporting-linux-x86-64-1.5.1.zip" \
     TPCH_SAMPLE="tpch-data.zip" \
     APEX_FILE="apex-latest.zip" \
-	SAMPLE_SCHEMAS="db-sample-schemas-master.zip" 
+	SAMPLE_SCHEMAS="db-sample-schemas-19c.zip" 
 
 # Use second ENV so that variable get substituted
 ENV PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH \
@@ -93,7 +93,7 @@ COPY $SETUP_LINUX_FILE $CHECK_SPACE_FILE $INSTALL_DIR/
 COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CREATE_OBSERVER_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE $USER_SCRIPTS_FILE $RELINK_BINARY_FILE $CONFIG_TCPS_FILE $ORACLE_BASE/
 COPY $APEX_FILE $ORACLE_BASE/
 
-RUN yum install -y dos2unix perl && \
+RUN yum install -y vi dos2unix perl && \
     yum-config-manager --enable ol7_optional_latest && \
     yum-config-manager --enable ol7_addons
 

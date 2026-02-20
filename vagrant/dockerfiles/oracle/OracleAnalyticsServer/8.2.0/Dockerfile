@@ -60,10 +60,10 @@ LABEL maintainer="Gianni Ceresa <gianni.ceresa@datalysis.ch>"
 # -------------------------------------------------------------
 ENV OAS_VERSION="8.2.0"                         \
     ORACLE_BASE=/opt/oracle                     \
-    INSTALL_FILE_JDK="jdk-8u411-linux-x64.rpm"  \
+    INSTALL_FILE_JDK="jdk-8u481-linux-x64.rpm"  \
     INSTALL_FILE_WLS="fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip"   \
     INSTALL_FILE_OAS="Oracle_Analytics_Server_Linux_8.2.0.zip"        \
-    INSTALL_FILE_OPATCH="p28186730_1394218_Generic.zip"               \
+    INSTALL_FILE_OPATCH="p28186730_1394222_Generic.zip"               \
     PATCH_FILE_WLS01="p37476485_122140_Generic.zip"  \
     PATCH_FILE_FMW01="p37388935_122140_Generic.zip"  \
     PATCH_FILE_FMW02="p34809489_122140_Generic.zip"  \
@@ -142,73 +142,84 @@ RUN cd ${INSTALL_DIR}  \
     && unzip ${INSTALL_DIR}/${INSTALL_FILE_WLS} -d ${INSTALL_DIR}/tmp_wls                                                                                  \
     && rm ${INSTALL_DIR}/${INSTALL_FILE_WLS}                                                                                                               \
     && java -jar $(find ${INSTALL_DIR}/tmp_wls -name *.jar) -silent -responseFile ${ORACLE_BASE}/${INSTALL_RSP_WLS} -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
-    && rm -rf ${INSTALL_DIR}/tmp_wls                                                                                                                       \
+    && rm -rf ${INSTALL_DIR}/tmp_wls
+
     ### Install OAS
-    && unzip ${INSTALL_DIR}/${INSTALL_FILE_OAS} -d ${INSTALL_DIR}/tmp_oas                                                                                  \
+RUN unzip ${INSTALL_DIR}/${INSTALL_FILE_OAS} -d ${INSTALL_DIR}/tmp_oas                                                                                  \
     && rm ${INSTALL_DIR}/${INSTALL_FILE_OAS}                                                                                                               \
     && java -jar $(find ${INSTALL_DIR}/tmp_oas -name Oracle_Analytics_Server_2025_Linux.jar) -silent -responseFile ${ORACLE_BASE}/${INSTALL_RSP_OAS} -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
-    && rm -rf ${INSTALL_DIR}/tmp_oas                                                                                                                       \
+    && rm -rf ${INSTALL_DIR}/tmp_oas
+
     ### Update OPatch
-    && unzip ${INSTALL_DIR}/${INSTALL_FILE_OPATCH} -d ${INSTALL_DIR}/tmp_opatch                                                                       \
+RUN unzip ${INSTALL_DIR}/${INSTALL_FILE_OPATCH} -d ${INSTALL_DIR}/tmp_opatch                                                                       \
     && rm ${INSTALL_DIR}/${INSTALL_FILE_OPATCH}                                                                                                       \
     && java -jar $(find ${INSTALL_DIR}/tmp_opatch -name opatch_generic.jar) -silent oracle_home=${ORACLE_HOME} -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
-    && rm -rf ${INSTALL_DIR}/${INSTALL_DIR}/tmp_opatch                                                                                                \
+    && rm -rf ${INSTALL_DIR}/${INSTALL_DIR}/tmp_opatch
+
     ### Patch WLS
     # - patch 1
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_WLS01} -d ${INSTALL_DIR}/patch                                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_WLS01} -d ${INSTALL_DIR}/patch                                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_WLS01}                                                             \
     && cd $(find ${INSTALL_DIR}/patch -type d -name binary_patches)                                      \
     && ${ORACLE_HOME}/OPatch/opatch napply -silent -oh ${ORACLE_HOME} -phBaseFile linux64_patchlist.txt  \
     && cd ${INSTALL_DIR}                                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     ### Patch FMW
     # - patch 1
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_FMW01} -d ${INSTALL_DIR}/patch                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_FMW01} -d ${INSTALL_DIR}/patch                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_FMW01}                                             \
     && cd $(find ${INSTALL_DIR}/patch -maxdepth 1 -type d -name '*[0-9]*')               \
     && ${ORACLE_HOME}/OPatch/opatch apply -silent -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
     && cd ${INSTALL_DIR}                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     # - patch 2
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_FMW02} -d ${INSTALL_DIR}/patch                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_FMW02} -d ${INSTALL_DIR}/patch                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_FMW02}                                             \
     && cd $(find ${INSTALL_DIR}/patch -maxdepth 1 -type d -name '*[0-9]*')               \
     && ${ORACLE_HOME}/OPatch/opatch apply -silent -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
     && cd ${INSTALL_DIR}                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     # - patch 3
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_FMW03} -d ${INSTALL_DIR}/patch                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_FMW03} -d ${INSTALL_DIR}/patch                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_FMW03}                                             \
     && cd $(find ${INSTALL_DIR}/patch -maxdepth 1 -type d -name '*[0-9]*')               \
     && ${ORACLE_HOME}/OPatch/opatch apply -silent -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
     && cd ${INSTALL_DIR}                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     # - patch 4
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_FMW04} -d ${INSTALL_DIR}/patch                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_FMW04} -d ${INSTALL_DIR}/patch                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_FMW04}                                             \
     && cd $(find ${INSTALL_DIR}/patch -maxdepth 1 -type d -name '*[0-9]*')               \
     && ${ORACLE_HOME}/OPatch/opatch apply -silent -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
     && cd ${INSTALL_DIR}                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     # - patch 5
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_FMW05} -d ${INSTALL_DIR}/patch                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_FMW05} -d ${INSTALL_DIR}/patch                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_FMW05}                                             \
     && cd $(find ${INSTALL_DIR}/patch -maxdepth 1 -type d -name '*[0-9]*')               \
     && ${ORACLE_HOME}/OPatch/opatch apply -silent -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
     && cd ${INSTALL_DIR}                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     # - patch 6
-    && unzip ${INSTALL_DIR}/${PATCH_FILE_FMW06} -d ${INSTALL_DIR}/patch                  \
+RUN unzip ${INSTALL_DIR}/${PATCH_FILE_FMW06} -d ${INSTALL_DIR}/patch                  \
     && rm ${INSTALL_DIR}/${PATCH_FILE_FMW06}                                             \
     && cd $(find ${INSTALL_DIR}/patch -maxdepth 1 -type d -name '*[0-9]*')               \
     && ${ORACLE_HOME}/OPatch/opatch apply -silent -invPtrLoc ${ORACLE_BASE}/oraInst.loc  \
     && cd ${INSTALL_DIR}                                                                 \
-    && rm -rf ${INSTALL_DIR}/patch                                                       \
+    && rm -rf ${INSTALL_DIR}/patch
+
     # clean up
-    && cd ${ORACLE_BASE}                                                                 \
-    && rm -rf ${INSTALL_DIR}                                                             \
+RUN cd ${ORACLE_BASE}                                                                 \
+    && rm -rf ${INSTALL_DIR}
+
     ### Install NodeJs modules for BI Excel export
-    && mkdir -p ${BI_EXCEL_EXPORT}                                                       \
+RUN mkdir -p ${BI_EXCEL_EXPORT}                                                       \
     && cd ${BI_EXCEL_EXPORT}                                                             \
     && mv ${ORACLE_BASE}/package.json ${BI_EXCEL_EXPORT}/                                \
     && npm install

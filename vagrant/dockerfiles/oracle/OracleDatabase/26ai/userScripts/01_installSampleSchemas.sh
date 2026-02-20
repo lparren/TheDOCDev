@@ -2,8 +2,17 @@ echo "*******************************************************"
 echo "*** Installing db sample schemas                    ***"
 echo "*******************************************************"
 cd /tmp
-unzip db-sample-schemas-master.zip
-cd db-sample-schemas-master
-perl -p -i.bak -e 's#__SUB__CWD__#'$(pwd)'#g' *.sql */*.sql */*.dat 
-echo "exit" >> mksample.sql
-sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB @mksample $ORACLE_PWD $ORACLE_PWD hr oe pm ix sh bi users temp . localhost:1521/$ORACLE_PDB
+unzip db-sample-schemas-23.3.zip
+cd db-sample-schemas-23.3
+sqlplus -s sys/${ORACLE_PWD}@${ORACLE_PDB} as sysdba @./human_resources/hr_install.sql <<EOF
+hr
+
+EOF
+sqlplus -s sys/${ORACLE_PWD}@${ORACLE_PDB} as sysdba @./customer_orders/co_install.sql <<EOF
+co
+
+EOF
+sqlplus -s sys/${ORACLE_PWD}@${ORACLE_PDB} as sysdba @./sales_history/sh_install.sql <<EOF
+co
+
+EOF

@@ -1,23 +1,26 @@
-# Use the official Oracle Linux 9 slim image
-FROM oraclelinux:9-slim
+# Use the official Oracle Linux 8 slim image
+FROM oraclelinux:8-slim
 
 # Set environment variables for the installation
 ENV ORACLE_DOCKER_INSTALL=true \
-    ORACLE_HOME=/opt/oracle/product/26ai/dbhome_1 \
-    PATH=$PATH:/opt/oracle/product/26ai/dbhome_1/bin \
+    ORACLE_HOME=/opt/oracle/product/19c/dbhome_1 \
+    PATH=$PATH:/opt/oracle/product/19c/dbhome_1/bin \
     APEX_FILE="apex-latest.zip"
 
 # Install the Preinstallation RPM to configure kernel parameters and create 'oracle' user
-RUN microdnf install -y dnf dnf-utils dos2unix iproute perl oracle-ai-database-preinstall-26ai && \
-    microdnf clean all
+RUN microdnf install -y dnf dnf-utils dos2unix iproute perl 
+RUN dnf install -y oraclelinux-release-el8 && \
+    dnf install -y oraclelinux-developer-release-el8  && \
+    dnf install -y oracle-database-preinstall-19c  && \
+    dnf clean all
 
 # Copy the Enterprise Edition RPM (must be in the same directory as Dockerfile)
 # Note: You must download this manually as it requires an Oracle Account
-COPY oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm /tmp/
+COPY oracle-database-ee-19c-1.0-1.x86_64.rpm /tmp/
 
 # Install the Database Enterprise Edition RPM
-RUN dnf -y localinstall /tmp/oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm
-RUN rm -rf /tmp/oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm
+RUN dnf -y localinstall /tmp/oracle-database-ee-19c-1.0-1.x86_64.rpm
+RUN rm -rf /tmp/oracle-database-ee-19c-1.0-1.x86_64.rpm
 
 # Expose the standard Oracle listener port
 EXPOSE 1521
@@ -36,7 +39,7 @@ COPY runUserScripts.sh /tmp/runUserScripts.sh
 RUN dos2unix /tmp/runUserScripts.sh
 RUN chmod +x /tmp/runUserScripts.sh
 
-COPY  db-sample-schemas-23.3.zip $APEX_FILE tpch-data.zip tpcds-data.zip /tmp/
+COPY  db-sample-schemas-19c.zip $APEX_FILE tpch-data.zip tpcds-data.zip /tmp/
 
 RUN mkdir -p /tmp/userScripts
 COPY ./userScripts/* /tmp/userScripts/

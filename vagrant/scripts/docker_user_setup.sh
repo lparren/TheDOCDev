@@ -71,7 +71,7 @@ echo "alias orastart=\"docker compose --project-directory /u01/dockerfiles/oracl
 echo "alias orastop=\"docker compose --project-directory /u01/dockerfiles/oracle/ stop \"" >> /home/docker_user/.bash_profile
 echo "alias oralog=\"docker compose --project-directory /u01/dockerfiles/oracle/ logs -f \"" >> /home/docker_user/.bash_profile
 echo "alias orabuild=\"docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm \"" >> /home/docker_user/.bash_profile
-echo "alias orarun=\"docker compose --project-directory /u01/dockerfiles/oracle/ run -rm \"" >> /home/docker_user/.bash_profile
+echo "alias orarun=\"docker compose --project-directory /u01/dockerfiles/oracle/ run --rm \"" >> /home/docker_user/.bash_profile
 # 
 echo "# Postgres aliasses" >> /home/docker_user/.bash_profile
 echo "alias pgup=\"docker compose --project-directory /u01/dockerfiles/postgres/  up --detach \"" >> /home/docker_user/.bash_profile
@@ -86,6 +86,10 @@ echo "alias lzd=\"lazydocker\"" >> /home/docker_user/.bash_profile
 echo "#" >> /home/docker_user/.bash_profile
 echo "alias mlt=\"docker run --rm -it -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \"" >> /home/docker_user/.bash_profile
 echo "alias mltui=\"docker run --rm -d -v ${PWD}:/project -w /project -e 5000 -p 5000:5000 meltano/meltano:latest \"" >> /home/docker_user/.bash_profile
+
+
+echo "# Sync dockerfiles from vagrant folder" >> /home/docker_user/.bash_profile
+echo "alias dfsync=\"rsync -avW --exclude='.git/' /vagrant/dockerfiles/ /u01/dockerfiles/\"" >> /home/docker_user/.bash_profile
 
 echo "*******************************************************"
 echo "*** You need to copy all the software in place now! ***"

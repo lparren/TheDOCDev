@@ -27,6 +27,31 @@ services:
         soft: 65536
         hard: 65536      
 
+  19c:
+    image: oracle/database:19c-ee
+    build:
+      context: ./OracleDatabase/19c
+    environment:
+      ORACLE_SID: ORCLCDB
+      ORACLE_PDB: ORCLPDB1
+      ORACLE_PWD: oracle
+      ORACLE_EDITION: enterprise
+      APEX_EMAIL: me@here.com
+      APEX_PASSWORD: ApexPassword1!
+      APEX_FILE: apex-latest.zip
+    expose:
+      - 1521
+      - 5500
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - /u01/volumes/19c_oradata:/opt/oracle/oradata
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536   
+
   26ai:
     image: oracle/database:26ai-ee
     build:
@@ -80,11 +105,11 @@ services:
       context: ./OracleAnalyticsServer/8.2.0
     stop_grace_period: 600s
     environment:
-      BI_CONFIG_RCU_DBSTRING: oradb:1521:pdb1930
+      BI_CONFIG_RCU_DBSTRING: 19c:1521:orclpdb1
       BI_CONFIG_RCU_PWD: oracle
-    depends_on: [oradb]
+    depends_on: [19c]
     links:
-      - oradb
+      - 19c
     expose:
       - 9500-9514
     ports:

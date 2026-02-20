@@ -23,7 +23,7 @@ Download and install the latest version of
 ### Install the vagrant plug-ins (virtualbox guest, env)
 
 ```
-vagrant plugin install vagrant-vbguest (no longer supported but still works)
+vagrant plugin install vagrant-vbguest [^1]
 vagrant plugin install vagrant-env
 ```
 
@@ -55,9 +55,18 @@ You can log into the VM on ssh port 2222 (default port assigned by vagrant, when
 ### Oracle Software
 In addition you will need to download all the required software and put it into the "software" directory, so it can be copied into place and used during the builds. (Some downloads are used for more installs, you only need to download it once :-))
 
-for Oracle Database
+for Oracle Database 19.3.0 
 - jdk-8u241-linux-x64.rpm
-- LINUX.X64_193000_db_home.zip
+- [LINUX.X64_193000_db_home.zip](https://download.oracle.com/otn/linux/oracle19c/190000/LINUX.X64_193000_db_home.zip)
+- [db-sample-schemas](https://github.com/oracle-samples/db-sample-schemas/archive/refs/tags/v19c.zip)
+
+for Oracle Database 19c (RPM install)
+- [oracle-database-ee-19c-1.0-1.x86_64.rpm](https://download.oracle.com/otn/linux/oracle19c/190000/oracle-database-ee-19c-1.0-1.x86_64.rpm)
+- [db-sample-schemas](https://github.com/oracle-samples/db-sample-schemas/archive/refs/tags/v19c.zip)
+
+for Oracle Database 26ai-ee (RPM install)
+- [oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm](https://download.oracle.com/otn/linux/oracle26ai/2326100/oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm)
+- [db-sample-schemas](https://github.com/oracle-samples/db-sample-schemas/archive/refs/tags/v19c.zip)
 
 for OAS 5.5.0
 - jdk-8u241-linux-x64.rpm
@@ -108,7 +117,7 @@ for OAS 7.6.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 <!--- [Patch 35024228](https://support.oracle.com/epmos/faces/ui/patch/PatchDetail.jspx?parent=DOCUMENT&amp;sourceId=2832967.2&amp;patchId=35024228&amp;)-->
 
 for OAS 8.2.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
-- [jdk-8u441-linux-x64.rpm ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+- [jdk-8u481-linux-x64.rpm ](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 - [Oracle WebLogic Server 12.2.1.4 Fusion Middleware Infrastructure Installer](https://download.oracle.com/otn/nt/middleware/12c/122140/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip?)
 - [Oracle Analytics Server 2025 Linux](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
 - [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730&amp;)
@@ -127,21 +136,25 @@ for ORDS
 - [Oracle Application Express (APEX) latest](https://download.oracle.com/otn_software/apex/apex-latest.zip)
 - [Oracle SQLcl latest](https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip)
 
-With all software in place login to the virtual machine and start the build script (Only the TPC builds are enabled to generate data for the databases.)
+With all software in place login to the virtual machine and start the build script (Only the TPC builds are enabled to generate data for the databases which are copied to the oracle database folders.)
 ```
 /vagrant/scripts/build.sh
 ```
-after build there will be a database, OAS image:
+The build script only copies all files which are required to build the docker images. Images must be built manually (eg. orabuild 19c).
 
 ```
-[docker_user@localhost ~]$ docker images
+[docker_user@localhost ~]$ docker images (after images have been built)
 
-REPOSITORY            TAG         IMAGE ID       CREATED          SIZE
-oracle/oas            7.6.0       1d699499db62   15 minutes ago   29.3GB
-oracle/database       19.3.0-ee   08351437f741   2 hours ago      7.61GB
-oraclelinux           8-slim      656791178b56   13 days ago      116MB
-lazyteam/lazydocker   latest      6518a6686572   22 months ago    55.7MB
+[docker_user@localhost 8.2.0]$ docker images
+                                                                                                                                          i Info →   U  In Use
+IMAGE                    ID             DISK USAGE   CONTENT SIZE   EXTRA
+oracle/database:19c-ee   d4d77e146725       12.7GB             0B    U
+oracle/oas:8.2.0         2d7d7e1f8f45       31.4GB             0B    U
+oraclelinux:8-slim       800a18df3a36        116MB             0B
+oraclelinux:9-slim       4e732d409933        113MB             0B
+thedoc/tpch:3.0.1        3be7dd0a1289        356MB             0B
 ```
+
 
 # You can start the containers individualy or through docker compose
 ## Docker compose
@@ -153,11 +166,12 @@ Aliasses:
   - mlt:    Start meltano docker container interactive
   - mltui:  Start meltano docker container in the backgroup
   - oracle
-    - orastart: [oradb|oas|23ai|26ai|dbt] Starts a container: database, Analytics server, 23cfree database or dbt (oas uses a oradb 19.3 instance) 
-    - orastop:  [oradb|oas|23ai|26ai|dbt] Stops a container 
-    - oaup:     [oradb|oas|23ai|26ai|dbt] Creates a container instance from an image
-    - oralog:   [oradb|oas|23ai|26ai|dbt] Shows the logging for a container
-    - orarun:   [tpch|tpcds|dbt] start a container and automatical deletes it after run
+    - orabuild: [oradb|oas|19c|23ai|26ai|dbt] builds the image
+    - oaup:     [oradb|oas|19c|23ai|26ai|dbt] Creates a container instance from an image (if image does not exist build it first)
+    - orastart: [oradb|oas|19c|23ai|26ai|dbt] Starts a container: database, Analytics server, 23cfree database or dbt (oas uses a oradb 19.3 instance) 
+    - orastop:  [oradb|oas|19c|23ai|26ai|dbt] Stops a container 
+    - oralog:   [oradb|oas|19c|23ai|26ai|dbt] Shows the logging for a container
+    - orarun:   [tpch|tpcds|dbt] start a container and delete it after run
   - Postgresql
     - pgstart:  [db|pgadmin|dbt] Start postgresql container: db is the database, pgadmin: the postgres admintool, dbt  
     - pgstop:   [db|pgadmin|dbt] Stops the container  
@@ -231,7 +245,13 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
 
   vagrant keeps report the old version during startup (6.1.32) while vagrant-vbguest reports the new one (7.0.2). Everything seems to work correctly though.
 
+[^1] The vbguest plugin no longer supported but still works. Sometimes an error message might appear. This is because the syntax _exists_ is no longer supported in ruby. Just update the _.rb_ file indicated to _exist_ and the script will work again.
+
 # Changes
+## 2026-02-20
+- added 19c rpm install to oracle scripts because the scripts are much easier although less flexible than the silent install.
+- replaced the 19.3.0 database with th 19c variant for oas
+- added load script for tpc-ds in 19c
 ## 2026-02-12
 - upgraded linux to OL9
   - fixed docker installation after upgrade

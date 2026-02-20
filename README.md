@@ -179,7 +179,7 @@ Aliasses:
     - pglog:    [db|pgadmin|dbt] Shows the logging for a container
 
 ### First run
-On first run start oraup oradb. When the logging shows DATABASE READY run oraup oas.
+On first run start __oraup 19c__. When the logging shows DATABASE READY run __oraup oas__.
 
 ```
 CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS                       PORTS                                                                                  NAMES

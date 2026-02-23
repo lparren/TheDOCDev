@@ -1,0 +1,557 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8199371E-8A48-39C6-BE82-9D1D586763CA" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="EXT_CATALOG_SALES">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>EXT_CATALOG_SALES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<typeID>6</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CS_SOLD_DATE_SK" id="506058FB-5249-4100-4AE4-2EBDE591B405">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SOLD_DATE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SOLD_TIME_SK" id="27041969-BF9F-A764-ED4D-9E005366CAAD">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SOLD_TIME_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SHIP_DATE_SK" id="5FFCA2BF-2C40-8583-5779-22ECC8A76085">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SHIP_DATE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_BILL_CUSTOMER_SK" id="0E7A8D36-F799-27BB-D4A8-59D759DD47D8">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_BILL_CUSTOMER_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_BILL_CDEMO_SK" id="984343A5-8A62-FD6E-28E2-202C7BBC1990">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_BILL_CDEMO_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_BILL_HDEMO_SK" id="EE02A949-CFAC-7480-ECEC-CB6C0F9E9869">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_BILL_HDEMO_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_BILL_ADDR_SK" id="72E09128-FE34-903D-F294-1FEB7B916AF2">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_BILL_ADDR_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SHIP_CUSTOMER_SK" id="EED320E6-BE7D-5C24-274B-F980B4E44E6B">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SHIP_CUSTOMER_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SHIP_CDEMO_SK" id="ADD765B0-14FE-E9E8-A6D6-4202A5D5A3B6">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SHIP_CDEMO_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SHIP_HDEMO_SK" id="B99B4FD1-6AE3-3108-29A4-9E57DB7EEF79">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SHIP_HDEMO_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SHIP_ADDR_SK" id="C94A6936-FC6A-C8A1-5607-321856BC734B">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SHIP_ADDR_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_CALL_CENTER_SK" id="97DD1140-4AB1-2169-37FD-A793741FCE82">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_CALL_CENTER_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_CATALOG_PAGE_SK" id="6CC343B8-0EB8-8F57-BD68-C4426EC6F0EC">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_CATALOG_PAGE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SHIP_MODE_SK" id="435E9B7F-7E7F-0845-A413-4BDE38CC2344">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SHIP_MODE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_WAREHOUSE_SK" id="C144BDEE-81BB-E801-E308-686AAEE97BC3">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_WAREHOUSE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_ITEM_SK" id="A041BBE6-5F10-212C-93F8-012777959C68">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_ITEM_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_PROMO_SK" id="0593C811-DBDA-78FF-2C94-06C0D97594F2">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_PROMO_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_ORDER_NUMBER" id="B8CD1D1E-B4B2-26EC-98E4-0B2120DC04BA">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_ORDER_NUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_QUANTITY" id="D7BD0FEB-CE5E-E262-F368-F4D722430AA8">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_QUANTITY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_WHOLESALE_COST" id="87071114-167C-24D9-38F6-3DBD5D52AC95">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_WHOLESALE_COST</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_LIST_PRICE" id="72CD538C-2D5F-3D23-993F-0D1075430338">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_LIST_PRICE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_SALES_PRICE" id="91A7AFDD-653E-C46C-EC28-7F5E4289AC09">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_SALES_PRICE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_EXT_DISCOUNT_AMT" id="8DA65814-D0CA-EC31-0D97-AD1DF413C89D">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_EXT_DISCOUNT_AMT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_EXT_SALES_PRICE" id="4EC29D2A-04AF-D30B-C703-64489D3A9F3E">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_EXT_SALES_PRICE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_EXT_WHOLESALE_COST" id="20ED3F63-9EBC-8C3C-BD5A-891598B946F7">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_EXT_WHOLESALE_COST</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_EXT_LIST_PRICE" id="1846C4A8-DFC1-2221-CE8B-9CB8F15A04DE">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_EXT_LIST_PRICE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_EXT_TAX" id="A9617CC5-CA32-4647-6A0A-25AF715107A4">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_EXT_TAX</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_COUPON_AMT" id="B489F6DC-814F-4C3F-5CDD-DF09096A95DC">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_COUPON_AMT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_EXT_SHIP_COST" id="1D2CA40F-F8F2-2010-0132-9AE1827A9254">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_EXT_SHIP_COST</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_NET_PAID" id="3B944607-12FE-37F0-88D5-D97B5EB0772F">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_NET_PAID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_NET_PAID_INC_TAX" id="ED1180D8-6FE2-95C7-D857-E4EC59FA5641">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_NET_PAID_INC_TAX</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_NET_PAID_INC_SHIP" id="5068F45B-DBD6-17D5-4A4D-A2005C5E5E53">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_NET_PAID_INC_SHIP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_NET_PAID_INC_SHIP_TAX" id="77802A0C-9F66-DA13-1D5E-E1C885DDA0F1">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_NET_PAID_INC_SHIP_TAX</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CS_NET_PROFIT" id="33A41231-624E-0A90-1062-E146482A9404">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_CATALOG_SALES</sourceObjSchema>
+<sourceObjName>CS_NET_PROFIT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

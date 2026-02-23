@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DirectoryOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DirectoryOraclev10g" name="TPCDS_DIR" directorySegmentName="seg_0" id="78A6085A-0DB9-DCAD-7246-AD83A8C735DA">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjName>TPCDS_DIR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:06 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<dirPath>/home/oracle/tpcds</dirPath>
+</DirectoryOraclev10g>

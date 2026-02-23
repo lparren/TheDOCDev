@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="773272EF-8AD5-8E5E-47A3-5DB21BC52673" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="EXT_HOUSEHOLD_DEMOGRAPHICS">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>EXT_HOUSEHOLD_DEMOGRAPHICS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<typeID>6</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HD_DEMO_SK" id="3CEA635C-ACED-1869-7FA4-2C67F95B341B">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_HOUSEHOLD_DEMOGRAPHICS</sourceObjSchema>
+<sourceObjName>HD_DEMO_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HD_INCOME_BAND_SK" id="CE4A7038-9CC9-AF8E-D850-C47E5B36E644">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_HOUSEHOLD_DEMOGRAPHICS</sourceObjSchema>
+<sourceObjName>HD_INCOME_BAND_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HD_BUY_POTENTIAL" id="E6BC45B4-A23F-3ACB-26E5-AF1E9E7CFAA1">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_HOUSEHOLD_DEMOGRAPHICS</sourceObjSchema>
+<sourceObjName>HD_BUY_POTENTIAL</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HD_DEP_COUNT" id="9E99C316-607A-1777-94B8-5C643E791D14">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_HOUSEHOLD_DEMOGRAPHICS</sourceObjSchema>
+<sourceObjName>HD_DEP_COUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HD_VEHICLE_COUNT" id="0F111306-3FFF-5BB8-B926-212075D2ED39">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_HOUSEHOLD_DEMOGRAPHICS</sourceObjSchema>
+<sourceObjName>HD_VEHICLE_COUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

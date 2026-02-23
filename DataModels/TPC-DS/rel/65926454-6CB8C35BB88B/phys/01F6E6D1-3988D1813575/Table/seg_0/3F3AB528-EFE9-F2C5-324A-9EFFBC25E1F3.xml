@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CUSTOMER_ADDRESS" directorySegmentName="seg_0" id="3F3AB528-EFE9-F2C5-324A-9EFFBC25E1F3">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E32B6722-C6DE-8348-B9F5-C3013FB562E5</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CA_COUNTY" id="1B475DD4-FDCB-705C-2B04-911D7D4310D0">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_SUITE_NUMBER" id="1FF49459-B634-59DA-D2F5-5BA3DD8C8D6B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_STREET_TYPE" id="2902844F-D309-6CD3-7A4E-C93EFBBF23EA">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_COUNTRY" id="35300A94-A252-E7F4-0850-DFEE2C392A20">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_GMT_OFFSET" id="35E23C9A-675E-9285-7DF2-3CE571704809">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_STREET_NAME" id="4E54E6E3-29C1-F848-E22F-AEE6B8AB34E1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_STATE" id="80DE4796-EC1B-B1D9-E2B5-B026CAAE49A9">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_STREET_NUMBER" id="A72A5F0A-C238-E65A-D958-72AE0A44828E">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_CITY" id="A99FBB69-8A64-3ED0-E8E3-45204D6EB74E">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_ADDRESS_ID" id="ACBD3B8D-D1C5-30CB-E934-B4E2A54DBE37">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_LOCATION_TYPE" id="B3129478-CFA8-7D12-18B4-80B5DD0A6FC1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_ADDRESS_SK" id="C6799C95-F531-8300-FE8E-B47E06EA55B6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CA_ZIP" id="E9E75EB3-3AB7-0133-5EFA-2481A19A3621">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CUSTOMER_ADDRESS_PK" id="BF0C0168-44C2-9FB0-0506-CDF97F2713A1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<segment>314941AF-1D10-C29F-9B90-1307145E2CBC</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CUSTOMER_ADDRESS_PK" id="DAD916EE-CAB4-93F9-CDF5-F7CC48207251">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<segment>E5CC66EA-12BF-1AA4-0DE5-ECA438584388</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+<existingIndex>BF0C0168-44C2-9FB0-0506-CDF97F2713A1</existingIndex>
+<indexSegment>E5CC66EA-12BF-1AA4-0DE5-ECA438584388</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

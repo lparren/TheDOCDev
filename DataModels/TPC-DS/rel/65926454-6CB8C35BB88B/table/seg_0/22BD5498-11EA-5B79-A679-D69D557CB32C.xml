@@ -1,0 +1,226 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22BD5498-11EA-5B79-A679-D69D557CB32C" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="EXT_WAREHOUSE">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>EXT_WAREHOUSE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<typeID>6</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="W_WAREHOUSE_SK" id="A5CD162E-9D68-1237-A0CD-2D234F9A7A3D">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_WAREHOUSE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_WAREHOUSE_ID" id="0798E04F-8E83-0CE1-8114-C14ABA3CF4FE">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_WAREHOUSE_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_WAREHOUSE_NAME" id="F955873D-613D-591C-A060-B7778D096B6B">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_WAREHOUSE_NAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_WAREHOUSE_SQ_FT" id="270FA525-50D2-F802-DCC7-6AF521278BB5">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_WAREHOUSE_SQ_FT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_STREET_NUMBER" id="E1521DE8-3547-E8B7-63F6-0FAA5FD858D2">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_STREET_NUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_STREET_NAME" id="EF5C2BF3-27CA-584D-032F-9FABF6EBD07D">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_STREET_NAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_STREET_TYPE" id="E7E6FCC5-9E8C-961E-B312-51000E12822E">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_STREET_TYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_SUITE_NUMBER" id="33313AF9-780C-816B-8FF7-236F6D94E5B3">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_SUITE_NUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_CITY" id="6F4EB010-2C11-5CF7-A532-84A40DA7C3FB">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_CITY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_COUNTY" id="BC47BE5A-8D3C-CB70-31C7-93FF1C337C76">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_COUNTY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_STATE" id="E71DD281-1181-E714-31CC-427775B3C4CA">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_STATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_ZIP" id="A3FEE25B-79EF-6119-4C7A-41D89193B9E2">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_ZIP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_COUNTRY" id="77B9B321-1CB0-194D-0FC9-73866107B31C">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_COUNTRY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="W_GMT_OFFSET" id="4AAB8895-B09D-F0E3-1D9E-19BAFE46B2A4">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_WAREHOUSE</sourceObjSchema>
+<sourceObjName>W_GMT_OFFSET</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

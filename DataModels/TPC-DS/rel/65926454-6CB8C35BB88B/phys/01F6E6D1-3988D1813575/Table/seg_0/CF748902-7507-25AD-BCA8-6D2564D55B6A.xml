@@ -1,0 +1,196 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CALL_CENTER" directorySegmentName="seg_0" id="CF748902-7507-25AD-BCA8-6D2564D55B6A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E32B6722-C6DE-8348-B9F5-C3013FB562E5</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CC_CITY" id="02E8E8A0-C7A7-88A3-BC0B-D326AE3EB406">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_STREET_NUMBER" id="06E4C364-7EDF-F547-F441-1C3BF0AFD7BA">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_MKT_CLASS" id="171D50D0-5345-A5BC-70F3-7AB6603041D1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_MKT_ID" id="1BF526D2-7DD7-CD77-1726-030402DB5A58">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_STREET_TYPE" id="215D2644-F70E-6099-6E20-B9F1CCCBB24A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_DIVISION" id="2288D764-167D-4940-4F6D-EC7A757ECA36">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_COMPANY_NAME" id="24251CBE-26F7-5E09-2224-65D26130F953">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_MANAGER" id="3177C06C-92EC-04B0-2022-132FD6EB85B1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_CLASS" id="350385C0-F7E6-9688-0FA1-54DEF610CB77">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_DIVISION_NAME" id="3A14C4B2-1A61-1B23-12FF-7C0C59471DF8">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_CALL_CENTER_ID" id="42DAC5C4-0E55-62B8-0A10-4752D4BBD66C">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_NAME" id="51D97996-3671-632B-78D6-4F4D4B51C65B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_ZIP" id="5C2B6926-BF54-4170-FB62-CD1B2EE0D6E0">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_MKT_DESC" id="628E57EC-4C1B-0575-9931-D17401F84688">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_CLOSED_DATE_SK" id="65FFDCFE-1563-3FB9-8D06-A9D248CB57A6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_REC_END_DATE" id="66C74BC3-07FC-2BE3-E788-E3A15BDADFF1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_COUNTY" id="7E630C08-295F-304E-7FEC-24DF18AB8DA1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_TAX_PERCENTAGE" id="7F00F46E-CF75-57C8-D544-E87E3350A7C8">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_EMPLOYEES" id="805116F8-2401-7F8D-59E4-093DD29AEDCB">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_COMPANY" id="8DA4E7AD-E470-FE3A-F1A3-EB1DF730BEA6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_REC_START_DATE" id="8FC94A79-3654-BA4F-B6A1-371226AEB0FE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_STREET_NAME" id="B0EE2FCC-CABF-9C9C-1186-4FA2E121A103">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_GMT_OFFSET" id="B43B9122-E675-59FE-F4BF-9A1F65981F43">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_SQ_FT" id="B5E59FEB-5CCD-2321-B6A6-8604020DC765">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_OPEN_DATE_SK" id="B76B586C-ACF2-D480-CBE2-9DEBF32C16BF">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_COUNTRY" id="BDB2F6B2-C58B-C018-2BCF-45FB872867BF">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_STATE" id="C2FE248F-FA58-85B1-7120-4509A021BA42">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_MARKET_MANAGER" id="CB77F1EB-837D-6480-BD92-0D95BA71314F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_HOURS" id="E4BEE2DC-0AF3-34DE-252C-B2E0B012505A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_CALL_CENTER_SK" id="EEDB7ABF-9887-226C-411F-273520092FFB">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CC_SUITE_NUMBER" id="FCD861A0-A4B0-1EBD-93D4-C85FB767E898">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CALL_CENTER_PK" id="19E344DD-6AA7-CA01-A76E-58E20D8AA111">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<segment>314941AF-1D10-C29F-9B90-1307145E2CBC</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CALL_CENTER_PK" id="1B4A5E37-F687-BFA2-C5AF-9182939594D0">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<segment>E5CC66EA-12BF-1AA4-0DE5-ECA438584388</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+<existingIndex>19E344DD-6AA7-CA01-A76E-58E20D8AA111</existingIndex>
+<indexSegment>E5CC66EA-12BF-1AA4-0DE5-ECA438584388</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,168 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6057EF43-9A5A-A861-B007-99444A5501BF" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="EXT_TIME_DIM">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>EXT_TIME_DIM</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<typeID>6</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_TIME_SK" id="B55419F2-1BF7-90C5-BA9A-1F9A7AB1F7FA">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_TIME_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_TIME_ID" id="5FB4C12E-CF20-A9DE-2499-BA4BC73DF0BE">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_TIME_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_TIME" id="EADF08D1-43FB-F9E1-8D47-DF33EAD33098">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_TIME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_HOUR" id="192D894F-6FB5-0405-F5A0-0A86A62676CD">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_HOUR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_MINUTE" id="0D9C05C2-1A2B-CA1C-C101-C0FDB1FA8856">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_MINUTE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_SECOND" id="E99D8352-557E-8E47-2070-5F10ABFD6B33">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_SECOND</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_AM_PM" id="CC331268-F83A-2992-3193-C66864F9467C">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_AM_PM</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_SHIFT" id="B9C23169-7E40-8A5B-9425-B85214E8E91D">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_SHIFT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_SUB_SHIFT" id="3A87550D-E75A-CA57-4266-7CB8A8EDB013">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_SUB_SHIFT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_MEAL_TIME" id="5160A8CD-C4B7-EE39-C621-4E1BB5B7FEE8">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>EXT_TIME_DIM</sourceObjSchema>
+<sourceObjName>T_MEAL_TIME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CATALOG_PAGE" directorySegmentName="seg_0" id="D4C89E3F-5349-045B-9A98-F3EB5C146B98">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>E32B6722-C6DE-8348-B9F5-C3013FB562E5</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CP_CATALOG_PAGE_NUMBER" id="037E7DA1-9E4E-C7A9-61E8-7D917C4CF1BD">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_DEPARTMENT" id="7CB45C67-E775-81DD-6D46-4FBAFFBE2F54">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_CATALOG_NUMBER" id="90AE232D-741A-3CC3-9932-F5166D368A46">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_DESCRIPTION" id="9D23B835-297E-53A4-49E9-B7026625E415">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_TYPE" id="A0A012DF-E894-1A66-27D6-F2D6F4353969">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_START_DATE_SK" id="BC11C656-B448-FCFE-CBC7-5C9D37108EEF">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_END_DATE_SK" id="C169D7C1-361C-0C3B-E207-DF9E96685549">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_CATALOG_PAGE_ID" id="DA540D3F-4331-F194-6B4D-8EC16ADFB5B6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP_CATALOG_PAGE_SK" id="E47B13A2-E7CE-C579-144A-E942DF992FD7">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CATALOG_PAGE_PK" id="24FCF513-207E-8E16-3FFF-1959B7A6DDB5">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<segment>314941AF-1D10-C29F-9B90-1307145E2CBC</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CATALOG_PAGE_PK" id="9C918DBF-3E84-9CE8-EB71-EB95CE0F6CAD">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:37:56 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<segment>E5CC66EA-12BF-1AA4-0DE5-ECA438584388</segment>
+<tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
+<existingIndex>24FCF513-207E-8E16-3FFF-1959B7A6DDB5</existingIndex>
+<indexSegment>E5CC66EA-12BF-1AA4-0DE5-ECA438584388</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

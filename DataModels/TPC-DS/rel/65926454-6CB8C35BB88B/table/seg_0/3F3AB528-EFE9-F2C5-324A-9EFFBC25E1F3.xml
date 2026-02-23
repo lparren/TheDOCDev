@@ -1,0 +1,239 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F3AB528-EFE9-F2C5-324A-9EFFBC25E1F3" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="CUSTOMER_ADDRESS">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>CUSTOMER_ADDRESS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CA_ADDRESS_SK" id="C6799C95-F531-8300-FE8E-B47E06EA55B6">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_ADDRESS_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_ADDRESS_ID" id="ACBD3B8D-D1C5-30CB-E934-B4E2A54DBE37">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_ADDRESS_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_STREET_NUMBER" id="A72A5F0A-C238-E65A-D958-72AE0A44828E">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_STREET_NUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_STREET_NAME" id="4E54E6E3-29C1-F848-E22F-AEE6B8AB34E1">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_STREET_NAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_STREET_TYPE" id="2902844F-D309-6CD3-7A4E-C93EFBBF23EA">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_STREET_TYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_SUITE_NUMBER" id="1FF49459-B634-59DA-D2F5-5BA3DD8C8D6B">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_SUITE_NUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_CITY" id="A99FBB69-8A64-3ED0-E8E3-45204D6EB74E">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_CITY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_COUNTY" id="1B475DD4-FDCB-705C-2B04-911D7D4310D0">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_COUNTY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_STATE" id="80DE4796-EC1B-B1D9-E2B5-B026CAAE49A9">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_STATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_ZIP" id="E9E75EB3-3AB7-0133-5EFA-2481A19A3621">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_ZIP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_COUNTRY" id="35300A94-A252-E7F4-0850-DFEE2C392A20">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_COUNTRY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_GMT_OFFSET" id="35E23C9A-675E-9285-7DF2-3CE571704809">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_GMT_OFFSET</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CA_LOCATION_TYPE" id="B3129478-CFA8-7D12-18B4-80B5DD0A6FC1">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>CUSTOMER_ADDRESS</sourceObjSchema>
+<sourceObjName>CA_LOCATION_TYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DAD916EE-CAB4-93F9-CDF5-F7CC48207251" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="CUSTOMER_ADDRESS_PK">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>SYS_C007861</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:08 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6799C95-F531-8300-FE8E-B47E06EA55B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF0C0168-44C2-9FB0-0506-CDF97F2713A1" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="CUSTOMER_ADDRESS_PK">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>CUSTOMER_ADDRESS_PK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<importedID>4B25A2E1-DB6A-C937-1C5E-53DF337007BF</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6799C95-F531-8300-FE8E-B47E06EA55B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

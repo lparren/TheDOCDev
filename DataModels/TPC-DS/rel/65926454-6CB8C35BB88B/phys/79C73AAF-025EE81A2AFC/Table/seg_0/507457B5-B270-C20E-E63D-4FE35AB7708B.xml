@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DBGEN_VERSION" directorySegmentName="seg_0" id="507457B5-B270-C20E-E63D-4FE35AB7708B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4E1240F3-3259-00F1-2A2F-4D1F771E02E8</segment>
+<tableSpace>EC8852A8-6E63-BB80-CF05-9B8896152542</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DV_CREATE_TIME" id="1F43AC95-B55C-8484-3168-9F94830AAA40">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DV_VERSION" id="509CD365-F926-F9BC-A15E-D6F55D180100">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DV_CREATE_DATE" id="83405DC7-5905-A4FA-84C9-AC2366E8FC50">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DV_CMDLINE_ARGS" id="F0F43B46-85C9-9686-E607-C51B6DD230B0">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E435500-0A9E-86FC-429C-0D47EBADD28E" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="INCOME_BAND">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>INCOME_BAND</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IB_INCOME_BAND_SK" id="866E42D7-3F2C-69F8-422E-A50586634644">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>INCOME_BAND</sourceObjSchema>
+<sourceObjName>IB_INCOME_BAND_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IB_LOWER_BOUND" id="FF4FC6B3-B38C-C5AB-FDC7-A97BF4F3818A">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>INCOME_BAND</sourceObjSchema>
+<sourceObjName>IB_LOWER_BOUND</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IB_UPPER_BOUND" id="909AE804-F4DE-EFFE-5C5C-78B5457F68DF">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>INCOME_BAND</sourceObjSchema>
+<sourceObjName>IB_UPPER_BOUND</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="37CCBE9F-7025-A2C4-A344-9E099E1B9490" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="INCOME_BAND_PK">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>SYS_C007880</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:09 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="866E42D7-3F2C-69F8-422E-A50586634644"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86F48FB7-3A8C-1DF0-5421-68862657FD4F" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="INCOME_BAND_PK">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>INCOME_BAND_PK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<importedID>47423DA2-43D1-E942-14B6-313EA81EE6B5</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="866E42D7-3F2C-69F8-422E-A50586634644"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

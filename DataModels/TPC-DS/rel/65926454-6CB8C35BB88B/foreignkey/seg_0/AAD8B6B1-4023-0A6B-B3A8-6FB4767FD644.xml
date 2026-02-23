@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AAD8B6B1-4023-0A6B-B3A8-6FB4767FD644" containerWithKeyObject="E33E475C-A748-2631-C727-583B048E1F78" localFKIndex="59F40370-9EF5-AE01-C5A5-C4C2C504BAB5" name="CS_S_HD">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>CS_S_HD</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<importedID>DDAB9C7B-4356-D4DA-F6BF-03EC5D4BC676</importedID>
+<referredTableLongName>TPCDS.HOUSEHOLD_DEMOGRAPHICS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>05583090-58E0-8877-ED24-EE94FEAEAC66</referredTableID>
+<keyObject>12E7C684-AB44-9118-21F8-70E3BE851B4E</keyObject>
+<referredKeyID>12E7C684-AB44-9118-21F8-70E3BE851B4E</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>HD_DEMO_SK</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

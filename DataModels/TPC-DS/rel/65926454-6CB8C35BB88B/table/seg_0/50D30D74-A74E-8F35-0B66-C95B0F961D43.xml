@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50D30D74-A74E-8F35-0B66-C95B0F961D43" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="SHIP_MODE">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>SHIP_MODE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SM_SHIP_MODE_SK" id="1F922CE0-AF0F-B439-6C8A-F106323B1467">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>SHIP_MODE</sourceObjSchema>
+<sourceObjName>SM_SHIP_MODE_SK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SM_SHIP_MODE_ID" id="0AD31E49-5CCF-3C01-E17D-00F7D8601E06">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>SHIP_MODE</sourceObjSchema>
+<sourceObjName>SM_SHIP_MODE_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SM_TYPE" id="9E445D4D-793A-5059-CE51-F1A442A626AF">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>SHIP_MODE</sourceObjSchema>
+<sourceObjName>SM_TYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SM_CODE" id="8D8CDA45-5857-C89B-4EC0-48B668CEE911">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>SHIP_MODE</sourceObjSchema>
+<sourceObjName>SM_CODE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SM_CARRIER" id="4EC71483-EA9E-6481-E0EF-44357BEB1544">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>SHIP_MODE</sourceObjSchema>
+<sourceObjName>SM_CARRIER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SM_CONTRACT" id="68AABC2A-E53A-5332-F652-3993B98BAA55">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>SHIP_MODE</sourceObjSchema>
+<sourceObjName>SM_CONTRACT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CBD25161-F7C1-045B-445F-E22A6ABFCC99" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="SHIP_MODE_PK">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>SYS_C007872</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:09 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F922CE0-AF0F-B439-6C8A-F106323B1467"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67BEDBC6-E585-C100-6DFD-8911BF19E892" schemaObject="05B32C38-F9A7-82CD-0CEA-E34991CD6787" name="SHIP_MODE_PK">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>SHIP_MODE_PK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<importedID>7DC029FD-C662-F0E3-25C6-0CCB29DFA9DE</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F922CE0-AF0F-B439-6C8A-F106323B1467"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

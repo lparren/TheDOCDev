@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EXT_STORE" directorySegmentName="seg_0" id="8DD2FCFD-9682-9863-B544-144F8BB019D5">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>EXT_STORE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
+<logging>YES</logging>
+<organization>EXTERNAL</organization>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>01677A16-08FB-00A8-7D5D-B84BBD97D2C9</segment>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>ORACLE_LOADER</accessDriverType>
+<defaultdir>78A6085A-0DB9-DCAD-7246-AD83A8C735DA</defaultdir>
+<defaultDirName>TPCDS_DIR</defaultDirName>
+<opaqueFormatSpec>FIELDS
+                        TERMINATED BY &apos;|&apos;
+                    MISSING FIELD VALUES ARE NULL</opaqueFormatSpec>
+<rejectLimit>0</rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="S_HOURS" id="01E00ACB-6743-2E3E-74D5-67C2D844BD4E">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STREET_TYPE" id="06305B32-2918-9269-848F-22D98667551D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_MARKET_ID" id="09EA62E5-8ADB-E321-07C2-3889E86D4928">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_MANAGER" id="1927BA7C-303C-0F18-D4EF-5721D0D04CEC">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_DIVISION_ID" id="25AB7BFD-FA6E-E8CD-90AE-FC2184B6F31A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_REC_START_DATE" id="29C6ACFA-6433-23F6-409D-474E372BD8F5">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_GMT_OFFSET" id="2B9BF73C-2A9E-966E-3A93-B78C1739279D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STORE_ID" id="3164A61B-00EC-B008-575A-F61607067A0E">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_ZIP" id="37F6A231-E10E-2B07-F855-C469973086E2">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_CLOSED_DATE_SK" id="381A5C66-A0BC-E83C-F88F-0E096A0136FF">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_MARKET_MANAGER" id="5E9CA78A-FC0A-8FE4-6AC8-ACFF02D5D9EE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_REC_END_DATE" id="6A2368F2-CBD1-EFF1-9EC7-A0F4B2862772">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_COUNTY" id="8730EEA3-D11E-F831-B6F8-BFD8543BDB06">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_COMPANY_NAME" id="9637023E-CF6D-7C46-2D81-37A93C31AAC7">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_GEOGRAPHY_CLASS" id="97226BA3-E6BC-9AD2-7CA5-2A206CFAF812">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_TAX_PRECENTAGE" id="9B96A80D-AFC2-00DB-C3EF-34E2E6032534">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_NUMBER_EMPLOYEES" id="AC1F4A8E-0E6F-19BD-2A6C-912FEEADB816">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_SUITE_NUMBER" id="BE6E3BE1-F1E5-34C2-7A55-45ABB7A3BFD1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STATE" id="C43A0457-017C-7166-D37D-5AE06759BD6C">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STREET_NUMBER" id="C81562A3-1575-9AE5-C5E2-A66309580E21">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_COMPANY_ID" id="CBF937B1-F6D7-6821-6914-A16553347F25">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STORE_SK" id="D22AE254-6B7E-6BA3-637B-3309711C7A1B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STREET_NAME" id="D3EE378A-66CD-43A3-A19E-49CB216CCA8C">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_DIVISION_NAME" id="D4932C8E-896E-1F50-E078-64A5322D9CC5">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_MARKET_DESC" id="DAD378B8-19A2-D43F-188F-49924930805B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_STORE_NAME" id="EA2F6508-E5CA-170F-B416-7E48AF93F78F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_COUNTRY" id="EE94388B-F985-B8D2-7BF5-8BE831D8D568">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_CITY" id="F3E5783B-DF67-E779-EB6F-6C6613214138">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_FLOOR_SPACE" id="FAACB342-D271-0018-D58A-8DC9E4E730AF">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 08:42:07 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<locations>
+<location directory="TPCDS_DIR" location="store.dat"/>
+</locations>
+</TableProxyOraclev12c>

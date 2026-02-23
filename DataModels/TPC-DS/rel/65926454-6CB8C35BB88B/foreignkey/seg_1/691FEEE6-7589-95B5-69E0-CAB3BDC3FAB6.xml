@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="691FEEE6-7589-95B5-69E0-CAB3BDC3FAB6" containerWithKeyObject="1D532579-F875-B448-985F-2E6D91B04E36" localFKIndex="4A752380-BE5A-88CB-E64E-90587D6E947A" name="WS_S_A">
+<sourceConnName>tpc-ds</sourceConnName>
+<sourceObjSchema>TPCDS</sourceObjSchema>
+<sourceObjName>WS_S_A</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 12:38:00 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<importedID>EE3F71DE-390D-2CE7-C0D5-D1D06534063D</importedID>
+<referredTableLongName>TPCDS.CUSTOMER_ADDRESS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3F3AB528-EFE9-F2C5-324A-9EFFBC25E1F3</referredTableID>
+<keyObject>DAD916EE-CAB4-93F9-CDF5-F7CC48207251</keyObject>
+<referredKeyID>DAD916EE-CAB4-93F9-CDF5-F7CC48207251</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>CA_ADDRESS_SK</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

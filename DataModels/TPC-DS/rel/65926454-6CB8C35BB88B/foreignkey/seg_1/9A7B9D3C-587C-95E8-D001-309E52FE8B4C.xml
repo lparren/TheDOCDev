@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="9A7B9D3C-587C-95E8-D001-309E52FE8B4C" containerWithKeyObject="D4C89E3F-5349-045B-9A98-F3EB5C146B98" localFKIndex="3DA23B20-CE3F-2956-AB31-F2C300C57DBE" name="CATALOG_PAGE_DATE_DIM_FKv1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:14:24 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<referredTableLongName>TPCDS.DATE_DIM</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>84EA9051-D840-3763-370A-1B5F83FF806E</referredTableID>
+<keyObject>E85D8BE5-9BD4-AC75-11F3-BF3F608A4322</keyObject>
+<referredKeyID>E85D8BE5-9BD4-AC75-11F3-BF3F608A4322</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>D_DATE_SK</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

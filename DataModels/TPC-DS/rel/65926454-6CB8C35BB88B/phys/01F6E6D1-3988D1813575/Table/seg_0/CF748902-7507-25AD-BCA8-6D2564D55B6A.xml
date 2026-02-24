@@ -179,6 +179,18 @@
 <tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
 </IndexProxy>
 </indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CALL_CENTER_DATE_DIM_FK" id="38F8D51C-03BE-4593-B692-963CF9873EB4">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:10:45 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CALL_CENTER_DATE_DIM_FKv1" id="A54EC970-4A50-488E-7279-43104B88C114">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:11:29 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CALL_CENTER_PK" id="1B4A5E37-F687-BFA2-C5AF-9182939594D0">
 <createdBy>LeonParren</createdBy>

@@ -21,6 +21,33 @@
 <tableSpace>EC8852A8-6E63-BB80-CF05-9B8896152542</tableSpace>
 </IndexProxy>
 </indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_HOUSEHOLD_DEMOGRAPHICS_FK" id="3D1C929D-D19E-FB17-D2A6-A1140D8C008B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:26:23 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_CUSTOMER_ADDRESS_FK" id="57D1E56F-7BF2-BF05-4FD2-07595ED7BB36">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:21:49 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_CUSTOMER_DEMOGRAPHICS_FK" id="72DBBFBF-A1E9-4101-47B2-DC0CBC8A6328">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:25:52 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_DATE_DIM_FKv1" id="E956FAC6-AA36-478A-8778-99E861B5B108">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:13:44 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CUSTOMER_DATE_DIM_FK" id="FC793A2F-9946-0178-9FA6-F28A829629AE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:13:44 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CUSTOMER_PK" id="E4EB5CDF-E05D-AB35-05B1-18BB48510188">
 <createdBy>LeonParren</createdBy>

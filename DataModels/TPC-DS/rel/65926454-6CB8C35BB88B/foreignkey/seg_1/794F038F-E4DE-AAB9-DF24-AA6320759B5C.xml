@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="794F038F-E4DE-AAB9-DF24-AA6320759B5C" containerWithKeyObject="24398C95-D28C-BD51-8316-6076730DD4F0" localFKIndex="3D1C929D-D19E-FB17-D2A6-A1140D8C008B" name="CUSTOMER_HOUSEHOLD_DEMOGRAPHICS_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:26:23 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<referredTableLongName>TPCDS.HOUSEHOLD_DEMOGRAPHICS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>05583090-58E0-8877-ED24-EE94FEAEAC66</referredTableID>
+<keyObject>12E7C684-AB44-9118-21F8-70E3BE851B4E</keyObject>
+<referredKeyID>12E7C684-AB44-9118-21F8-70E3BE851B4E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>HD_DEMO_SK</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

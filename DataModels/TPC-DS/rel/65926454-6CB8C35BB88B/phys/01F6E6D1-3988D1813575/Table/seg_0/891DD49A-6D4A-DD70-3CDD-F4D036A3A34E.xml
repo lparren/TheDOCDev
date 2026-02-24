@@ -119,6 +119,23 @@
 <tableSpace>5F6F0FDD-FEB0-6201-797E-8CEC574E25D5</tableSpace>
 </IndexProxy>
 </indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PROMOTION_ITEM_FK" id="6956A1C6-2A40-405A-6578-6B316316D819">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:30:04 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PROMOTION_DATE_DIM_FKv1" id="711F663F-B265-DFDB-20AF-7A67A1AB177A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 14:02:27 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PROMOTION_DATE_DIM_FK" id="E3427DB5-4CD0-6286-030C-B20253F007E6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 14:00:24 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PROMOTION_PK" id="64A8F5F0-5CBC-03AE-83FF-2DA2E81E78EC">
 <createdBy>LeonParren</createdBy>

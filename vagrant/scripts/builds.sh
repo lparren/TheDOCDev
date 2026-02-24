@@ -74,7 +74,7 @@ echo "**************************************************************************
 cd /u01/dockerfiles/oracle/OracleDatabase/26ai
 cp /vagrant/software/oracle-ai-database-ee-26ai-1.0-1.el9.x86_64.rpm .
 cp /vagrant/software/apex-latest.zip .
-cp /vagrant/software/db-sample-schemas-23.3.zip .
+cp /vagrant/software/db-sample-schemas-19c.zip .
 
 # echo "******************************************************************************"
 # echo "docker build Oracle 19.3.0 software" `date`

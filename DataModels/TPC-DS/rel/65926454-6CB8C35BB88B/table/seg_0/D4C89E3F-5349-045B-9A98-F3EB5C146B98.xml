@@ -21,8 +21,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
-<dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,*,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="CP_CATALOG_PAGE_ID" id="DA540D3F-4331-F194-6B4D-8EC16ADFB5B6">
@@ -46,7 +45,6 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -54,6 +52,9 @@
 <dataTypeScale>0</dataTypeScale>
 <ownDataTypeParameters>,*,0</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33903D83-5EEE-7DFD-EE03-1CA8D745E06F" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="CP_END_DATE_SK" id="C169D7C1-361C-0C3B-E207-DF9E96685549">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -62,7 +63,6 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -70,6 +70,9 @@
 <dataTypeScale>0</dataTypeScale>
 <ownDataTypeParameters>,*,0</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9A7B9D3C-587C-95E8-D001-309E52FE8B4C" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="CP_DEPARTMENT" id="7CB45C67-E775-81DD-6D46-4FBAFFBE2F54">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -176,6 +179,26 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="E47B13A2-E7CE-C579-144A-E942DF992FD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06ABAA44-FC99-781C-946D-F0F3F13280E3" name="CATALOG_PAGE_DATE_DIM_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:14:24 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC11C656-B448-FCFE-CBC7-5C9D37108EEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3DA23B20-CE3F-2956-AB31-F2C300C57DBE" name="CATALOG_PAGE_DATE_DIM_FKv1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:14:24 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C169D7C1-361C-0C3B-E207-DF9E96685549"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

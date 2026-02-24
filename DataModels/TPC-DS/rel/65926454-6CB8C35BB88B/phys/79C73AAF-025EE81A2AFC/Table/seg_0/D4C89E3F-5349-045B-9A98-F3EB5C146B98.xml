@@ -68,6 +68,18 @@
 <tableSpace>EC8852A8-6E63-BB80-CF05-9B8896152542</tableSpace>
 </IndexProxy>
 </indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CATALOG_PAGE_DATE_DIM_FK" id="06ABAA44-FC99-781C-946D-F0F3F13280E3">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:14:24 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CATALOG_PAGE_DATE_DIM_FKv1" id="3DA23B20-CE3F-2956-AB31-F2C300C57DBE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:14:24 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CATALOG_PAGE_PK" id="9C918DBF-3E84-9CE8-EB71-EB95CE0F6CAD">
 <createdBy>LeonParren</createdBy>

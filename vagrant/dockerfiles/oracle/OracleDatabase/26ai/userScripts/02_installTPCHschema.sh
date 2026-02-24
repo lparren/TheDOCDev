@@ -11,12 +11,11 @@ echo "*** Create TPCH schema"
 sqlplus system/$ORACLE_PWD@localhost:1521/$ORACLE_PDB << EOF
     drop user if exists tpch cascade;
     CREATE USER IF NOT EXISTS tpch IDENTIFIED BY tpch;
-    GRANT CREATE SESSION,
-        RESOURCE,
+    GRANT DB_DEVELOPER_ROLE,
         UNLIMITED TABLESPACE
         TO tpch;
     CREATE OR REPLACE DIRECTORY tpch_dir AS '/home/oracle/tpch';
-    GRANT READ ON DIRECTORY tpch_dir TO tpch;
+    GRANT READ, WRITE ON DIRECTORY tpch_dir TO tpch;
     -- 1.4.1
     --  per 1.4.2.1  all table columns may be defined NOT NULL
     CREATE TABLE IF NOT EXISTS tpch.ext_part

@@ -21,8 +21,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
-<dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,*,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="C_CUSTOMER_ID" id="68E7CF64-0118-2447-4987-F94FFC22BC84">
@@ -46,14 +45,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,*,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23DBD7AF-A565-D27A-8897-8A1DFA5023F5" referredColumn="1BA003B6-4B8D-5C32-D862-22FE72070B8E"/>
+</associations>
 </Column>
 <Column name="C_CURRENT_HDEMO_SK" id="AE0FCE90-6E5C-BF26-9BAE-31E1B62C4D9E">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -62,14 +63,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="794F038F-E4DE-AAB9-DF24-AA6320759B5C" referredColumn="E0D570C6-3BEE-F8C4-9F5E-9759B846A643"/>
+</associations>
 </Column>
 <Column name="C_CURRENT_ADDR_SK" id="15F8C711-B5B6-7AD3-C20F-38F2CE501074">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -78,14 +81,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13155569-9741-65EB-593F-900B4CDBBC8E" referredColumn="C6799C95-F531-8300-FE8E-B47E06EA55B6"/>
+</associations>
 </Column>
 <Column name="C_FIRST_SHIPTO_DATE_SK" id="3BCC6D25-5DBE-207E-4474-3CE3171ABB48">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -94,14 +99,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B39AAB0-F3D8-946A-61D9-57297523789B" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="C_FIRST_SALES_DATE_SK" id="22A5E69F-3FBF-FE98-1F50-4EF90234F4AA">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -110,14 +117,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BCCFCB86-3009-59FD-DA22-51E312DBAB36" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="C_SALUTATION" id="5ADDD6DA-C0FE-63CA-7491-53B9A461BC8A">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -314,6 +323,56 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="EC84985B-82E8-A3EB-D695-1C1A9038E10B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC793A2F-9946-0178-9FA6-F28A829629AE" name="CUSTOMER_DATE_DIM_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:13:44 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BCC6D25-5DBE-207E-4474-3CE3171ABB48"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E956FAC6-AA36-478A-8778-99E861B5B108" name="CUSTOMER_DATE_DIM_FKv1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:13:44 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22A5E69F-3FBF-FE98-1F50-4EF90234F4AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57D1E56F-7BF2-BF05-4FD2-07595ED7BB36" name="CUSTOMER_CUSTOMER_ADDRESS_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:21:49 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15F8C711-B5B6-7AD3-C20F-38F2CE501074"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72DBBFBF-A1E9-4101-47B2-DC0CBC8A6328" name="CUSTOMER_CUSTOMER_DEMOGRAPHICS_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:25:52 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6A7B606-F840-EFAE-000E-98236A6B4934"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D1C929D-D19E-FB17-D2A6-A1140D8C008B" name="CUSTOMER_HOUSEHOLD_DEMOGRAPHICS_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:26:23 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE0FCE90-6E5C-BF26-9BAE-31E1B62C4D9E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

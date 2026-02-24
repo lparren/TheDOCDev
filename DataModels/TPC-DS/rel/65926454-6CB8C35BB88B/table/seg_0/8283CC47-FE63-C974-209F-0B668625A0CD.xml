@@ -21,8 +21,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
-<dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,*,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="S_STORE_ID" id="9248F801-1D33-7837-E72E-88E77885E535">
@@ -76,14 +75,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AA033490-359D-CDEA-10E4-9B9EED616036" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="S_STORE_NAME" id="22CF5463-439F-71B4-8B44-66A57CC29AB6">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -480,6 +481,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="44733D46-F178-814D-6E21-8975E0BB3C8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA403A26-A107-EB62-C16D-4EC18E040A38" name="STORE_DATE_DIM_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:22:51 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="144F8697-8AC0-C5E1-14D0-A8AA7B87AA64"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -21,8 +21,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
-<dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,*,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="CC_CALL_CENTER_ID" id="42DAC5C4-0E55-62B8-0A10-4752D4BBD66C">
@@ -76,7 +75,6 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -84,6 +82,9 @@
 <dataTypeScale>0</dataTypeScale>
 <ownDataTypeParameters>,*,0</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14C8FEB9-B428-1E72-2504-C7B5D6A45629" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="CC_OPEN_DATE_SK" id="B76B586C-ACF2-D480-CBE2-9DEBF32C16BF">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -92,14 +93,16 @@
 <createdBy>LeonParren</createdBy>
 <createdTime>2026-02-23 08:42:07 UTC</createdTime>
 <ownerDesignName>TPC-DS</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>*</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
-<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4363A0E5-1FCF-0604-E302-30272C3487B8" referredColumn="3FDCE1AE-2109-D21E-EC2B-BED6BFB44A85"/>
+</associations>
 </Column>
 <Column name="CC_NAME" id="51D97996-3671-632B-78D6-4F4D4B51C65B">
 <sourceConnName>tpc-ds</sourceConnName>
@@ -511,6 +514,26 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="EEDB7ABF-9887-226C-411F-273520092FFB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38F8D51C-03BE-4593-B692-963CF9873EB4" name="CALL_CENTER_DATE_DIM_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:10:45 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B76B586C-ACF2-D480-CBE2-9DEBF32C16BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A54EC970-4A50-488E-7279-43104B88C114" name="CALL_CENTER_DATE_DIM_FKv1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-02-23 15:11:29 UTC</createdTime>
+<ownerDesignName>TPC-DS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65FFDCFE-1563-3FB9-8D06-A9D248CB57A6"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

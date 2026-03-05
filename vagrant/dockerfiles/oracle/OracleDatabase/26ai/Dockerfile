@@ -36,7 +36,7 @@ COPY runUserScripts.sh /tmp/runUserScripts.sh
 RUN dos2unix /tmp/runUserScripts.sh
 RUN chmod +x /tmp/runUserScripts.sh
 
-COPY  db-sample-schemas-19c.zip $APEX_FILE tpch-data.zip tpcds-data.zip /tmp/
+COPY  db-sample-schemas-19c.zip $APEX_FILE tpch-data.zip tpcds-data.zip advworks-data.zip /tmp/
 
 RUN mkdir -p /tmp/userScripts
 COPY ./userScripts/* /tmp/userScripts/

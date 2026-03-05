@@ -51,6 +51,12 @@ else
 fi
 
 /etc/init.d/oracledb_ORCLCDB-26ai start
+# Note: The database should already be open, but we can ensure it is by connecting as sysdba and issuing the command again
+su - oracle <<EOF
+    sqlplus -s / as sysdba
+        ALTER PLUGGABLE DATABASE ALL OPEN;
+        EXIT;
+EOF
 
 su - oracle <<EOF
     if /opt/oracle/checkDBStatus.sh; then 

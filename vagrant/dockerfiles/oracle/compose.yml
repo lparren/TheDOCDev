@@ -65,11 +65,11 @@ services:
       APEX_PASSWORD: ApexPassword1!
       APEX_FILE: apex-latest.zip
     expose:
-      - 1521
-      - 5500
+      - 8521
+      - 8500
     ports:
-      - 1521:1521
-      - 5500:5500
+      - 8521:1521
+      - 8500:5500
     volumes:
       - /u01/volumes/26ai_oradata:/opt/oracle/oradata
     ulimits:

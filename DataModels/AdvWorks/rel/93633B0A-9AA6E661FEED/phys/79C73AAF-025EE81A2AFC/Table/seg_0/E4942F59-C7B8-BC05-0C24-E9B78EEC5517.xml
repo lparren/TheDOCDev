@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="NEWFACTCURRENCYRATE" directorySegmentName="seg_0" id="E4942F59-C7B8-BC05-0C24-E9B78EEC5517">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FC45A8B-78FE-8F55-892F-E4630CF8A99C</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CURRENCYKEY" id="06C98E84-EA60-B595-DFAE-04FF79A8B474">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENDOFDAYRATE" id="0CFEA451-3368-C407-8A32-464F1DA31A17">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CURRENCYID" id="1023AE1B-8DC3-CB19-5355-3BD93D43C805">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AVERAGERATE" id="4BD9F48E-5C9D-B569-AD7F-EAB53B2CB575">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATEKEY" id="CDACE227-A408-C352-A896-EA04F537592F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CURRENCYDATE" id="F3E8A5B5-CB83-077F-C83A-FBA55B852DDC">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

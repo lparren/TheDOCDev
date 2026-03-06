@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="86893B4D-E2FB-4746-6884-01D3FCD7BE0A" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="VASSOCSEQLINEITEMS">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>VASSOCSEQLINEITEMS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE OR REPLACE VIEW VASSOCSEQLINEITEMS
+AS 
+SELECT ordernumber,
+          linenumber,
+          model
+     FROM vdmprep
+    WHERE fiscalyear = 2013]]></userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ORDERNUMBER" id="83FA321E-F68C-A0C1-827E-6B4163B95295">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VASSOCSEQLINEITEMS</sourceObjSchema>
+<sourceObjName>ORDERNUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ORDERNUMBER</alias>
+<dataType>VARCHAR2 (20 CHAR)</dataType>
+<headerAlias>ORDERNUMBER</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>C600D5AD-C77B-6666-FDDD-1F2CCC7950BD</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LINENUMBER" id="AFC3DABF-C7F4-C377-00C6-C94A08F85C8C">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VASSOCSEQLINEITEMS</sourceObjSchema>
+<sourceObjName>LINENUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LINENUMBER</alias>
+<dataType>NUMBER (3)</dataType>
+<headerAlias>LINENUMBER</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>3E1E5A8C-5498-17A6-D1F6-74F59E3ADD89</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MODEL" id="7E0B9068-6116-334A-ED92-82FEDA22678D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VASSOCSEQLINEITEMS</sourceObjSchema>
+<sourceObjName>MODEL</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>MODEL</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>MODEL</headerAlias>
+<reference>false</reference>
+<referencedColumn>042C17F8-BE14-5B2E-BF86-642319C51A2A</referencedColumn>
+<referencedColumnViewID>7AC2AE2C-5558-961B-4F9D-1DAC884F93DA</referencedColumnViewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4364024A-D03A-D1D1-B2E2-ECCFC13B13FC">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>VDMPREP</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C600D5AD-C77B-6666-FDDD-1F2CCC7950BD">
+<columnName>ORDERNUMBER</columnName>
+<schema>ADVWORKS</schema>
+<tableName>VDMPREP</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3E1E5A8C-5498-17A6-D1F6-74F59E3ADD89">
+<columnName>LINENUMBER</columnName>
+<schema>ADVWORKS</schema>
+<tableName>VDMPREP</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7AC2AE2C-5558-961B-4F9D-1DAC884F93DA">
+<columnName>MODEL</columnName>
+<schema>ADVWORKS</schema>
+<tableName>VDMPREP</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C1770BBB-45C6-753F-3814-B49682E0D7EF">
+<columnName>FISCALYEAR</columnName>
+<schema>ADVWORKS</schema>
+<tableName>VDMPREP</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

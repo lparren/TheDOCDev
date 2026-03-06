@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="FACTCALLCENTER" directorySegmentName="seg_0" id="7FFEB712-C222-9631-A0D2-813DAA23BD3C">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FC45A8B-78FE-8F55-892F-E4630CF8A99C</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DATEKEY" id="29676FD7-F783-2692-8BD3-37AB558BF677">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOADDATE" id="32629747-7249-56D1-6A77-F318AD8CB38E">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORDERS" id="48F6C14F-2EA2-22D7-811A-62A5F40D31F1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ISSUESRAISED" id="5CE742C9-53CD-EB8B-9FE0-812799592C4B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AVERAGETIMEPERISSUE" id="6D158B40-75A4-12A8-39D7-23ADAD602FD1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LEVELONEOPERATORS" id="7977136B-11CF-5846-2ACA-2E53722EFDF6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AUTOMATICRESPONSES" id="94B7B3F2-E4A2-A116-7661-703D846AC62B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SERVICEGRADE" id="B242DBF1-B90B-52FF-60CF-4BFD11B8D7AA">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTALOPERATORS" id="C0E7141A-AC44-8E0B-722A-0AB46B2A790D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LEVELTWOOPERATORS" id="C5E665B7-7212-A9D7-82FA-86234BB22C9F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CALLS" id="E0390FB6-08F1-346B-1AF8-6BEEEB99D957">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FACTCALLCENTERID" id="F09A7E9A-1B22-20B6-E223-125C2B993A91">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WAGETYPE" id="F253685B-BFDC-647C-5ED5-BD1D990E9CFA">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHIFT" id="F498415D-D910-A608-8C6C-06E1CE743CCD">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="AK_FACTCALLCENTER_DATEKEY_SHIFT" id="32E40473-3494-B308-BC54-431F7E20D07C">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_FACTCALLCENTER_DIMDATE" id="BB687C60-BAB4-9B3A-E6B7-2EBD2A7D2A0D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="FACTCALLCENTER_PK" id="AE9F8FB3-3ED1-AE53-7132-46CE29C9B581">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<indexSegment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

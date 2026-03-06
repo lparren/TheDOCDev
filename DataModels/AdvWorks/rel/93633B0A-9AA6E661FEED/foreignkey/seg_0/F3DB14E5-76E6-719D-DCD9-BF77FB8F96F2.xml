@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F3DB14E5-76E6-719D-DCD9-BF77FB8F96F2" containerWithKeyObject="04C24C43-27AD-7ECD-85F2-3F4082728C2F" localFKIndex="6DCE38B3-AB47-125E-E15D-EA168129C8AD" name="FK_FACTRESELLERSALES_DIMRESELLER">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTRESELLERSALES_DIMRESELLER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMRESELLER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9060B1B2-6BF4-8AE7-5F92-B91D9DAC835C</referredTableID>
+<keyObject>5F769F20-E74A-4B6D-5140-5F3679E4CDDB</keyObject>
+<referredKeyID>5F769F20-E74A-4B6D-5140-5F3679E4CDDB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>RESELLERKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

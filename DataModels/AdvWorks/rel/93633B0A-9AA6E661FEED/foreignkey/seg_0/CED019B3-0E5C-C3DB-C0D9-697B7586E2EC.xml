@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CED019B3-0E5C-C3DB-C0D9-697B7586E2EC" containerWithKeyObject="D0DF6320-7337-2C39-3A9D-1FD9F6823AA7" localFKIndex="F4D266DB-1CB1-3334-8F40-4A9B5A9D458D" name="FK_FACTFINANCE_DIMDEPARTMENTGROUP">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTFINANCE_DIMDEPARTMENTGROUP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMDEPARTMENTGROUP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F4E97051-64E6-87BB-D323-6A3EC78AF8F6</referredTableID>
+<keyObject>77EBF964-11E9-DE60-165A-3BB154D4F1A9</keyObject>
+<referredKeyID>77EBF964-11E9-DE60-165A-3BB154D4F1A9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>DEPARTMENTGROUPKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

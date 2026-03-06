@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="11C3C658-74BC-82A4-67F4-F2442D86FFB7" containerWithKeyObject="E516411C-AEEA-4DA7-7322-58DDF58C068B" localFKIndex="72F401DA-9E81-C44D-F17A-74E4CDFDFF9B" name="FK_FACTINTERNETSALESREASON_FACTINTERNETSALES">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTINTERNETSALESREASON_FACTINTERNETSALES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.FACTINTERNETSALES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E41D4D35-C0BD-401A-3ADD-0F5420B1162C</referredTableID>
+<keyObject>0E05D865-D0D1-4814-CE63-CD6D4BF6B04C</keyObject>
+<referredKeyID>0E05D865-D0D1-4814-CE63-CD6D4BF6B04C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SALESORDERNUMBER,SALESORDERLINENUMBER</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,188 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D869F712-4F8D-844E-3C72-5A3EFC558AEE" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMACCOUNT">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>DIMACCOUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACCOUNTKEY" id="38164C52-35E1-A82A-1D2B-A80E4DD0FE1F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>ACCOUNTKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PARENTACCOUNTKEY" id="0E657C99-A03C-1E2F-5558-C96153E8F86F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>PARENTACCOUNTKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="450C31D8-3A8A-4642-3018-FAF4263EA861" referredColumn="38164C52-35E1-A82A-1D2B-A80E4DD0FE1F"/>
+</associations>
+</Column>
+<Column name="ACCOUNTCODEALTERNATEKEY" id="BC51D68B-1BF7-F2A7-F890-B2F239627FB6">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>ACCOUNTCODEALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PARENTACCOUNTCODEALTERNATEKEY" id="5ACC64DE-7607-A5B0-9353-50124320115A">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>PARENTACCOUNTCODEALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCOUNTDESCRIPTION" id="9F414270-F2E0-C6A5-7E75-7CAB3F10B47B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>ACCOUNTDESCRIPTION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCOUNTTYPE" id="F88BDA06-2A87-6ECD-AC99-BE172EF86905">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>ACCOUNTTYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPERATOR" id="DDA042A5-16AA-F972-C3FD-43989BB07BCE">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>OPERATOR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUSTOMMEMBERS" id="91EED205-17D0-C105-88DF-AC9E9D2E2575">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>CUSTOMMEMBERS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALUETYPE" id="A4D1CD5A-26AA-11AD-3B03-D6B3B3028A50">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>VALUETYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUSTOMMEMBEROPTIONS" id="2B1CA306-4F53-DAF9-8070-90A159C91561">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMACCOUNT</sourceObjSchema>
+<sourceObjName>CUSTOMMEMBEROPTIONS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F490DDD-3BB3-31CA-91AA-F056B9088762" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMACCOUNT_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025547</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38164C52-35E1-A82A-1D2B-A80E4DD0FE1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EF0F3A2-6D65-FE0F-2DC4-E15E4612C3F0" name="FK_DIMACCOUNT_DIMACCOUNT">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E657C99-A03C-1E2F-5558-C96153E8F86F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

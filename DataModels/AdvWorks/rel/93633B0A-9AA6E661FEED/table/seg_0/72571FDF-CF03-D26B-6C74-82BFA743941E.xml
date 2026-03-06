@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="72571FDF-CF03-D26B-6C74-82BFA743941E" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMORGANIZATION">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>DIMORGANIZATION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ORGANIZATIONKEY" id="1E49CE42-319D-E391-D380-016224B9C761">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMORGANIZATION</sourceObjSchema>
+<sourceObjName>ORGANIZATIONKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PARENTORGANIZATIONKEY" id="20E766EB-4BF9-2CF9-7515-F739A374AD45">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMORGANIZATION</sourceObjSchema>
+<sourceObjName>PARENTORGANIZATIONKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="059A4674-29F5-2BEA-CEE0-83CFAF883196" referredColumn="1E49CE42-319D-E391-D380-016224B9C761"/>
+</associations>
+</Column>
+<Column name="PERCENTAGEOFOWNERSHIP" id="F551EF84-0F95-C511-3C7A-1E8B44BCD4F6">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMORGANIZATION</sourceObjSchema>
+<sourceObjName>PERCENTAGEOFOWNERSHIP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORGANIZATIONNAME" id="5852797F-DA04-3F3D-1AC6-EDDBF19881AF">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMORGANIZATION</sourceObjSchema>
+<sourceObjName>ORGANIZATIONNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURRENCYKEY" id="DCFD4908-08C1-60AC-FACF-FD4A481F0A18">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMORGANIZATION</sourceObjSchema>
+<sourceObjName>CURRENCYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E8440D2-D82D-D7E3-31B8-0B7E7D639FFB" referredColumn="6E6C59B0-40A6-1A81-CAAF-070CC8F7A0BD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6773E3EA-FDA0-84D5-EE6B-10FB477CAAEB" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMORGANIZATION_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025581</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E49CE42-319D-E391-D380-016224B9C761"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DEC63B8-8908-DC4E-54F5-ABF729F91FB1" name="FK_DIMORGANIZATION_DIMCURRENCY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DCFD4908-08C1-60AC-FACF-FD4A481F0A18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57A89778-3BBB-6A9E-979F-CEF8FB44CEC4" name="FK_DIMORGANIZATION_DIMORGANIZATION">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20E766EB-4BF9-2CF9-7515-F739A374AD45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

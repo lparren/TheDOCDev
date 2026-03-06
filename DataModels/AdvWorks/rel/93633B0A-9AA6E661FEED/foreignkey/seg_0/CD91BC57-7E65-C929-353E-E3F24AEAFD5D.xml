@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CD91BC57-7E65-C929-353E-E3F24AEAFD5D" containerWithKeyObject="04C24C43-27AD-7ECD-85F2-3F4082728C2F" localFKIndex="37563F72-36BF-DDCF-F6F0-9E5AB8FA2473" name="FK_FACTRESELLERSALES_DIMSALESTERRITORY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTRESELLERSALES_DIMSALESTERRITORY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMSALESTERRITORY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>73401D79-F83B-DC42-2C42-6591C81BC293</referredTableID>
+<keyObject>33586674-4CAB-65FB-B9E3-9A9C5E87778B</keyObject>
+<referredKeyID>33586674-4CAB-65FB-B9E3-9A9C5E87778B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SALESTERRITORYKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

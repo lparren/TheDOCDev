@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="78038FC4-8BC3-88AE-F344-9FB44CF3A63F" containerWithKeyObject="3A6F7C90-C9A9-2F26-07E5-4895C0D0D98F" localFKIndex="5C9BFDD1-42FA-FD59-3537-54A566940635" name="DIMPRODUCT_DIMPRODUCTSUBCATEGORY_FKv1">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_DIMPRODUCT_DIMPRODUCTSUBCATEGORY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMPRODUCTSUBCATEGORY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>26F7A525-05B7-B724-284F-0EE960074688</referredTableID>
+<keyObject>744170E6-B98D-A549-3396-0206B5CFBE59</keyObject>
+<referredKeyID>744170E6-B98D-A549-3396-0206B5CFBE59</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>PRODUCTSUBCATEGORYKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

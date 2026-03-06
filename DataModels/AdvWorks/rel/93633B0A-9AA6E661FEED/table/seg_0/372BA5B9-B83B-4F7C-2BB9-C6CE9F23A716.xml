@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="372BA5B9-B83B-4F7C-2BB9-C6CE9F23A716" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="SYSDIAGRAMS">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYSDIAGRAMS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NAME" id="DB8DFCB8-1BE9-0CF6-E34C-5A48E8EBD397">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>SYSDIAGRAMS</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128 CHAR</dataTypeSize>
+<ownDataTypeParameters>128 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRINCIPAL_ID" id="111D3FDD-946B-F449-6667-D65E0C337939">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>SYSDIAGRAMS</sourceObjSchema>
+<sourceObjName>PRINCIPAL_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIAGRAM_ID" id="3C2416FB-5701-CBD2-14FE-5F2B4B3FB15B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>SYSDIAGRAMS</sourceObjSchema>
+<sourceObjName>DIAGRAM_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VERSION" id="0D504CA2-B916-F054-4DB1-85E720BE2D8A">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>SYSDIAGRAMS</sourceObjSchema>
+<sourceObjName>VERSION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEFINITION" id="9EC08B2B-74E5-D032-9647-875813957697">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>SYSDIAGRAMS</sourceObjSchema>
+<sourceObjName>DEFINITION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="321BD3CF-9FB9-F068-3D97-708F392B75A7" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="SYSDIAGRAMS_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025700</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C2416FB-5701-CBD2-14FE-5F2B4B3FB15B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="47D22DF5-8A86-A33A-553D-8F5E2212783C" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="UK_PRINCIPAL_NAME">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>UK_PRINCIPAL_NAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="111D3FDD-946B-F449-6667-D65E0C337939"/>
+<colUsage columnID="DB8DFCB8-1BE9-0CF6-E34C-5A48E8EBD397"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

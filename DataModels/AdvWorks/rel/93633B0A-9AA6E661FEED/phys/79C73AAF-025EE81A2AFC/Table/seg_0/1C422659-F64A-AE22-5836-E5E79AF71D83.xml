@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIMPROMOTION" directorySegmentName="seg_0" id="1C422659-F64A-AE22-5836-E5E79AF71D83">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FC45A8B-78FE-8F55-892F-E4630CF8A99C</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="STARTDATE" id="02124B52-71D6-7CA1-1CB6-BD234F05896B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FRENCHPROMOTIONCATEGORY" id="025CE442-F39A-DC9A-7999-1836A2EBA74F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAXQTY" id="0827105E-3782-D491-D737-141367C22B42">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENGLISHPROMOTIONTYPE" id="290E4CA2-251D-3958-15D4-ED8709CFC18B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENGLISHPROMOTIONNAME" id="338D2D4D-E14F-8F11-9E12-B0B14E2E4063">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PROMOTIONALTERNATEKEY" id="69F24EDE-E80A-0533-4F14-64C22657005C">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SPANISHPROMOTIONTYPE" id="73769A5B-4823-ED09-BB58-C38977C5468D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SPANISHPROMOTIONCATEGORY" id="7D312E3C-1CB9-1DA6-DD0F-DC9C1912D692">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SPANISHPROMOTIONNAME" id="81D08915-DC86-252B-9B7D-F0F2657FFBB4">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FRENCHPROMOTIONTYPE" id="90DBEC80-BCA8-693A-4FD6-83834BBC5E42">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PROMOTIONKEY" id="A516E557-18D5-AA63-000A-422C28AAE4F4">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENGLISHPROMOTIONCATEGORY" id="A7D7EA0A-8955-6397-E2D0-BA0151D2B9B0">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FRENCHPROMOTIONNAME" id="B5474063-B619-1793-C97B-FFE482F18F32">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MINQTY" id="C3E4D6BD-856D-792E-858B-0CEA890A2CB4">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENDDATE" id="EAA5FC41-3BEF-8A84-44E9-5F0C952FBB3D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DISCOUNTPCT" id="EC7DC791-748B-4A12-F56B-D0F38186ED13">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="AK_DIMPROMOTION_PROMOTIONALTERNATEKEY" id="E1E09319-94EF-1F8A-6569-498EC75DCD19">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DIMPROMOTION_PK" id="B91D2695-0AF6-2884-4628-0734E8299F3D">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<indexSegment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

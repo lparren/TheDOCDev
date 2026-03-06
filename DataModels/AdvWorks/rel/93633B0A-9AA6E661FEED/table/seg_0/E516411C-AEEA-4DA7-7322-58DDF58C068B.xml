@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E516411C-AEEA-4DA7-7322-58DDF58C068B" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="FACTINTERNETSALESREASON">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FACTINTERNETSALESREASON</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SALESORDERNUMBER" id="AE27AE46-4E87-126B-8AC7-7BCEBB02A822">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTINTERNETSALESREASON</sourceObjSchema>
+<sourceObjName>SALESORDERNUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11C3C658-74BC-82A4-67F4-F2442D86FFB7" referredColumn="973179DB-8FE4-DC66-29EE-F22F2CD5DBED"/>
+</associations>
+</Column>
+<Column name="SALESORDERLINENUMBER" id="C3548B9A-2A43-0DFF-FF0D-C7D982357851">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTINTERNETSALESREASON</sourceObjSchema>
+<sourceObjName>SALESORDERLINENUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11C3C658-74BC-82A4-67F4-F2442D86FFB7" referredColumn="26A0326D-CE4D-13D4-B275-47946E4B9AA6"/>
+</associations>
+</Column>
+<Column name="SALESREASONKEY" id="1303EC4E-4E06-ECAF-4D8D-5B6F3773BF22">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTINTERNETSALESREASON</sourceObjSchema>
+<sourceObjName>SALESREASONKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C9A56747-435C-4C59-A684-7ECC6DBBD44F" referredColumn="6B3725BD-5BF0-B1E2-1D77-ABE96ADE6DC5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C9B6D53-65C7-5910-63BE-1812219E95A3" name="PK_FACTINTERNETSALESREASON">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTINTERNETSALESREASON</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE27AE46-4E87-126B-8AC7-7BCEBB02A822"/>
+<colUsage columnID="C3548B9A-2A43-0DFF-FF0D-C7D982357851"/>
+<colUsage columnID="1303EC4E-4E06-ECAF-4D8D-5B6F3773BF22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D39B4BD9-3E18-3EB5-22D0-6958B111B0B5" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="PK_FACTINTERNETSALESREASON">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTINTERNETSALESREASON</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE27AE46-4E87-126B-8AC7-7BCEBB02A822"/>
+<colUsage columnID="C3548B9A-2A43-0DFF-FF0D-C7D982357851"/>
+<colUsage columnID="1303EC4E-4E06-ECAF-4D8D-5B6F3773BF22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13EE5596-D0B8-1DD5-54A5-31982B7AAB4F" name="FK_FACTINTERNETSALESREASON_DIMSALESREASON">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1303EC4E-4E06-ECAF-4D8D-5B6F3773BF22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72F401DA-9E81-C44D-F17A-74E4CDFDFF9B" name="FK_FACTINTERNETSALESREASON_FACTINTERNETSALES">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE27AE46-4E87-126B-8AC7-7BCEBB02A822"/>
+<colUsage columnID="C3548B9A-2A43-0DFF-FF0D-C7D982357851"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

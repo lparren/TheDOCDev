@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="VASSOCSEQLINEITEMS" directorySegmentName="seg_0" id="86893B4D-E2FB-4746-6884-01D3FCD7BE0A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+</TableViewProxyOraclev10g>

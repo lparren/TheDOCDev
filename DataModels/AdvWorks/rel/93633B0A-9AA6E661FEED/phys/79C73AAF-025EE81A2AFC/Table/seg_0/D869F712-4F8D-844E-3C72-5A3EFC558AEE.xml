@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIMACCOUNT" directorySegmentName="seg_0" id="D869F712-4F8D-844E-3C72-5A3EFC558AEE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FC45A8B-78FE-8F55-892F-E4630CF8A99C</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PARENTACCOUNTKEY" id="0E657C99-A03C-1E2F-5558-C96153E8F86F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMMEMBEROPTIONS" id="2B1CA306-4F53-DAF9-8070-90A159C91561">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCOUNTKEY" id="38164C52-35E1-A82A-1D2B-A80E4DD0FE1F">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PARENTACCOUNTCODEALTERNATEKEY" id="5ACC64DE-7607-A5B0-9353-50124320115A">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMMEMBERS" id="91EED205-17D0-C105-88DF-AC9E9D2E2575">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCOUNTDESCRIPTION" id="9F414270-F2E0-C6A5-7E75-7CAB3F10B47B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VALUETYPE" id="A4D1CD5A-26AA-11AD-3B03-D6B3B3028A50">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCOUNTCODEALTERNATEKEY" id="BC51D68B-1BF7-F2A7-F890-B2F239627FB6">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPERATOR" id="DDA042A5-16AA-F972-C3FD-43989BB07BCE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCOUNTTYPE" id="F88BDA06-2A87-6ECD-AC99-BE172EF86905">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_DIMACCOUNT_DIMACCOUNT" id="6EF0F3A2-6D65-FE0F-2DC4-E15E4612C3F0">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DIMACCOUNT_PK" id="5F490DDD-3BB3-31CA-91AA-F056B9088762">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<indexSegment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

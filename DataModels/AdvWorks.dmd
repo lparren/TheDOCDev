@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="AdvWorks" id="310197D5-8765-D889-B859-B3F63C04EA27" version="3.5">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:39:00 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>310197D5-8765-D889-B859-B3F63C04EA27</designId>
+</OSDM_Design>

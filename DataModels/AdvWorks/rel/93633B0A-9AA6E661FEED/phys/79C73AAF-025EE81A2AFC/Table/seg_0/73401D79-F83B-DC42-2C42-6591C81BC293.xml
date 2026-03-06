@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DIMSALESTERRITORY" directorySegmentName="seg_0" id="73401D79-F83B-DC42-2C42-6591C81BC293">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FC45A8B-78FE-8F55-892F-E4630CF8A99C</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SALESTERRITORYIMAGE" id="080F87E8-360D-02E5-2EE1-6ABAB3992FBC">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESTERRITORYKEY" id="0C20B23A-F80C-478C-6001-679F502E9C47">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESTERRITORYGROUP" id="312F8C55-4F4B-F4F8-F8FC-4D2707DD44FB">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESTERRITORYALTERNATEKEY" id="69A575AF-69FC-D3A6-8BC5-70E9C7D11731">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESTERRITORYCOUNTRY" id="AA8A46B9-414E-CB35-EC8B-1638C97680CF">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESTERRITORYREGION" id="AAA2996A-3383-0806-2B1D-106413B7900B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="AK_DIMSALESTERRITORY_SALESTERRITORYALTERNATEKEY" id="ADA7178C-87DC-D7D4-1552-226B572CEE87">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<lobStorages>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000087062C00006$$" id="7BE18D97-1C15-B4C6-0E31-150EFD81AD14">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:48 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>SALESTERRITORYIMAGE</column>
+<compression>NO</compression>
+<duplication>KEEP_DUPLICATES</duplication>
+<logging>YES</logging>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<lobStorageType>SECUREFILE</lobStorageType>
+</LobStorage>
+</lobStorages>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DIMSALESTERRITORY_PK" id="33586674-4CAB-65FB-B9E3-9A9C5E87778B">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
+<segment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</segment>
+<tableSpace>5F5EE491-E297-3F88-E110-BFFF895DF63A</tableSpace>
+<indexSegment>72077BDF-70BB-8F6D-B61D-23B70E103FF9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

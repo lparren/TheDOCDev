@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_DIMGEOGRAPHY_GEOGRAPHYKEY" directorySegmentName="seg_0" id="DDBF771E-D6B1-1014-7993-8B4D9791A0C4">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SEQ_DIMGEOGRAPHY_GEOGRAPHYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>9999999999999999999999999999</maxValue>
+<minValue>1</minValue>
+<user>AED6504F-506A-50F9-99CB-E97B211C9A2E</user>
+</SequenceOraclev10g>

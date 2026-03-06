@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B15CAD14-B673-5986-D576-8B57F5CFB1EC" containerWithKeyObject="E41D4D35-C0BD-401A-3ADD-0F5420B1162C" localFKIndex="423FCE6D-1B66-1207-5349-8DA251F55523" name="FK_FACTINTERNETSALES_DIMCURRENCY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTINTERNETSALES_DIMCURRENCY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMCURRENCY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6D112C76-39EC-D66A-7B99-B51405BD6C24</referredTableID>
+<keyObject>AC0DC7F2-74E6-6955-188A-5F89DC7A1B14</keyObject>
+<referredKeyID>AC0DC7F2-74E6-6955-188A-5F89DC7A1B14</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CURRENCYKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

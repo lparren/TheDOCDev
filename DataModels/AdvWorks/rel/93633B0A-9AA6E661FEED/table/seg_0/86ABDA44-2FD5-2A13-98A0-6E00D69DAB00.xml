@@ -1,0 +1,205 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86ABDA44-2FD5-2A13-98A0-6E00D69DAB00" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMGEOGRAPHY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>DIMGEOGRAPHY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="GEOGRAPHYKEY" id="DED670D7-B598-4BFE-016A-A82164CA1C23">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>GEOGRAPHYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="969FAE1A-59EF-BA42-F965-66E34C67662B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>CITY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATEPROVINCECODE" id="5D12796F-1871-0889-85C8-6BB8F35005AF">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>STATEPROVINCECODE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATEPROVINCENAME" id="9A5CD6D4-F0A4-C0C9-9656-B8858AA56342">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>STATEPROVINCENAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRYREGIONCODE" id="E87E5587-0F45-8800-1604-0738536ECAD9">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>COUNTRYREGIONCODE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENGLISHCOUNTRYREGIONNAME" id="A3E663A3-5311-0AFF-A184-DE6659BBA981">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>ENGLISHCOUNTRYREGIONNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPANISHCOUNTRYREGIONNAME" id="51A8A6D3-B1A6-32DD-D196-3D16DE3D4747">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>SPANISHCOUNTRYREGIONNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRENCHCOUNTRYREGIONNAME" id="BDFEDF95-3D10-5554-17A4-2C534A247F22">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>FRENCHCOUNTRYREGIONNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POSTALCODE" id="54BC5176-3939-AE9E-39B2-CBAC45FD423E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>POSTALCODE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALESTERRITORYKEY" id="4DC76285-7F81-D90C-03DA-8D4F6B7B0ED3">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>SALESTERRITORYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FA35950-C007-3BBA-453E-CE3F6E5E8C39" referredColumn="0C20B23A-F80C-478C-6001-679F502E9C47"/>
+</associations>
+</Column>
+<Column name="IPADDRESSLOCATOR" id="F18EB36A-97FB-9EFD-FD4D-22C6FDE24509">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMGEOGRAPHY</sourceObjSchema>
+<sourceObjName>IPADDRESSLOCATOR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1DE78E48-6B76-BCCB-D000-231B988B4880" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMGEOGRAPHY_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025580</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DED670D7-B598-4BFE-016A-A82164CA1C23"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F99B67CD-F92C-6ADE-4F20-A8A0B7804A76" name="FK_DIMGEOGRAPHY_DIMSALESTERRITORY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DC76285-7F81-D90C-03DA-8D4F6B7B0ED3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

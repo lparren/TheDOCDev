@@ -1,0 +1,352 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9060B1B2-6BF4-8AE7-5F92-B91D9DAC835C" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMRESELLER">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>DIMRESELLER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RESELLERKEY" id="D20A65A8-0FD4-422F-A5E0-A277325C3A53">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>RESELLERKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GEOGRAPHYKEY" id="26176DE5-3D57-B75F-75B0-3BF91D681007">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>GEOGRAPHYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="70297A1B-BF19-C05C-ABEB-7F2CD22D8A7B" referredColumn="DED670D7-B598-4BFE-016A-A82164CA1C23"/>
+</associations>
+</Column>
+<Column name="RESELLERALTERNATEKEY" id="F9768BF1-FC05-859C-77F8-79577B7EE161">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>RESELLERALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE" id="CEE1FD7F-D69E-0DF7-A99D-D8622582973A">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>PHONE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BUSINESSTYPE" id="E479B711-4E7E-8F62-8470-F9D12B111687">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>BUSINESSTYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RESELLERNAME" id="9C939BFD-A666-F818-2F2D-AF68FC99D817">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>RESELLERNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMBEREMPLOYEES" id="D81EC300-FCF4-035F-9EBB-FA13914C2885">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>NUMBEREMPLOYEES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDERFREQUENCY" id="AEE6318E-7B25-F5E2-DFBC-A25C70D9470E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>ORDERFREQUENCY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDERMONTH" id="B3B8B0C3-F78B-C8DE-6ABB-59EB52949C33">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>ORDERMONTH</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRSTORDERYEAR" id="DE454A12-3819-C1C1-AD1B-838738CB1ED3">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>FIRSTORDERYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LASTORDERYEAR" id="E7BBE7D8-FA63-3851-A354-FC1F2F3F064B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>LASTORDERYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTLINE" id="63B40048-CB45-FCFB-0E81-AE12A4923915">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>PRODUCTLINE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESSLINE1" id="7DC89680-CD2F-629E-8EE1-3D56A445B985">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>ADDRESSLINE1</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESSLINE2" id="AB0E8A3A-567D-A96B-65EB-486C975D1B70">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>ADDRESSLINE2</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANNUALSALES" id="74010EA8-0E88-648A-D790-16388E01DF08">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>ANNUALSALES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BANKNAME" id="A089C1F7-3E51-962D-C7F4-9010C0BA958F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>BANKNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MINPAYMENTTYPE" id="34C2E718-B327-2506-DDD1-ADE3693E533E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>MINPAYMENTTYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MINPAYMENTAMOUNT" id="551A4AEC-BD0E-116D-A36E-173B878BC7D3">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>MINPAYMENTAMOUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANNUALREVENUE" id="EE5C437D-AD5E-4A13-4334-DF1C99763292">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>ANNUALREVENUE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="YEAROPENED" id="742651E1-0584-214C-7BBB-DA01155B71A9">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMRESELLER</sourceObjSchema>
+<sourceObjName>YEAROPENED</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F769F20-E74A-4B6D-5140-5F3679E4CDDB" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMRESELLER_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025600</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D20A65A8-0FD4-422F-A5E0-A277325C3A53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD0B0E50-70C6-74A6-28A4-1428B74AC2B9" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="AK_DIMRESELLER_RESELLERALTERNATEKEY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>AK_DIMRESELLER_RESELLERALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9768BF1-FC05-859C-77F8-79577B7EE161"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A501C7F6-5451-A35C-CC8B-99EA63370B16" name="FK_DIMRESELLER_DIMGEOGRAPHY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26176DE5-3D57-B75F-75B0-3BF91D681007"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

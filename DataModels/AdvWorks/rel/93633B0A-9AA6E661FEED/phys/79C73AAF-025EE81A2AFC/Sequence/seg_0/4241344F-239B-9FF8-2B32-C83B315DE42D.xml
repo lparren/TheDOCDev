@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_FACTSURVEYRESPONSE_SURVEYRESPONSEKEY" directorySegmentName="seg_0" id="4241344F-239B-9FF8-2B32-C83B315DE42D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SEQ_FACTSURVEYRESPONSE_SURVEYRESPONSEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>9999999999999999999999999999</maxValue>
+<minValue>1</minValue>
+<user>AED6504F-506A-50F9-99CB-E97B211C9A2E</user>
+</SequenceOraclev10g>

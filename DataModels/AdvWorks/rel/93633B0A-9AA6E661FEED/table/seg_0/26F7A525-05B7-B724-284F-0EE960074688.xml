@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="26F7A525-05B7-B724-284F-0EE960074688" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMPRODUCTSUBCATEGORY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>DIMPRODUCTSUBCATEGORY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTSUBCATEGORYKEY" id="493B094D-742B-7CF9-524A-8F1F4D49DF1D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMPRODUCTSUBCATEGORY</sourceObjSchema>
+<sourceObjName>PRODUCTSUBCATEGORYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTSUBCATEGORYALTERNATEKEY" id="C40E1AC9-2525-589A-6984-74CCC8013E05">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMPRODUCTSUBCATEGORY</sourceObjSchema>
+<sourceObjName>PRODUCTSUBCATEGORYALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENGLISHPRODUCTSUBCATEGORYNAME" id="5F5ED616-E149-5E1D-452C-719F2D9E25A5">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMPRODUCTSUBCATEGORY</sourceObjSchema>
+<sourceObjName>ENGLISHPRODUCTSUBCATEGORYNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPANISHPRODUCTSUBCATEGORYNAME" id="9FE3E932-D330-74C3-28BE-FB063D82808A">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMPRODUCTSUBCATEGORY</sourceObjSchema>
+<sourceObjName>SPANISHPRODUCTSUBCATEGORYNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRENCHPRODUCTSUBCATEGORYNAME" id="367F9052-2E81-D96D-21AC-D4740387E009">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMPRODUCTSUBCATEGORY</sourceObjSchema>
+<sourceObjName>FRENCHPRODUCTSUBCATEGORYNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTCATEGORYKEY" id="D0FFD815-9C04-58EA-F2DB-1F2E060BF029">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMPRODUCTSUBCATEGORY</sourceObjSchema>
+<sourceObjName>PRODUCTCATEGORYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57ECDE75-A1A2-3FF9-FF95-DCF52D062E2B" referredColumn="66D86D65-FCE6-504E-039F-66CFCD425466"/>
+</associations>
+</Column>
+<Column name="DIMPRODUCTCATEGORY_PRODUCTCATEGORYKEY" id="02E48502-645F-5D6C-8084-DD9BE166A2F4">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:48:27 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="783F8434-D765-4979-DB8B-414A713D17A2" referredColumn="66D86D65-FCE6-504E-039F-66CFCD425466"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="744170E6-B98D-A549-3396-0206B5CFBE59" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMPRODUCTSUBCATEGORY_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025595</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="493B094D-742B-7CF9-524A-8F1F4D49DF1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="722947BA-62CC-2506-356A-74EB13B49389" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="AK_DIMPRODUCTSUBCATEGORY_PRODUCTSUBCATEGORYALTERNATEKEY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>AK_DIMPRODUCTSUBCATEGORY_PRODUCTSUBCATEGORYALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C40E1AC9-2525-589A-6984-74CCC8013E05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AD21B23-3219-1DC8-4861-6D26BCCE4345" name="FK_DIMPRODUCTSUBCATEGORY_DIMPRODUCTCATEGORY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0FFD815-9C04-58EA-F2DB-1F2E060BF029"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08C94EED-A2DC-B07B-3981-FFF2EA7610B8" name="DIMPRODUCTSUBCATEGORY_DIMPRODUCTCATEGORY_FK">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:48:27 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02E48502-645F-5D6C-8084-DD9BE166A2F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

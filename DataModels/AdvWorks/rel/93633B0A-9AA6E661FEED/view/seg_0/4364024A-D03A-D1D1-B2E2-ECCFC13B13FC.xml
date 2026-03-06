@@ -1,0 +1,424 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="4364024A-D03A-D1D1-B2E2-ECCFC13B13FC" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="VDMPREP">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>VDMPREP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE OR REPLACE VIEW VDMPREP
+AS 
+SELECT pc.englishproductcategoryname,
+          nvl(
+             p.modelname,
+             p.englishproductname
+          ) AS model,
+          c.customerkey,
+          s.salesterritorygroup AS region,
+          CASE
+             WHEN EXTRACT(MONTH FROM trunc(sysdate)) < EXTRACT(MONTH FROM c.birthdate) THEN
+                EXTRACT(YEAR FROM trunc(sysdate)) - EXTRACT(YEAR FROM c.birthdate) - 1
+             WHEN EXTRACT(MONTH FROM trunc(sysdate)) = EXTRACT(MONTH FROM c.birthdate)
+                AND EXTRACT(DAY FROM trunc(sysdate)) < EXTRACT(DAY FROM c.birthdate) THEN
+                EXTRACT(YEAR FROM trunc(sysdate)) - EXTRACT(YEAR FROM c.birthdate) - 1
+             ELSE
+                EXTRACT(YEAR FROM trunc(sysdate)) - EXTRACT(YEAR FROM c.birthdate)
+          END AS age,
+          CASE
+             WHEN c.yearlyincome < 40000 THEN
+                'Low'
+             WHEN c.yearlyincome > 60000 THEN
+                'High'
+             ELSE
+                'Moderate'
+          END AS incomegroup,
+          d.calendaryear,
+          d.fiscalyear,
+          d.monthnumberofyear AS month,
+          f.salesordernumber AS ordernumber,
+          f.salesorderlinenumber AS linenumber,
+          f.orderquantity AS quantity,
+          f.extendedamount AS amount
+     FROM factinternetsales f
+    INNER JOIN dimdate d
+   ON f.orderdatekey = d.datekey
+    INNER JOIN dimproduct p
+   ON f.productkey = p.productkey
+    INNER JOIN dimproductsubcategory psc
+   ON p.productsubcategorykey = psc.productsubcategorykey
+    INNER JOIN dimproductcategory pc
+   ON psc.productcategorykey = pc.productcategorykey
+    INNER JOIN dimcustomer c
+   ON f.customerkey = c.customerkey
+    INNER JOIN dimgeography g
+   ON c.geographykey = g.geographykey
+    INNER JOIN dimsalesterritory s
+   ON g.salesterritorykey = s.salesterritorykey]]></userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ENGLISHPRODUCTCATEGORYNAME" id="B10E62EF-98D6-12E3-F2CE-D9FD5AF0A678">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>ENGLISHPRODUCTCATEGORYNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ENGLISHPRODUCTCATEGORYNAME</alias>
+<dataType>VARCHAR2 (50 CHAR)</dataType>
+<headerAlias>ENGLISHPRODUCTCATEGORYNAME</headerAlias>
+<reference>false</reference>
+<referencedColumn>C9DB5EF9-A52C-E851-860C-E69B9F1EC065</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MODEL" id="7AC2AE2C-5558-961B-4F9D-1DAC884F93DA">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>MODEL</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>MODEL</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>MODEL</headerAlias>
+<reference>false</reference>
+<referencedColumn>042C17F8-BE14-5B2E-BF86-642319C51A2A</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CUSTOMERKEY" id="2E9C36D8-0337-10BB-345F-258160D84788">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>CUSTOMERKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>CUSTOMERKEY</alias>
+<dataType>NUMBER (5)</dataType>
+<headerAlias>CUSTOMERKEY</headerAlias>
+<reference>false</reference>
+<referencedColumn>7D2FD99D-99AC-452B-55C7-AF116C33132C</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REGION" id="7735255F-1071-0239-9E47-953AB089A865">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>REGION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>REGION</alias>
+<dataType>NUMBER (5)</dataType>
+<headerAlias>REGION</headerAlias>
+<reference>false</reference>
+<referencedColumn>313AA8DE-05E5-686B-AC70-A82B938911FF</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="AGE" id="925C46EC-E6C1-CC2A-9CAD-AEF2A549CE63">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>AGE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>AGE</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>AGE</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="INCOMEGROUP" id="BF618103-4844-16B5-F1D6-93BABA13B262">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>INCOMEGROUP</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>INCOMEGROUP</alias>
+<dataType>VARCHAR2 (8 BYTE)</dataType>
+<headerAlias>INCOMEGROUP</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CALENDARYEAR" id="C512E8F5-6364-6FD2-ABD6-413A8408F29E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>CALENDARYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>CALENDARYEAR</alias>
+<dataType>NUMBER (5)</dataType>
+<headerAlias>CALENDARYEAR</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FISCALYEAR" id="C1770BBB-45C6-753F-3814-B49682E0D7EF">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>FISCALYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>FISCALYEAR</alias>
+<dataType>NUMBER (5)</dataType>
+<headerAlias>FISCALYEAR</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MONTH" id="D5262D4B-01BE-C7AD-49A3-41883E84DF8A">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>MONTH</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>MONTH</alias>
+<dataType>NUMBER (3)</dataType>
+<headerAlias>MONTH</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ORDERNUMBER" id="C600D5AD-C77B-6666-FDDD-1F2CCC7950BD">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>ORDERNUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ORDERNUMBER</alias>
+<dataType>VARCHAR2 (20 CHAR)</dataType>
+<headerAlias>ORDERNUMBER</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LINENUMBER" id="3E1E5A8C-5498-17A6-D1F6-74F59E3ADD89">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>LINENUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LINENUMBER</alias>
+<dataType>NUMBER (3)</dataType>
+<headerAlias>LINENUMBER</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="QUANTITY" id="02CAF7F6-4599-D25B-977B-85C671BEA728">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>QUANTITY</alias>
+<dataType>NUMBER (5)</dataType>
+<headerAlias>QUANTITY</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="AMOUNT" id="31CD3D13-E82B-A5E9-7686-DFD16081B8D3">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>VDMPREP</sourceObjSchema>
+<sourceObjName>AMOUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>AMOUNT</alias>
+<dataType>NUMBER (19, 4)</dataType>
+<headerAlias>AMOUNT</headerAlias>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E41D4D35-C0BD-401A-3ADD-0F5420B1162C">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D9625CCF-0183-F588-1972-10A92EF8EC82">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMDATE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3A6F7C90-C9A9-2F26-07E5-4895C0D0D98F">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="26F7A525-05B7-B724-284F-0EE960074688">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCTSUBCATEGORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="43ABC86A-3814-698D-3DC6-4D13BD18F3B1">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCTCATEGORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="77F559B3-7269-43FB-C814-9A115A09AD0A">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMCUSTOMER</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="86ABDA44-2FD5-2A13-98A0-6E00D69DAB00">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMGEOGRAPHY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="73401D79-F83B-DC42-2C42-6591C81BC293">
+<container>true</container>
+<schema>ADVWORKS</schema>
+<tableName>DIMSALESTERRITORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C9DB5EF9-A52C-E851-860C-E69B9F1EC065">
+<columnName>ENGLISHPRODUCTCATEGORYNAME</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCTCATEGORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="042C17F8-BE14-5B2E-BF86-642319C51A2A">
+<columnName>CUSTOMERKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMCUSTOMER</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7D2FD99D-99AC-452B-55C7-AF116C33132C">
+<columnName>CALENDARYEAR</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMDATE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="313AA8DE-05E5-686B-AC70-A82B938911FF">
+<columnName>FISCALYEAR</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMDATE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E19E5050-AB1F-F2A2-A6D3-182A1E60C566">
+<columnName>ENGLISHPRODUCTNAME</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0C20B23A-F80C-478C-6001-679F502E9C47">
+<columnName>SALESTERRITORYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMSALESTERRITORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="26A0326D-CE4D-13D4-B275-47946E4B9AA6">
+<columnName>SALESORDERLINENUMBER</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E0A1C527-C349-8A16-B84B-23F21D0EF5AC">
+<columnName>CUSTOMERKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="973179DB-8FE4-DC66-29EE-F22F2CD5DBED">
+<columnName>SALESORDERNUMBER</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C5D8936F-993A-E045-8AF4-B59C157CD864">
+<columnName>MODELNAME</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="312F8C55-4F4B-F4F8-F8FC-4D2707DD44FB">
+<columnName>SALESTERRITORYGROUP</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMSALESTERRITORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E0F720DF-96D0-893E-0878-F2B646978F40">
+<columnName>MONTHNUMBEROFYEAR</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMDATE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="979069AA-AE0F-12E0-900D-DEEC72239FD3">
+<columnName>PRODUCTSUBCATEGORYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="805FCD32-FADD-D3BA-C645-B63E09B15608">
+<columnName>ORDERDATEKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="472E44EA-6150-BF58-CB06-90FA417BED88">
+<columnName>DATEKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMDATE</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="493B094D-742B-7CF9-524A-8F1F4D49DF1D">
+<columnName>PRODUCTSUBCATEGORYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCTSUBCATEGORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D89A273E-8199-512D-A021-863F78899019">
+<columnName>BIRTHDATE</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMCUSTOMER</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="ADFC839F-830C-FCC9-61A3-E23B3576CEC4">
+<columnName>PRODUCTKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4DC76285-7F81-D90C-03DA-8D4F6B7B0ED3">
+<columnName>SALESTERRITORYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMGEOGRAPHY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D0FFD815-9C04-58EA-F2DB-1F2E060BF029">
+<columnName>PRODUCTCATEGORYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCTSUBCATEGORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FCF3014E-B714-67EE-DF52-F0534BF462E2">
+<columnName>GEOGRAPHYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMCUSTOMER</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5CFA3F46-72FA-700B-3B90-F4098D2B55E4">
+<columnName>EXTENDEDAMOUNT</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="75B083A9-51BF-51C9-B3E9-463D54DCEB28">
+<columnName>ORDERQUANTITY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>FACTINTERNETSALES</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BB6C1076-1392-5069-1790-2B1F5E54F7DB">
+<columnName>YEARLYINCOME</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMCUSTOMER</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DED670D7-B598-4BFE-016A-A82164CA1C23">
+<columnName>GEOGRAPHYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMGEOGRAPHY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="66D86D65-FCE6-504E-039F-66CFCD425466">
+<columnName>PRODUCTCATEGORYKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCTCATEGORY</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="342B3EA7-49F9-ECA2-44D2-7B183A03A7C5">
+<columnName>PRODUCTKEY</columnName>
+<schema>ADVWORKS</schema>
+<tableName>DIMPRODUCT</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

@@ -1,0 +1,254 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7FFEB712-C222-9631-A0D2-813DAA23BD3C" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="FACTCALLCENTER">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FACTCALLCENTER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FACTCALLCENTERID" id="F09A7E9A-1B22-20B6-E223-125C2B993A91">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>FACTCALLCENTERID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATEKEY" id="29676FD7-F783-2692-8BD3-37AB558BF677">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>DATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA11A83E-AC54-5AB0-4352-57CA943EA71D" referredColumn="472E44EA-6150-BF58-CB06-90FA417BED88"/>
+</associations>
+</Column>
+<Column name="WAGETYPE" id="F253685B-BFDC-647C-5ED5-BD1D990E9CFA">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>WAGETYPE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SHIFT" id="F498415D-D910-A608-8C6C-06E1CE743CCD">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>SHIFT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEVELONEOPERATORS" id="7977136B-11CF-5846-2ACA-2E53722EFDF6">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>LEVELONEOPERATORS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEVELTWOOPERATORS" id="C5E665B7-7212-A9D7-82FA-86234BB22C9F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>LEVELTWOOPERATORS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTALOPERATORS" id="C0E7141A-AC44-8E0B-722A-0AB46B2A790D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>TOTALOPERATORS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALLS" id="E0390FB6-08F1-346B-1AF8-6BEEEB99D957">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>CALLS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUTOMATICRESPONSES" id="94B7B3F2-E4A2-A116-7661-703D846AC62B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>AUTOMATICRESPONSES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDERS" id="48F6C14F-2EA2-22D7-811A-62A5F40D31F1">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>ORDERS</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISSUESRAISED" id="5CE742C9-53CD-EB8B-9FE0-812799592C4B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>ISSUESRAISED</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AVERAGETIMEPERISSUE" id="6D158B40-75A4-12A8-39D7-23ADAD602FD1">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>AVERAGETIMEPERISSUE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICEGRADE" id="B242DBF1-B90B-52FF-60CF-4BFD11B8D7AA">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>SERVICEGRADE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT056</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOADDATE" id="32629747-7249-56D1-6A77-F318AD8CB38E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCALLCENTER</sourceObjSchema>
+<sourceObjName>LOADDATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE9F8FB3-3ED1-AE53-7132-46CE29C9B581" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="FACTCALLCENTER_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025625</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F09A7E9A-1B22-20B6-E223-125C2B993A91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32E40473-3494-B308-BC54-431F7E20D07C" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="AK_FACTCALLCENTER_DATEKEY_SHIFT">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>AK_FACTCALLCENTER_DATEKEY_SHIFT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29676FD7-F783-2692-8BD3-37AB558BF677"/>
+<colUsage columnID="F498415D-D910-A608-8C6C-06E1CE743CCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB687C60-BAB4-9B3A-E6B7-2EBD2A7D2A0D" name="FK_FACTCALLCENTER_DIMDATE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29676FD7-F783-2692-8BD3-37AB558BF677"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

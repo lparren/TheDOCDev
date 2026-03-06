@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEQ_SYSDIAGRAMS_DIAGRAM_ID" directorySegmentName="seg_0" id="C4C07B97-5882-D4C6-73D5-B1FD3CED9C67">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SEQ_SYSDIAGRAMS_DIAGRAM_ID</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:42 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>9999999999999999999999999999</maxValue>
+<minValue>1</minValue>
+<user>AED6504F-506A-50F9-99CB-E97B211C9A2E</user>
+</SequenceOraclev10g>

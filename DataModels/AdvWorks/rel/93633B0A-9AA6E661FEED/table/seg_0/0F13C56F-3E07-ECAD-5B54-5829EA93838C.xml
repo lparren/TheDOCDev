@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0F13C56F-3E07-ECAD-5B54-5829EA93838C" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="FACTCURRENCYRATE">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FACTCURRENCYRATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CURRENCYKEY" id="0F5EF658-4F9C-4977-8962-6D7A23FBFF1F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCURRENCYRATE</sourceObjSchema>
+<sourceObjName>CURRENCYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04AAA024-681A-A2C5-F97E-A182DD7D93A3" referredColumn="6E6C59B0-40A6-1A81-CAAF-070CC8F7A0BD"/>
+</associations>
+</Column>
+<Column name="DATEKEY" id="89027934-32D4-6BFA-E60C-F0E6A6C4D658">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCURRENCYRATE</sourceObjSchema>
+<sourceObjName>DATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0287F456-78F0-AF8E-620B-186B10689A5C" referredColumn="472E44EA-6150-BF58-CB06-90FA417BED88"/>
+</associations>
+</Column>
+<Column name="AVERAGERATE" id="30F4F974-A778-4DBB-14E6-BE5CE7460F02">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCURRENCYRATE</sourceObjSchema>
+<sourceObjName>AVERAGERATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT056</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENDOFDAYRATE" id="AFB594C5-FFE3-8CFD-56C5-65B2CBEE447D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCURRENCYRATE</sourceObjSchema>
+<sourceObjName>ENDOFDAYRATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT056</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOADDATE" id="BC038518-E09D-2E3B-41CE-5720BEEFCF9D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTCURRENCYRATE</sourceObjSchema>
+<sourceObjName>LOADDATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BECA855F-8946-9C31-7B22-57338BEBE461" name="PK_FACTCURRENCYRATE">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTCURRENCYRATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F5EF658-4F9C-4977-8962-6D7A23FBFF1F"/>
+<colUsage columnID="89027934-32D4-6BFA-E60C-F0E6A6C4D658"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A8396426-8B84-7CA6-F20F-F3E9F7DA12C6" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="PK_FACTCURRENCYRATE">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTCURRENCYRATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F5EF658-4F9C-4977-8962-6D7A23FBFF1F"/>
+<colUsage columnID="89027934-32D4-6BFA-E60C-F0E6A6C4D658"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A01F9D1-FE90-A48E-E93D-D82380010F15" name="FK_FACTCURRENCYRATE_DIMCURRENCY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F5EF658-4F9C-4977-8962-6D7A23FBFF1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4008782F-6602-BE51-2072-AB6A765712B1" name="FK_FACTCURRENCYRATE_DIMDATE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89027934-32D4-6BFA-E60C-F0E6A6C4D658"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

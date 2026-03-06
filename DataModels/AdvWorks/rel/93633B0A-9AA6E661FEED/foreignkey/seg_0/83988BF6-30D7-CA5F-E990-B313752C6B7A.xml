@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="83988BF6-30D7-CA5F-E990-B313752C6B7A" containerWithKeyObject="D0DF6320-7337-2C39-3A9D-1FD9F6823AA7" localFKIndex="333E4FE0-4D28-78D5-488C-8FE4246ED808" name="FK_FACTFINANCE_DIMSCENARIO">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTFINANCE_DIMSCENARIO</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMSCENARIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>45FA8557-AF55-554B-D4AC-2D1CD7B6C38C</referredTableID>
+<keyObject>DC6DA487-C561-EF93-75D8-8E3053528A3C</keyObject>
+<referredKeyID>DC6DA487-C561-EF93-75D8-8E3053528A3C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SCENARIOKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

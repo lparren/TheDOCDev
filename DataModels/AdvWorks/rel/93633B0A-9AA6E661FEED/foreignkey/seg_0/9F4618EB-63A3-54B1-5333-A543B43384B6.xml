@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9F4618EB-63A3-54B1-5333-A543B43384B6" containerWithKeyObject="04C24C43-27AD-7ECD-85F2-3F4082728C2F" localFKIndex="E2430D62-AC30-6A9E-9AA3-EBCF949DD15A" name="FK_FACTRESELLERSALES_DIMPRODUCT">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTRESELLERSALES_DIMPRODUCT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMPRODUCT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3A6F7C90-C9A9-2F26-07E5-4895C0D0D98F</referredTableID>
+<keyObject>B7214E80-21F5-D439-4090-825C94EFEC7E</keyObject>
+<referredKeyID>B7214E80-21F5-D439-4090-825C94EFEC7E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PRODUCTKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

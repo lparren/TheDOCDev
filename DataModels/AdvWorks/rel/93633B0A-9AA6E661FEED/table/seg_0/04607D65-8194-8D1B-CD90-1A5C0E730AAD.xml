@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="04607D65-8194-8D1B-CD90-1A5C0E730AAD" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="FACTADDITIONALINTERNATIONALPRODUCTDESCRIPTION">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FACTADDITIONALINTERNATIONALPRODUCTDESCRIPTION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTKEY" id="101A331F-EEC0-5561-5794-AFBA72C3E7A0">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTADDITIONALINTERNATIONALPRODUCTDESCRIPTION</sourceObjSchema>
+<sourceObjName>PRODUCTKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CULTURENAME" id="84565F53-DF4B-9397-3D9A-5FECA28D5867">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTADDITIONALINTERNATIONALPRODUCTDESCRIPTION</sourceObjSchema>
+<sourceObjName>CULTURENAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTDESCRIPTION" id="9A9B12A2-1B19-045C-21E4-9110990E62E8">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTADDITIONALINTERNATIONALPRODUCTDESCRIPTION</sourceObjSchema>
+<sourceObjName>PRODUCTDESCRIPTION</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26DBE35D-501D-6E17-6243-5BFF2825E626" name="PK_FACTADDINTLPRODDESC">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTADDINTLPRODDESC</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="101A331F-EEC0-5561-5794-AFBA72C3E7A0"/>
+<colUsage columnID="84565F53-DF4B-9397-3D9A-5FECA28D5867"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65968A40-567F-3A8D-E845-66D11702756A" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="PK_FACTADDINTLPRODDESC">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTADDINTLPRODDESC</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="101A331F-EEC0-5561-5794-AFBA72C3E7A0"/>
+<colUsage columnID="84565F53-DF4B-9397-3D9A-5FECA28D5867"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="03AE830E-2D37-CF12-DF89-5359094613C7" containerWithKeyObject="E41D4D35-C0BD-401A-3ADD-0F5420B1162C" localFKIndex="C6037B8F-6281-AA56-E0F3-F4ADF855C801" name="FK_FACTINTERNETSALES_DIMDATE2">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTINTERNETSALES_DIMDATE2</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMDATE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D9625CCF-0183-F588-1972-10A92EF8EC82</referredTableID>
+<keyObject>4E986FDF-7885-BAAE-F1E7-C19E31D4519C</keyObject>
+<referredKeyID>4E986FDF-7885-BAAE-F1E7-C19E31D4519C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>DATEKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

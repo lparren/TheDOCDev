@@ -1,0 +1,557 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="04C24C43-27AD-7ECD-85F2-3F4082728C2F" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="FACTRESELLERSALES">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FACTRESELLERSALES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRODUCTKEY" id="8952900F-382B-72AB-218B-6BCC21366506">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>PRODUCTKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F4618EB-63A3-54B1-5333-A543B43384B6" referredColumn="342B3EA7-49F9-ECA2-44D2-7B183A03A7C5"/>
+</associations>
+</Column>
+<Column name="ORDERDATEKEY" id="E8E8810D-1CF0-0DC4-A215-201DD6886D02">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>ORDERDATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B30B2E55-43EC-0535-6ECC-E6AF5C5DA3D3" referredColumn="472E44EA-6150-BF58-CB06-90FA417BED88"/>
+</associations>
+</Column>
+<Column name="DUEDATEKEY" id="4AA72139-BF56-F4F8-8724-4BAB555A220A">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>DUEDATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A3DCF24-10F6-5A4A-B2CE-C9A18BA31BC4" referredColumn="472E44EA-6150-BF58-CB06-90FA417BED88"/>
+</associations>
+</Column>
+<Column name="SHIPDATEKEY" id="134964CD-9403-3681-ACA8-72C924AB47C0">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>SHIPDATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9EBD3C75-A421-4DEE-DB78-E7B2330A0FA5" referredColumn="472E44EA-6150-BF58-CB06-90FA417BED88"/>
+</associations>
+</Column>
+<Column name="RESELLERKEY" id="8F880503-EFB6-5C16-8A7C-4B23E22FEBC9">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>RESELLERKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F3DB14E5-76E6-719D-DCD9-BF77FB8F96F2" referredColumn="D20A65A8-0FD4-422F-A5E0-A277325C3A53"/>
+</associations>
+</Column>
+<Column name="EMPLOYEEKEY" id="0AE4BAE8-1EEF-7743-1ABF-7198A3B17C8D">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>EMPLOYEEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D14840C5-9DB0-AD06-4ACD-D745F0231B27" referredColumn="9C7436F6-2758-C1D8-7EA9-A4954C1E726F"/>
+</associations>
+</Column>
+<Column name="PROMOTIONKEY" id="BE025FEA-629E-38BE-5CD6-852BD7358507">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>PROMOTIONKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9B52D41-C948-6455-96C3-85EE1E3610C9" referredColumn="A516E557-18D5-AA63-000A-422C28AAE4F4"/>
+</associations>
+</Column>
+<Column name="CURRENCYKEY" id="6F5955AD-3F82-9331-8C6B-B76CC50E9065">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>CURRENCYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96859578-C5A8-1478-A92A-CC5D2C97492C" referredColumn="6E6C59B0-40A6-1A81-CAAF-070CC8F7A0BD"/>
+</associations>
+</Column>
+<Column name="SALESTERRITORYKEY" id="4C39B0F8-E1C8-3445-7240-94E477440767">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>SALESTERRITORYKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CD91BC57-7E65-C929-353E-E3F24AEAFD5D" referredColumn="0C20B23A-F80C-478C-6001-679F502E9C47"/>
+</associations>
+</Column>
+<Column name="SALESORDERNUMBER" id="C4CDFDE0-B640-02D7-8244-8E7AC50F782E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>SALESORDERNUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALESORDERLINENUMBER" id="76B90D0B-4D01-8B94-B8ED-ACF7595C1CF8">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>SALESORDERLINENUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REVISIONNUMBER" id="9A3A83AC-B647-A1D1-8398-EB7B499FCE85">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>REVISIONNUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDERQUANTITY" id="5A2810E8-5292-0849-A1E3-39726719A22F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>ORDERQUANTITY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNITPRICE" id="5FE32F91-F37F-D7CE-1978-553C489E3B47">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>UNITPRICE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXTENDEDAMOUNT" id="B46C0B18-2679-FD44-6A4B-C31883C27375">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>EXTENDEDAMOUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNITPRICEDISCOUNTPCT" id="96B33551-C777-3772-0171-F6AA95E3D6A7">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>UNITPRICEDISCOUNTPCT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT056</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DISCOUNTAMOUNT" id="4C8181A7-09DB-02AB-AC9B-993B09FBC50B">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>DISCOUNTAMOUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT056</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTSTANDARDCOST" id="49DCC383-25C8-AB5E-77A8-FD057930BDD8">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>PRODUCTSTANDARDCOST</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTALPRODUCTCOST" id="99CE8BFF-BEAC-C587-D809-886FD9CF8BD7">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>TOTALPRODUCTCOST</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALESAMOUNT" id="EA7FDBE4-14B5-741C-DF6A-7D2C953A44F6">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>SALESAMOUNT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TAXAMT" id="D7044F9D-A15F-2EE8-31B2-371C7249C3FA">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>TAXAMT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FREIGHT" id="90F93F01-3D17-0ED8-0FD2-CEB272979D5E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>FREIGHT</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,19,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CARRIERTRACKINGNUMBER" id="0A3A3484-7FE6-B96D-2FDE-3103EFE21090">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>CARRIERTRACKINGNUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUSTOMERPONUMBER" id="841A5F5B-A96A-1196-4CCF-6D571C058A1F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>CUSTOMERPONUMBER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDERDATE" id="0F6BAA96-3E76-3874-2492-9A9C4F34C494">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>ORDERDATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DUEDATE" id="11A686E5-33A0-0052-3E7E-2AC6CE5BC792">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>DUEDATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SHIPDATE" id="BB181119-7977-DAC0-D030-CD574F23F3B8">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>FACTRESELLERSALES</sourceObjSchema>
+<sourceObjName>SHIPDATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:44 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A2D14D7-79CD-EB6E-8424-CB37FC9FA83C" name="PK_FACTRESELLERSALES">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTRESELLERSALES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4CDFDE0-B640-02D7-8244-8E7AC50F782E"/>
+<colUsage columnID="76B90D0B-4D01-8B94-B8ED-ACF7595C1CF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2CF1BA09-EE87-5F95-2F06-230AC0F63876" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="PK_FACTRESELLERSALES">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>PK_FACTRESELLERSALES</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:46 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4CDFDE0-B640-02D7-8244-8E7AC50F782E"/>
+<colUsage columnID="76B90D0B-4D01-8B94-B8ED-ACF7595C1CF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="737192D7-43FE-480C-DBE9-20CA90A9B60F" name="FK_FACTRESELLERSALES_DIMCURRENCY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F5955AD-3F82-9331-8C6B-B76CC50E9065"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A848D2C-75B2-7146-C02A-8548C2DE40A0" name="FK_FACTRESELLERSALES_DIMDATE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8E8810D-1CF0-0DC4-A215-201DD6886D02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6848CE54-15B4-D9EC-7B30-2E4BFE88F057" name="FK_FACTRESELLERSALES_DIMDATE1">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4AA72139-BF56-F4F8-8724-4BAB555A220A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A88C96EC-48D5-C3DC-0F78-435C143424ED" name="FK_FACTRESELLERSALES_DIMDATE2">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="134964CD-9403-3681-ACA8-72C924AB47C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB79D8F5-E530-2619-7DC7-959044D41941" name="FK_FACTRESELLERSALES_DIMEMPLOYEE">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AE4BAE8-1EEF-7743-1ABF-7198A3B17C8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2430D62-AC30-6A9E-9AA3-EBCF949DD15A" name="FK_FACTRESELLERSALES_DIMPRODUCT">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8952900F-382B-72AB-218B-6BCC21366506"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2DF1009-A3E5-458A-FB2C-1DEE4C4A407A" name="FK_FACTRESELLERSALES_DIMPROMOTION">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE025FEA-629E-38BE-5CD6-852BD7358507"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6DCE38B3-AB47-125E-E15D-EA168129C8AD" name="FK_FACTRESELLERSALES_DIMRESELLER">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F880503-EFB6-5C16-8A7C-4B23E22FEBC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37563F72-36BF-DDCF-F6F0-9E5AB8FA2473" name="FK_FACTRESELLERSALES_DIMSALESTERRITORY">
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C39B0F8-E1C8-3445-7240-94E477440767"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

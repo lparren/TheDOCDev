@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6E25846D-BE9B-8382-35FB-73FD1B9410BF" containerWithKeyObject="3BC9253B-D82F-C07B-1F9D-BEEE59B369D0" localFKIndex="9C88BEDE-63C2-4C4E-6934-A871ED4409B5" name="FK_FACTSURVEYRESPONSE_CUSTOMERKEY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_FACTSURVEYRESPONSE_CUSTOMERKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMCUSTOMER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>77F559B3-7269-43FB-C814-9A115A09AD0A</referredTableID>
+<keyObject>C61FE73A-E0D8-8981-44F3-C66638BBDE02</keyObject>
+<referredKeyID>C61FE73A-E0D8-8981-44F3-C66638BBDE02</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CUSTOMERKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

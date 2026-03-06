@@ -1,0 +1,319 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9625CCF-0183-F588-1972-10A92EF8EC82" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMDATE">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>DIMDATE</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATEKEY" id="472E44EA-6150-BF58-CB06-90FA417BED88">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>DATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FULLDATEALTERNATEKEY" id="A1A08506-AA2B-6927-2F64-97FFB9B326A3">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>FULLDATEALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAYNUMBEROFWEEK" id="E37E595E-9569-0252-9B93-772F0447262C">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>DAYNUMBEROFWEEK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENGLISHDAYNAMEOFWEEK" id="B3697B09-08E5-67C3-492B-4FDAC7636F7E">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>ENGLISHDAYNAMEOFWEEK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPANISHDAYNAMEOFWEEK" id="27D1A70D-05D4-B43A-5737-A8B77FAF8E45">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>SPANISHDAYNAMEOFWEEK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRENCHDAYNAMEOFWEEK" id="00DD3406-6E9C-BD70-688C-E046D40E1071">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>FRENCHDAYNAMEOFWEEK</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAYNUMBEROFMONTH" id="AECDC03B-9DB6-8971-48AE-0110EE71A696">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>DAYNUMBEROFMONTH</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAYNUMBEROFYEAR" id="61F7CE93-A6C1-8DA3-3A8C-3C95D7F61ABA">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>DAYNUMBEROFYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WEEKNUMBEROFYEAR" id="B23BCB15-8309-EEAF-473A-4B9A9B934573">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>WEEKNUMBEROFYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENGLISHMONTHNAME" id="518D9AA3-9720-6B30-B26E-EB55F5D466B7">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>ENGLISHMONTHNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPANISHMONTHNAME" id="E7C0B9DF-46C5-2DFB-8825-4E42E103E9FA">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>SPANISHMONTHNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRENCHMONTHNAME" id="FA039C01-662F-FCE4-49D7-E3B9FDD146DB">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>FRENCHMONTHNAME</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTHNUMBEROFYEAR" id="E0F720DF-96D0-893E-0878-F2B646978F40">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>MONTHNUMBEROFYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALENDARQUARTER" id="C8209E2B-B77E-F8E0-264F-D33AA3D838BC">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>CALENDARQUARTER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALENDARYEAR" id="7D2FD99D-99AC-452B-55C7-AF116C33132C">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>CALENDARYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALENDARSEMESTER" id="F91E3298-B96E-4EC3-2942-D2052BA4779F">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>CALENDARSEMESTER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FISCALQUARTER" id="FFBF0230-C615-D1D0-01D2-36BC771CDFDF">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>FISCALQUARTER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FISCALYEAR" id="313AA8DE-05E5-686B-AC70-A82B938911FF">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>FISCALYEAR</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FISCALSEMESTER" id="FB7D2DF4-BFB3-939B-0D37-632FE4D9C285">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>DIMDATE</sourceObjSchema>
+<sourceObjName>FISCALSEMESTER</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:43 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E986FDF-7885-BAAE-F1E7-C19E31D4519C" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="DIMDATE_PK">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>SYS_C0025572</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="472E44EA-6150-BF58-CB06-90FA417BED88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC501392-F9DF-AE15-E3C7-471F7C44DF54" schemaObject="8306FE7E-282E-DA95-FCD3-646C3FC307F2" name="AK_DIMLOADDATEFULLDATEALTERNATEKEY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>AK_DIMLOADDATEFULLDATEALTERNATEKEY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:45 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1A08506-AA2B-6927-2F64-97FFB9B326A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

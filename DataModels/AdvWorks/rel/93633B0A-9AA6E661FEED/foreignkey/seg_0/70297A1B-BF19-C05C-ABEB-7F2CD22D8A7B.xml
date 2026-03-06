@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="70297A1B-BF19-C05C-ABEB-7F2CD22D8A7B" containerWithKeyObject="9060B1B2-6BF4-8AE7-5F92-B91D9DAC835C" localFKIndex="A501C7F6-5451-A35C-CC8B-99EA63370B16" name="FK_DIMRESELLER_DIMGEOGRAPHY">
+<sourceConnName>advworks</sourceConnName>
+<sourceObjSchema>ADVWORKS</sourceObjSchema>
+<sourceObjName>FK_DIMRESELLER_DIMGEOGRAPHY</sourceObjName>
+<createdBy>LeonParren</createdBy>
+<createdTime>2026-03-06 13:41:47 UTC</createdTime>
+<ownerDesignName>AdvWorks</ownerDesignName>
+<referredTableLongName>ADVWORKS.DIMGEOGRAPHY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>86ABDA44-2FD5-2A13-98A0-6E00D69DAB00</referredTableID>
+<keyObject>1DE78E48-6B76-BCCB-D000-231B988B4880</keyObject>
+<referredKeyID>1DE78E48-6B76-BCCB-D000-231B988B4880</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>GEOGRAPHYKEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

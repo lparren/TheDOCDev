@@ -179,24 +179,45 @@ cp /vagrant/software/apex-latest.zip .
 # echo "******************************************************************************"
 # docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
 
-echo "******************************************************************************"
-echo "Copy OracleAnalyticsServer 8.2.0 software." `date`
-echo "******************************************************************************"
-cd /u01/dockerfiles/oracle/OracleAnalyticsServer/8.2.0
-cp /vagrant/software/jdk-8u481-linux-x64.rpm .
-cp /vagrant/software/Oracle_Analytics_Server_Linux_8.2.0.zip .
-cp /vagrant/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip .
-cp /vagrant/software/p28186730_1394222_Generic.zip .
-cp /vagrant/software/p37476485_122140_Generic.zip .
-cp /vagrant/software/p37388935_122140_Generic.zip .
-cp /vagrant/software/p34809489_122140_Generic.zip .
-cp /vagrant/software/p37284722_122140_Generic.zip .
-cp /vagrant/software/p37035947_122140_Generic.zip .
-cp /vagrant/software/p36946553_122140_Generic.zip .
-cp /vagrant/software/p36316422_122140_Generic.zip .
+# echo "******************************************************************************"
+# echo "Copy OracleAnalyticsServer 8.2.0 software." `date`
+# echo "******************************************************************************"
+# cd /u01/dockerfiles/oracle/OracleAnalyticsServer/8.2.0
+# cp /vagrant/software/jdk-8u481-linux-x64.rpm .
+# cp /vagrant/software/Oracle_Analytics_Server_Linux_8.2.0.zip .
+# cp /vagrant/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip .
+# cp /vagrant/software/p28186730_1394222_Generic.zip .
+# cp /vagrant/software/p37476485_122140_Generic.zip .
+# cp /vagrant/software/p37388935_122140_Generic.zip .
+# cp /vagrant/software/p34809489_122140_Generic.zip .
+# cp /vagrant/software/p37284722_122140_Generic.zip .
+# cp /vagrant/software/p37035947_122140_Generic.zip .
+# cp /vagrant/software/p36946553_122140_Generic.zip .
+# cp /vagrant/software/p36316422_122140_Generic.zip .
 
 # echo "******************************************************************************"
 # echo "docker build OracleAnalyticsServer 8.2.0." `date`
+# echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
+# echo "******************************************************************************"
+# docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas
+
+echo "******************************************************************************"
+echo "Copy OracleAnalyticsServer 26.01.0.0.0 software." `date`
+echo "******************************************************************************"
+cd /u01/dockerfiles/oracle/OracleAnalyticsServer/26.01.0.0.0
+cp /vagrant/software/jdk-21_linux-x64_bin.rpm .
+cp /vagrant/software/Oracle_Analytics_Server_2026_Linux.zip .
+cp /vagrant/software/fmw_14.1.2.0.0_infrastructure.zip .
+cp /vagrant/software/p28186730_1394222_Generic.zip .
+cp /vagrant/software/p38799629_141200_Generic.zip .
+cp /vagrant/software/p38566996_141200_Generic.zip .
+cp /vagrant/software/p38348367_141200_Generic.zip .
+cp /vagrant/software/p38679562_141200_Generic.zip .
+cp /vagrant/software/p38637356_141200_Generic.zip .
+cp /vagrant/software/p38391376_141200_Generic.zip .
+
+# echo "******************************************************************************"
+# echo "docker build OracleAnalyticsServer 2026." `date`
 # echo "THIS WILL TAKE A WHILE, PLEASE BE PATIENT"
 # echo "******************************************************************************"
 # docker compose --project-directory /u01/dockerfiles/oracle/ build --no-cache  --force-rm oas

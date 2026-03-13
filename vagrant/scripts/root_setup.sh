@@ -100,6 +100,7 @@ echo "docker_user:vagrant" | chpasswd
 mkdir -p /u01/volumes/ora1930_oradata
 mkdir -p /u01/volumes/oas760_data
 mkdir -p /u01/volumes/oas820_data
+mkdir -p /u01/volumes/oas2026_data
 mkdir -p /u01/volumes/23aifree_oradata
 mkdir -p /u01/volumes/26ai_oradata
 chown -R docker_user:docker_fg /u01

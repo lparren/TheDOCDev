@@ -99,27 +99,57 @@ services:
       - /u01/volumes/23aifree_oradata:/opt/oracle/oradata
       - ./OracleDatabase/23aifree:/container-entrypoint-initdb.d
 
+# 2026 (26.1.0)
   oas:
-    image: oracle/oas:8.2.0
+    image: oracle/oas:26.01.0.0.0
     build:
-      context: ./OracleAnalyticsServer/8.2.0
+      context: ./OracleAnalyticsServer/26.01.0.0.0
     stop_grace_period: 600s
     environment:
-      BI_CONFIG_RCU_DBSTRING: 19c:1521:orclpdb1
+      BI_CONFIG_RCU_DBSTRING: 26ai:1521:orclpdb1
       BI_CONFIG_RCU_PWD: oracle
-    depends_on: [19c]
+      BI_CONFIG_RCU_DB_PREFIX: OAS
+      # BI_CONFIG_DOMAINE_NAME: bi
+      # BI_CONFIG_ADMIN_USER: weblogic
+      # BI_CONFIG_ADMIN_PWD: Admin123
+      # BI_CONFIG_RCU_USER: sys
+      # BI_CONFIG_RCU_NEW_DB_PWD: Admin123
+    depends_on: [26ai]
     links:
-      - 19c
+      - 26ai
     expose:
       - 9500-9514
     ports:
       - 9500-9514:9500-9514
     volumes:
-      - /u01/volumes/oas820_data:/opt/oracle/oradata
+      - /u01/volumes/oas2026_data:/opt/oracle/oradata
     ulimits:
       nofile:
         soft: 65536
         hard: 65536   
+
+# # 2025 (8.2.0)
+#   oas:
+#     image: oracle/oas:8.2.0
+#     build:
+#       context: ./OracleAnalyticsServer/8.2.0
+#     stop_grace_period: 600s
+#     environment:
+#       BI_CONFIG_RCU_DBSTRING: 19c:1521:orclpdb1
+#       BI_CONFIG_RCU_PWD: oracle
+#     depends_on: [19c]
+#     links:
+#       - 19c
+#     expose:
+#       - 9500-9514
+#     ports:
+#       - 9500-9514:9500-9514
+#     volumes:
+#       - /u01/volumes/oas820_data:/opt/oracle/oradata
+#     ulimits:
+#       nofile:
+#         soft: 65536
+#         hard: 65536   
 
   ords:
     image: oracle/ords:latest

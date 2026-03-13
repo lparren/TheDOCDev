@@ -79,7 +79,6 @@ for OAS 5.9.0
 - [Patch 30657796](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 - [Oracle_Analytics_Server_Linux_5.9.0.zip](https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 
-
 for OAS 6.4.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#license-lightbox)
 - jdk-8u321-linux-x64.rpm
 - Oracle WebLogic Server 12c (12.2.1.4) Generic - Download the file "Fusion Middleware Infrastructure Installer (1.5 GB)"
@@ -129,6 +128,18 @@ for OAS 8.2.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 - [Patch 36946553](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36946553&amp;)
 - [Patch 36316422](https://support.oracle.com/epmos/faces/PatchDetail?patchId=36316422&amp;)
 
+for OAS 26.01.0.0.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
+- [jdk-21_linux-x64_bin.rpm](https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm)
+- [Oracle WebLogic Server 14c (14.1.2.0) Generic](https://www.oracle.com/middleware/technologies/weblogic-server-installers-downloads.html)
+- [Oracle Analytics Server 2026 Linux](https://www.oracle.com/solutions/analytics/analytics-server/analytics-server.html#)
+- [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730)
+- [Patch 38799629](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38799629)
+- [Patch 38566996](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38566996)
+- [Patch 38348367](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38348367)
+- [Patch 38679562](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38679562)
+- [Patch 38637356](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38637356)
+- [Patch 38391376](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38391376)
+
 for ORDS
 - [Java 11 (11.0.23_9)](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
 - [Tomcat 9.0.90](https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90.tar.gz)
@@ -140,7 +151,7 @@ With all software in place login to the virtual machine and start the build scri
 ```
 /vagrant/scripts/build.sh
 ```
-The build script only copies all files which are required to build the docker images. Images must be built manually (eg. orabuild 19c).
+The build script copies all files which are required to build the docker images. Images must be built manually (eg. orabuild 19c).
 
 ```
 [docker_user@localhost ~]$ docker images (after images have been built)
@@ -177,14 +188,15 @@ Aliasses:
     - pgstop:   [db|pgadmin|dbt] Stops the container  
     - pgup:     [db|pgadmin|dbt] Creates a container instance from an image
     - pglog:    [db|pgadmin|dbt] Shows the logging for a container
+  - dfsync: copy new or changed file from /vagrant/dockerfiles to /u01
 
 ### First run
-On first run start __oraup 19c__. When the logging shows DATABASE READY run __oraup oas__.
+On first run start __oraup 26ai__. When the logging shows DATABASE READY run __oraup oas__.
 
 ```
-CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS                       PORTS                                                                                  NAMES
-1fd5d829e65b   oracle/oas:7.6.0            "/bin/sh -c ${ORACLE…"   34 minutes ago      Up 34 minutes                0/tcp, 0.0.0.0:9500-9514->9500-9514/tcp, :::9500-9514->9500-9514/tcp                   oracle-oas-1
-827582584ee2   oracle/database:19.3.0-ee   "/bin/sh -c 'exec $O…"   About an hour ago   Up About an hour (healthy)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp, 0.0.0.0:5500->5500/tcp, :::5500->5500/tcp   oracle-oradb-1
+CONTAINER ID   IMAGE                     COMMAND                  CREATED       STATUS       PORTS                                                                                                          NAMES
+647c7183de45   oracle/oas:26.01.0.0.0    "/bin/sh -c ${ORACLE…"   2 hours ago   Up 2 hours   0.0.0.0:9500-9514->9500-9514/tcp, [::]:9500-9514->9500-9514/tcp, 9515/tcp                                      oracle-oas-1
+efb662255b08   oracle/database:26ai-ee   "/opt/oracle/entrypo…"   3 hours ago   Up 3 hours   8500/tcp, 8521/tcp, 0.0.0.0:8521->1521/tcp, [::]:8521->1521/tcp, 0.0.0.0:8500->5500/tcp, [::]:8500->5500/tcp   oracle-26ai-1
 ```
 
 # Problems with stuck CPU's
@@ -248,6 +260,8 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
 [^1] The vbguest plugin no longer supported but still works. Sometimes an error message might appear. This is because the syntax _exists_ is no longer supported in ruby. Just update the _.rb_ file indicated to _exist_ and the script will work again.
 
 # Changes
+## 2026-03-13
+- added OAS 26.01.0.0.0
 ## 2026-02-20
 - added 19c rpm install to oracle scripts because the scripts are much easier although less flexible than the silent install.
 - replaced the 19.3.0 database with th 19c variant for oas

@@ -131,7 +131,7 @@ for OAS 8.2.0 (https://www.oracle.com/solutions/business-analytics/analytics-ser
 for OAS 26.01.0.0.0 (https://www.oracle.com/solutions/business-analytics/analytics-server/analytics-server.html#)
 - [jdk-21_linux-x64_bin.rpm](https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm)
 - [Oracle WebLogic Server 14c (14.1.2.0) Generic](https://www.oracle.com/middleware/technologies/weblogic-server-installers-downloads.html)
-- [Oracle Analytics Server 2026 Linux](https://www.oracle.com/solutions/analytics/analytics-server/analytics-server.html#)
+- [Oracle Analytics Server 2026 Linux](https://www.oracle.com/solutions/analytics/analytics-server/analytics-server.html#) 
 - [Patch 28186730](https://support.oracle.com/epmos/faces/PatchDetail?patchId=28186730)
 - [Patch 38799629](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38799629)
 - [Patch 38566996](https://support.oracle.com/epmos/faces/PatchDetail?patchId=38566996)

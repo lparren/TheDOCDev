@@ -1,229 +1,238 @@
-CREATE TABLE DOC_DIM_LOSS_REASONS (
-    ACTIVE_IND VARCHAR2(1) NULL,
-    CATEGORY VARCHAR2(100) NULL,
-    CREATION_DATE date  NULL,
-    CREATION_RUN_NR number(22) NULL,
-    ID number(22) NOT NULL,
-    LAST_UPDATE_DATE date  NULL,
-    LAST_UPDATE_RUN_NR number(22) NULL,
-    MAIN_CODE VARCHAR2(25) NOT NULL,
-    MAIN_REASON VARCHAR2(4000) NULL,
-    SOURCE VARCHAR2(1) NULL,
-    SUB_CODE VARCHAR2(25) NULL,
-    SUB_REASON VARCHAR2(4000) NULL,
-    PRIMARY KEY (ID)
+DROP USER manufacturing_user CASCADE;
+CREATE USER manufacturing_user IDENTIFIED BY manufacturing_user;
+GRANT db_developer_role TO manufacturing_user;
+GRANT UNLIMITED TABLESPACE TO manufacturing_user;
+CREATE OR REPLACE DIRECTORY manufacturing_dir AS '/home/oracle/manufacturing_user/';
+GRANT READ,WRITE,EXECUTE ON DIRECTORY manufacturing_dir TO manufacturing_user;
+
+CONNECT manufacturing_user/manufacturing_user;
+
+CREATE TABLE doc_dim_loss_reasons (
+   active_ind         VARCHAR2(1) NULL,
+   category           VARCHAR2(100) NULL,
+   creation_date      DATE NULL,
+   creation_run_nr    NUMBER(22) NULL,
+   id                 NUMBER(22) NOT NULL,
+   last_update_date   DATE NULL,
+   last_update_run_nr NUMBER(22) NULL,
+   main_code          VARCHAR2(25) NOT NULL,
+   main_reason        VARCHAR2(4000) NULL,
+   source             VARCHAR2(1) NULL,
+   sub_code           VARCHAR2(25) NULL,
+   sub_reason         VARCHAR2(4000) NULL,
+   PRIMARY KEY ( id )
 );
 
 
-CREATE TABLE DOC_DIM_MACHINES (
-    ACTIVE_IND VARCHAR2(1) NULL,
-    A_TARGET number(22) NULL,
-    COSTPRICE number(22) NULL,
-    CREATION_DATE date  NULL,
-    CREATION_RUN_NR number(22) NULL,
-    DESCRIPTION VARCHAR2(20) NULL,
-    ID number(22) NOT NULL,
-    LAST_UPDATE_DATE date  NULL,
-    LAST_UPDATE_RUN_NR number(22) NULL,
-    OEE_TARGET number(22) NULL,
-    P_TARGET number(22) NULL,
-    Q_TARGET number(22) NULL,
-    SOURCE VARCHAR2(1) NULL,
-    STANDARD_MACHINE_SPEED number(22) NULL,
-    PRIMARY KEY (ID)
+CREATE TABLE doc_dim_machines (
+   active_ind             VARCHAR2(1) NULL,
+   a_target               NUMBER(22) NULL,
+   costprice              NUMBER(22) NULL,
+   creation_date          DATE NULL,
+   creation_run_nr        NUMBER(22) NULL,
+   description            VARCHAR2(20) NULL,
+   id                     NUMBER(22) NOT NULL,
+   last_update_date       DATE NULL,
+   last_update_run_nr     NUMBER(22) NULL,
+   oee_target             NUMBER(22) NULL,
+   p_target               NUMBER(22) NULL,
+   q_target               NUMBER(22) NULL,
+   source                 VARCHAR2(1) NULL,
+   standard_machine_speed NUMBER(22) NULL,
+   PRIMARY KEY ( id )
 );
 
-CREATE TABLE DOC_DIM_MAIN_LOSS_REASONS (
-    ACTIVE_IND VARCHAR2(1) NULL,
-    CATEGORY VARCHAR2(100) NULL,
-    CODE VARCHAR2(25) NOT NULL,
-    CREATION_DATE date  NULL,
-    CREATION_RUN_NR number(22) NULL,
-    DESCRIPTION VARCHAR2(4000) NULL,
-    ID number(22) NOT NULL,
-    LAST_UPDATE_DATE date  NULL,
-    LAST_UPDATE_RUN_NR number(22) NULL,
-    SOURCE VARCHAR2(1) NULL,
-    PRIMARY KEY (ID)
+CREATE TABLE doc_dim_main_loss_reasons (
+   active_ind         VARCHAR2(1) NULL,
+   category           VARCHAR2(100) NULL,
+   code               VARCHAR2(25) NOT NULL,
+   creation_date      DATE NULL,
+   creation_run_nr    NUMBER(22) NULL,
+   description        VARCHAR2(4000) NULL,
+   id                 NUMBER(22) NOT NULL,
+   last_update_date   DATE NULL,
+   last_update_run_nr NUMBER(22) NULL,
+   source             VARCHAR2(1) NULL,
+   PRIMARY KEY ( id )
 );
 
-CREATE TABLE DOC_DIM_PRODUCTS (
-    ACTIVE_IND VARCHAR2(1) NOT NULL,
-    COSTPRICE number(22) NULL,
-    CREATION_DATE date  NULL,
-    CREATION_RUN_NR number(22) NULL,
-    DESCRIPTION VARCHAR2(512) NULL,
-    ENDDATE date  NULL,
-    ID number(22) NOT NULL,
-    LAST_UPDATE_DATE date  NULL,
-    LAST_UPDATE_RUN_NR number(22) NULL,
-    MACHINE_ID number(22) NULL,
-    MODEL VARCHAR2(50) NULL,
-    PRODUCT_CODE VARCHAR2(19) NULL,
-    PRODUCT_NUMBER VARCHAR2(50) NULL,
-    PRODUCT_TYPE VARCHAR2(10) NULL,
-    SOURCE VARCHAR2(1) NULL,
-    STARTDATE date  NULL,
-    STD_Q number NULL,
-    STD_A number NULL,
-    STD_P number NULL,
-    TYPE_COLOR VARCHAR2(25) NULL,
-    PRIMARY KEY (ID)
+CREATE TABLE doc_dim_products (
+   active_ind         VARCHAR2(1) NOT NULL,
+   costprice          NUMBER(22) NULL,
+   creation_date      DATE NULL,
+   creation_run_nr    NUMBER(22) NULL,
+   description        VARCHAR2(512) NULL,
+   enddate            DATE NULL,
+   id                 NUMBER(22) NOT NULL,
+   last_update_date   DATE NULL,
+   last_update_run_nr NUMBER(22) NULL,
+   machine_id         NUMBER(22) NULL,
+   model              VARCHAR2(50) NULL,
+   product_code       VARCHAR2(19) NULL,
+   product_number     VARCHAR2(50) NULL,
+   product_type       VARCHAR2(10) NULL,
+   source             VARCHAR2(1) NULL,
+   startdate          DATE NULL,
+   std_q              NUMBER NULL,
+   std_a              NUMBER NULL,
+   std_p              NUMBER NULL,
+   type_color         VARCHAR2(25) NULL,
+   PRIMARY KEY ( id )
 );
 
-CREATE TABLE DOC_DIM_SHIFT_TIMES (
-    CREATION_DATE DATE NULL,
-    CREATION_RUN_NR NUMBER(22) NULL,
-    DAY DATE NULL,
-    ID NUMBER(22) NOT NULL,
-    ISO_WEEK NUMBER(2) NULL,
-    ISO_YEAR NUMBER(4) NULL,
-    ISO_YEARWEEK NUMBER(6) NULL,
-    LAST_UPDATE_DATE DATE NULL,
-    LAST_UPDATE_RUN_NR NUMBER(22) NULL,
-    MONTH NUMBER(2) NULL,
-    MONTH_NAME VARCHAR2(20) NULL,
-    SHIFT VARCHAR2(15) NULL,
-    SHIFT_CODE VARCHAR2(2) NULL,
-    SHIFT_END DATE NULL,
-    SHIFT_START DATE NULL,
-    SOURCE VARCHAR2(1) NULL,
-    WEEKDAY VARCHAR2(20) NULL,
-    YEAR NUMBER(4) NULL,
-    PRIMARY KEY (ID)
-);
-
-
-CREATE TABLE DOC_DIM_TEAMS (
-    CREATION_DATE DATE NULL,
-    CREATION_RUN_NR NUMBER(22) NULL,
-    DESCRIPTION VARCHAR2(20) NULL,
-    ID NUMBER(22) NOT NULL,
-    LAST_UPDATE_DATE DATE NULL,
-    LAST_UPDATE_RUN_NR NUMBER(22) NULL,
-    SOURCE VARCHAR2(1) NULL,
-    TEAM VARCHAR2(20) NULL,
-    PRIMARY KEY (ID)
-);
-
-CREATE TABLE DOC_FCT_AVAILABILITY (
-    AVAILABILITY NUMBER(22) NULL,
-    DOWNTIME NUMBER(22) NULL,
-    D_MCE_ID NUMBER(22) NULL,
-    D_MLR_ID NUMBER(22) NULL,
-    D_PDT_ID NUMBER(22) NULL,
-    D_STE_ID NUMBER(22) NULL,
-    D_TEM_ID NUMBER(22) NULL,
-    ID NUMBER(22) NOT NULL,
-    TOTALTIME NUMBER(22) NULL,
-    UPTIME NUMBER(22) NULL,
-    STD_A NUMBER(22) NULL,
-    D_LRN_ID NUMBER(22) NOT NULL,
-    PRIMARY KEY (ID)
+CREATE TABLE doc_dim_shift_times (
+   creation_date      DATE NULL,
+   creation_run_nr    NUMBER(22) NULL,
+   day                DATE NULL,
+   id                 NUMBER(22) NOT NULL,
+   iso_week           NUMBER(2) NULL,
+   iso_year           NUMBER(4) NULL,
+   iso_yearweek       NUMBER(6) NULL,
+   last_update_date   DATE NULL,
+   last_update_run_nr NUMBER(22) NULL,
+   month              NUMBER(2) NULL,
+   month_name         VARCHAR2(20) NULL,
+   shift              VARCHAR2(15) NULL,
+   shift_code         VARCHAR2(2) NULL,
+   shift_end          DATE NULL,
+   shift_start        DATE NULL,
+   source             VARCHAR2(1) NULL,
+   weekday            VARCHAR2(20) NULL,
+   year               NUMBER(4) NULL,
+   PRIMARY KEY ( id )
 );
 
 
-CREATE TABLE DOC_FCT_PERFORMANCE (
-    ACTUAL_SPEED_P_MIN NUMBER(22) NULL,
-    DURATION_MIN NUMBER(22) NULL,
-    D_MCE_ID NUMBER(22) NULL,
-    D_MLR_ID NUMBER(22) NULL,
-    D_PDT_ID NUMBER(22) NULL,
-    D_STE_ID NUMBER(22) NULL,
-    D_TEM_ID NUMBER(22) NULL,
-    ID NUMBER(22) NOT NULL,
-    NR_PIECES_PRODUCED NUMBER(22) NULL,
-    STD_SPEED_P_MIN NUMBER(22) NULL,
-    PERFORMANCE NUMBER(22) NOT NULL,
-    PERFORMANCE_LOSS_MIN NUMBER(22) NOT NULL,
-    D_LRN_ID NUMBER(22) NOT NULL,
-    PRIMARY KEY (ID)
+CREATE TABLE doc_dim_teams (
+   creation_date      DATE NULL,
+   creation_run_nr    NUMBER(22) NULL,
+   description        VARCHAR2(20) NULL,
+   id                 NUMBER(22) NOT NULL,
+   last_update_date   DATE NULL,
+   last_update_run_nr NUMBER(22) NULL,
+   source             VARCHAR2(1) NULL,
+   team               VARCHAR2(20) NULL,
+   PRIMARY KEY ( id )
 );
 
-CREATE TABLE DOC_FCT_QUALITY (
-    D_MCE_ID NUMBER(22) NULL,
-    D_MLR_ID NUMBER(22) NULL,
-    D_PDT_ID NUMBER(22) NULL,
-    D_STE_ID NUMBER(22) NULL,
-    D_TEM_ID NUMBER(22) NULL,
-    ID NUMBER(22) NOT NULL,
-    NR_LOSS NUMBER(22) NULL,
-    NR_PRODUCED NUMBER(22) NULL,
-    QUALITY NUMBER(22) NULL,
-    STD_Q NUMBER(22) NOT NULL,
-    D_LRN_ID NUMBER(22) NOT NULL,
-    PRIMARY KEY (ID)
+CREATE TABLE doc_fct_availability (
+   availability NUMBER(22) NULL,
+   downtime     NUMBER(22) NULL,
+   d_mce_id     NUMBER(22) NULL,
+   d_mlr_id     NUMBER(22) NULL,
+   d_pdt_id     NUMBER(22) NULL,
+   d_ste_id     NUMBER(22) NULL,
+   d_tem_id     NUMBER(22) NULL,
+   id           NUMBER(22) NOT NULL,
+   totaltime    NUMBER(22) NULL,
+   uptime       NUMBER(22) NULL,
+   std_a        NUMBER(22) NULL,
+   d_lrn_id     NUMBER(22) NOT NULL,
+   PRIMARY KEY ( id )
 );
 
-ALTER TABLE DOC_FCT_QUALITY
-ADD CONSTRAINT fk_quality_loss_reasons
-FOREIGN KEY (D_LRN_ID) REFERENCES DOC_DIM_LOSS_REASONS(ID);
 
-ALTER TABLE DOC_FCT_QUALITY
-ADD CONSTRAINT fk_quality_machines
-FOREIGN KEY (D_MCE_ID) REFERENCES DOC_DIM_MACHINES(ID);
+CREATE TABLE doc_fct_performance (
+   actual_speed_p_min   NUMBER(22) NULL,
+   duration_min         NUMBER(22) NULL,
+   d_mce_id             NUMBER(22) NULL,
+   d_mlr_id             NUMBER(22) NULL,
+   d_pdt_id             NUMBER(22) NULL,
+   d_ste_id             NUMBER(22) NULL,
+   d_tem_id             NUMBER(22) NULL,
+   id                   NUMBER(22) NOT NULL,
+   nr_pieces_produced   NUMBER(22) NULL,
+   std_speed_p_min      NUMBER(22) NULL,
+   performance          NUMBER(22) NOT NULL,
+   performance_loss_min NUMBER(22) NOT NULL,
+   d_lrn_id             NUMBER(22) NOT NULL,
+   PRIMARY KEY ( id )
+);
 
-ALTER TABLE DOC_FCT_QUALITY
-ADD CONSTRAINT fk_quality_main_loss_reasons
-FOREIGN KEY (D_MLR_ID) REFERENCES DOC_DIM_MAIN_LOSS_REASONS(ID);
+CREATE TABLE doc_fct_quality (
+   d_mce_id    NUMBER(22) NULL,
+   d_mlr_id    NUMBER(22) NULL,
+   d_pdt_id    NUMBER(22) NULL,
+   d_ste_id    NUMBER(22) NULL,
+   d_tem_id    NUMBER(22) NULL,
+   id          NUMBER(22) NOT NULL,
+   nr_loss     NUMBER(22) NULL,
+   nr_produced NUMBER(22) NULL,
+   quality     NUMBER(22) NULL,
+   std_q       NUMBER(22) NOT NULL,
+   d_lrn_id    NUMBER(22) NOT NULL,
+   PRIMARY KEY ( id )
+);
 
-ALTER TABLE DOC_FCT_QUALITY
-ADD CONSTRAINT fk_quality_products
-FOREIGN KEY (D_PDT_ID) REFERENCES DOC_DIM_PRODUCTS(ID);
+ALTER TABLE doc_fct_quality
+   ADD CONSTRAINT fk_quality_loss_reasons FOREIGN KEY ( d_lrn_id )
+      REFERENCES doc_dim_loss_reasons ( id );
 
-ALTER TABLE DOC_FCT_QUALITY
-ADD CONSTRAINT fk_quality_shift_times
-FOREIGN KEY (D_STE_ID) REFERENCES DOC_DIM_SHIFT_TIMES(ID);
+ALTER TABLE doc_fct_quality
+   ADD CONSTRAINT fk_quality_machines FOREIGN KEY ( d_mce_id )
+      REFERENCES doc_dim_machines ( id );
 
-ALTER TABLE DOC_FCT_QUALITY
-ADD CONSTRAINT fk_quality_teams
-FOREIGN KEY (D_TEM_ID) REFERENCES DOC_DIM_TEAMS(ID);
+ALTER TABLE doc_fct_quality
+   ADD CONSTRAINT fk_quality_main_loss_reasons FOREIGN KEY ( d_mlr_id )
+      REFERENCES doc_dim_main_loss_reasons ( id );
+
+ALTER TABLE doc_fct_quality
+   ADD CONSTRAINT fk_quality_products FOREIGN KEY ( d_pdt_id )
+      REFERENCES doc_dim_products ( id );
+
+ALTER TABLE doc_fct_quality
+   ADD CONSTRAINT fk_quality_shift_times FOREIGN KEY ( d_ste_id )
+      REFERENCES doc_dim_shift_times ( id );
+
+ALTER TABLE doc_fct_quality
+   ADD CONSTRAINT fk_quality_teams FOREIGN KEY ( d_tem_id )
+      REFERENCES doc_dim_teams ( id );
 
 
-ALTER TABLE DOC_FCT_PERFORMANCE
-ADD CONSTRAINT fk_performance_loss_reasons
-FOREIGN KEY (D_LRN_ID) REFERENCES DOC_DIM_LOSS_REASONS(ID);
+ALTER TABLE doc_fct_performance
+   ADD CONSTRAINT fk_performance_loss_reasons FOREIGN KEY ( d_lrn_id )
+      REFERENCES doc_dim_loss_reasons ( id );
 
-ALTER TABLE DOC_FCT_PERFORMANCE
-ADD CONSTRAINT fk_performance_machines
-FOREIGN KEY (D_MCE_ID) REFERENCES DOC_DIM_MACHINES(ID);
+ALTER TABLE doc_fct_performance
+   ADD CONSTRAINT fk_performance_machines FOREIGN KEY ( d_mce_id )
+      REFERENCES doc_dim_machines ( id );
 
-ALTER TABLE DOC_FCT_PERFORMANCE
-ADD CONSTRAINT fk_performance_main_loss_reasons
-FOREIGN KEY (D_MLR_ID) REFERENCES DOC_DIM_MAIN_LOSS_REASONS(ID);
+ALTER TABLE doc_fct_performance
+   ADD CONSTRAINT fk_performance_main_loss_reasons FOREIGN KEY ( d_mlr_id )
+      REFERENCES doc_dim_main_loss_reasons ( id );
 
-ALTER TABLE DOC_FCT_PERFORMANCE
-ADD CONSTRAINT fk_performance_products
-FOREIGN KEY (D_PDT_ID) REFERENCES DOC_DIM_PRODUCTS(ID);
+ALTER TABLE doc_fct_performance
+   ADD CONSTRAINT fk_performance_products FOREIGN KEY ( d_pdt_id )
+      REFERENCES doc_dim_products ( id );
 
-ALTER TABLE DOC_FCT_PERFORMANCE
-ADD CONSTRAINT fk_performance_shift_times
-FOREIGN KEY (D_STE_ID) REFERENCES DOC_DIM_SHIFT_TIMES(ID);
+ALTER TABLE doc_fct_performance
+   ADD CONSTRAINT fk_performance_shift_times FOREIGN KEY ( d_ste_id )
+      REFERENCES doc_dim_shift_times ( id );
 
-ALTER TABLE DOC_FCT_PERFORMANCE
-ADD CONSTRAINT fk_performance_teams
-FOREIGN KEY (D_TEM_ID) REFERENCES DOC_DIM_TEAMS(ID);
+ALTER TABLE doc_fct_performance
+   ADD CONSTRAINT fk_performance_teams FOREIGN KEY ( d_tem_id )
+      REFERENCES doc_dim_teams ( id );
 
-ALTER TABLE DOC_FCT_AVAILABILITY
-ADD CONSTRAINT fk_availability_loss_reasons
-FOREIGN KEY (D_LRN_ID) REFERENCES DOC_DIM_LOSS_REASONS(ID);
+ALTER TABLE doc_fct_availability
+   ADD CONSTRAINT fk_availability_loss_reasons FOREIGN KEY ( d_lrn_id )
+      REFERENCES doc_dim_loss_reasons ( id );
 
-ALTER TABLE DOC_FCT_AVAILABILITY
-ADD CONSTRAINT fk_availability_machines
-FOREIGN KEY (D_MCE_ID) REFERENCES DOC_DIM_MACHINES(ID);
+ALTER TABLE doc_fct_availability
+   ADD CONSTRAINT fk_availability_machines FOREIGN KEY ( d_mce_id )
+      REFERENCES doc_dim_machines ( id );
 
-ALTER TABLE DOC_FCT_AVAILABILITY
-ADD CONSTRAINT fk_availability_main_loss_reasons
-FOREIGN KEY (D_MLR_ID) REFERENCES DOC_DIM_MAIN_LOSS_REASONS(ID);
+ALTER TABLE doc_fct_availability
+   ADD CONSTRAINT fk_availability_main_loss_reasons FOREIGN KEY ( d_mlr_id )
+      REFERENCES doc_dim_main_loss_reasons ( id );
 
-ALTER TABLE DOC_FCT_AVAILABILITY
-ADD CONSTRAINT fk_availability_products
-FOREIGN KEY (D_PDT_ID) REFERENCES DOC_DIM_PRODUCTS(ID);
+ALTER TABLE doc_fct_availability
+   ADD CONSTRAINT fk_availability_products FOREIGN KEY ( d_pdt_id )
+      REFERENCES doc_dim_products ( id );
 
-ALTER TABLE DOC_FCT_AVAILABILITY
-ADD CONSTRAINT fk_availability_shift_times
-FOREIGN KEY (D_STE_ID) REFERENCES DOC_DIM_SHIFT_TIMES(ID);
+ALTER TABLE doc_fct_availability
+   ADD CONSTRAINT fk_availability_shift_times FOREIGN KEY ( d_ste_id )
+      REFERENCES doc_dim_shift_times ( id );
 
-ALTER TABLE DOC_FCT_AVAILABILITY
-ADD CONSTRAINT fk_availability_teams
-FOREIGN KEY (D_TEM_ID) REFERENCES DOC_DIM_TEAMS(ID);
+ALTER TABLE doc_fct_availability
+   ADD CONSTRAINT fk_availability_teams FOREIGN KEY ( d_tem_id )
+      REFERENCES doc_dim_teams ( id );

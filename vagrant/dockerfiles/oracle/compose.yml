@@ -108,7 +108,7 @@ services:
     environment:
       BI_CONFIG_RCU_DBSTRING: 26ai:1521:orclpdb1
       BI_CONFIG_RCU_PWD: oracle
-      BI_CONFIG_RCU_DB_PREFIX: OAS
+
       # BI_CONFIG_DOMAINE_NAME: bi
       # BI_CONFIG_ADMIN_USER: weblogic
       # BI_CONFIG_ADMIN_PWD: Admin123
@@ -118,9 +118,9 @@ services:
     links:
       - 26ai
     expose:
-      - 9500-9514
+      - 9500-9515
     ports:
-      - 9500-9514:9500-9514
+      - 9500-9515:9500-9515
     volumes:
       - /u01/volumes/oas2026_data:/opt/oracle/oradata
     ulimits:

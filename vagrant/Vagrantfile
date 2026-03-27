@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 9000, host: 9005 # Poort 9000 tot 9003 is bezet door Telepo
     
   # OAS poorten
-  for i in 9500..9514
+  for i in 9500..9515
     config.vm.network "forwarded_port", guest: i, host: i
   end
   config.vm.network "forwarded_port", guest: 8889, host: 8889 # Jupyter notebook

@@ -46,6 +46,12 @@ su - oracle << EOF
     /tmp/runUserScripts.sh /tmp/userScripts
 EOF
 
+    # Oracle has increased the security in recent versions, which can cause issues with some clients. 
+    # to prevent connection errors from OAS we need to allow weak DN matching in sqlnet.ora
+cat <<EOF >> ORACLE_HOME/network/admin/sqlnet.ora
+SSL_SERVER_DN_MATCH = NO
+SSL_ALLOW_WEAK_DN_MATCH = TRUE
+EOF
 else
     echo "Database already configured. Skipping setup."
 fi

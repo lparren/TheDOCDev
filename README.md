@@ -260,6 +260,10 @@ Whenever I upgrade virtualbox the vagrant-vbguest plugin sometimes will not inst
 [^1] The vbguest plugin no longer supported but still works. Sometimes an error message might appear. This is because the syntax _exists_ is no longer supported in ruby. Just update the _.rb_ file indicated to _exist_ and the script will work again.
 
 # Changes
+## 2026-04-10
+- OAS Developer feature was not working. For some reason jq was not installed, added it to the dockerfile.
+- added dns to compose file for oas. We need to be able to cummunicate with github so we can commit our semantic models.
+- added a folder for my own demo applications (which are not included)
 ## 2026-03-27
 - added port 9515 to port forwarding in Vagrantfile and compose.ytml for OAS2026. The BI server listens on port 9515 Since OAS 2025. If tou want to use the BI Client Tool configure ODBC on port 9515.
 - added several SSL settings to sqlnet.ora on database server to circumvent tighter security in 26ai.

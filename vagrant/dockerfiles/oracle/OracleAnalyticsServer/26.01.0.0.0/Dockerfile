@@ -99,7 +99,7 @@ RUN useradd -d /home/oracle -m -s /bin/bash oracle  \
     && echo oracle:oracle | chpasswd 
 ### Update OS + install required packages
 RUN dnf -y update
-RUN dnf -y install hostname unzip
+RUN dnf -y install hostname unzip jq
 RUN dnf -y install binutils gcc gcc-c++ glibc glibc-devel libaio libaio-devel libgcc libstdc++ libstdc++-devel libnsl sysstat motif motif-devel openssl make xorg-x11-utils ksh libcap libgfortran libxcrypt-compat
 ### Install JDK
 RUN dnf -y install ${INSTALL_DIR}/${INSTALL_FILE_JDK}  \

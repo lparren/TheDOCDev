@@ -1,9 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="TPCDS" directorySegmentName="seg_0" id="296392D5-6B74-2628-6E45-61EA5C5C7749">
-<sourceConnName>tpc-ds</sourceConnName>
-<sourceObjName>TPCDS</sourceObjName>
-<createdBy>LeonParren</createdBy>
-<createdTime>2026-02-23 12:37:51 UTC</createdTime>
-<ownerDesignName>TPC-DS</ownerDesignName>
-<schemaObject>05B32C38-F9A7-82CD-0CEA-E34991CD6787</schemaObject>
-</UserOraclev10g>

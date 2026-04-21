@@ -108,7 +108,7 @@ services:
     environment:
       BI_CONFIG_RCU_DBSTRING: 26ai:1521:orclpdb1
       BI_CONFIG_RCU_PWD: oracle
-      BI_CONFIG_RCU_DB_PREFIX: DEV
+      BI_CONFIG_RCU_DB_PREFIX: oas
       # BI_CONFIG_DOMAINE_NAME: bi
       # BI_CONFIG_ADMIN_USER: weblogic
       # BI_CONFIG_ADMIN_PWD: Admin123
@@ -122,7 +122,7 @@ services:
     ports:
       - 9500-9515:9500-9515
     volumes:
-      - /u01/volumes/oas2026_data:/opt/oracle/oradata
+      - /u01/volumes/oas2026_data:/opt/oracle/config/domains
     ulimits:
       nofile:
         soft: 65536

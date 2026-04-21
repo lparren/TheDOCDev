@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="TPCDS" directorySegmentName="seg_0" id="05B32C38-F9A7-82CD-0CEA-E34991CD6787">
-<createdBy>LeonParren</createdBy>
-<createdTime>2026-02-23 08:42:07 UTC</createdTime>
-<ownerDesignName>TPC-DS</ownerDesignName>
-<importedID>F1555323-2A41-C0DE-7C6B-48C5123AE196</importedID>
-</SchemaObject>

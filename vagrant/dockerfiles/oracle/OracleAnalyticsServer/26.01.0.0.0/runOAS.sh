@@ -82,15 +82,20 @@ function stopOAS {
 
 ############# Start BI Excel Export ################
 function startBIExcelExport {
+  if ! grep -q '"--disable-web-security"' "${ORACLE_HOME}/bi/modules/oracle.bi.tech/obitech-serverside-exportexcel-bundle.js"; then
+    echo "Patch the NodeJs script to disable PNA (Private Network Access) security rules (CORS from private address)"
+    sed -i 's/"--enable-precise-memory-info"/"--enable-precise-memory-info","--disable-web-security","--disable-features=BlockInsecurePrivateNetworkRequests"/g' "${ORACLE_HOME}/bi/modules/oracle.bi.tech/obitech-serverside-exportexcel-bundle.js"
+  fi
+
   echo "Starting BI Excel Export"
-  #pm2 start ${ORACLE_HOME}/bi/modules/oracle.bi.tech/obitech-serverside-exportexcel-bundle.js
-  NODE_PATH=${NPM_BI_EXCEL_EXPORT}/node_modules PUPPETEER_EXECUTABLE_PATH=$(cd "${NPM_BI_EXCEL_EXPORT}" && node -e "const p = require('puppeteer'); console.log(p.executablePath())") pm2 start ${ORACLE_HOME}/bi/modules/oracle.bi.tech/obitech-serverside-exportexcel-bundle.js --update-env
+  echo "- The process can be monitored with \`pm2 logs bi_excel_export\`"
+  pm2 start ${ORACLE_HOME}/bi/modules/oracle.bi.tech/obitech-serverside-exportexcel-bundle.js --name bi_excel_export
 }
 
 ############# Stop BI Excel Export ################
 function stopBIExcelExport {
   echo "Stopping BI Excel Export"
-  pm2 stop obitech-serverside-exportexcel-bundle
+  pm2 stop bi_excel_export
 }
 
 ############# MAIN ################
@@ -116,14 +121,14 @@ else
 fi;
 
 
-# Set some env variables for NodeJs pieces
+# Set some env variables for Node.js pieces
+export NODE_PATH=${NODEJS_MODULES}/node_modules
+export PUPPETEER_EXECUTABLE_PATH=$(cd "${NODEJS_MODULES}" && node -e "const p = require('puppeteer'); console.log(p.executablePath())")
+
 ## BI Excel export
-# export NODE_PATH= : defined in the `pm2 start` commmand
-# export PUPPETEER_EXECUTABLE_PATH : defined in the `pm2 start` command
 export OAS_FORMATTED_EXPORT_ENABLED=true
+
 ## Workbook Email Scheduler
-export NODE_PATH=${NPM_WORKBOOK_EMAIL_SCHEDULER}/node_modules
-export PUPPETEER_EXECUTABLE_PATH=$(cd "${NPM_WORKBOOK_EMAIL_SCHEDULER}" && node -e "const p = require('puppeteer'); console.log(p.executablePath())")
 export OAS_ENABLED=true
 export OAS_WORKBOOK_SCHEDULE_ENABLED=true
 

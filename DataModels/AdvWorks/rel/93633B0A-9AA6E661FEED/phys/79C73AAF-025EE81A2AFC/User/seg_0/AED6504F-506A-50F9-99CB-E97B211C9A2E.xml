@@ -1,9 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="ADVWORKS" directorySegmentName="seg_0" id="AED6504F-506A-50F9-99CB-E97B211C9A2E">
-<sourceConnName>advworks</sourceConnName>
-<sourceObjName>ADVWORKS</sourceObjName>
-<createdBy>LeonParren</createdBy>
-<createdTime>2026-03-06 13:41:42 UTC</createdTime>
-<ownerDesignName>AdvWorks</ownerDesignName>
-<schemaObject>8306FE7E-282E-DA95-FCD3-646C3FC307F2</schemaObject>
-</UserOraclev10g>
